@@ -10,11 +10,31 @@ WARP_OUTPUT_FILE = PROVIDERS_CACHE_DIR / "warp.json"
 
 
 WARP_ENDPOINTS = [
-    ("162.159.192.1", 2408),
-    ("162.159.192.2", 2408),
-    ("162.159.193.1", 2408),
-    ("188.114.96.1", 2408),
-    ("188.114.97.1", 2408),
+    {
+        "name": "Cloudflare EU-1",
+        "server": "162.159.192.1",
+        "port": 2408,
+    },
+    {
+        "name": "Cloudflare EU-2",
+        "server": "162.159.192.2",
+        "port": 2408,
+    },
+    {
+        "name": "Cloudflare EU-3",
+        "server": "162.159.193.1",
+        "port": 2408,
+    },
+    {
+        "name": "Cloudflare Anycast-1",
+        "server": "188.114.96.1",
+        "port": 2408,
+    },
+    {
+        "name": "Cloudflare Anycast-2",
+        "server": "188.114.97.1",
+        "port": 2408,
+    },
 ]
 
 

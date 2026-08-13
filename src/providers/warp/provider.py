@@ -27,13 +27,13 @@ class WarpProvider:
 
         nodes = []
 
-        for idx, (host, port) in enumerate(self.endpoints, 1):
+        for endpoint in self.endpoints:
 
             node = {
-                "name": f"[WARP] Cloudflare #{idx}",
+                "name": f"[WARP] {endpoint['name']}",
                 "type": "wireguard",
-                "server": host,
-                "port": port,
+                "server": endpoint["server"],
+                "port": endpoint["port"],
 
                 "ip": account["ipv4"],
 
