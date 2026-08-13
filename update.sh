@@ -21,18 +21,16 @@ python3 src/checker.py cache/imported/proxies.json cache/filtered/available.json
 AVAIL=$(jq '. | length' cache/filtered/available.json 2>/dev/null || echo "0")
 echo "  Working proxies: $AVAIL"
 
-echo "[3/4] Split by categories"
-python3 src/splitter.py cache/filtered/available.json cache/filtered/ru.json cache/filtered/foreign.json
+echo "[3/4] Prepare proxy pool"
 
-RU_COUNT=$(jq '. | length' cache/filtered/ru.json 2>/dev/null || echo "0")
-FOREIGN_COUNT=$(jq '. | length' cache/filtered/foreign.json 2>/dev/null || echo "0")
-echo "  Russian: $RU_COUNT"
-echo "  Foreign: $FOREIGN_COUNT"
+cp cache/filtered/available.json cache/filtered/all.json
+
+POOL_COUNT=$(jq '. | length' cache/filtered/all.json 2>/dev/null || echo "0")
+echo "  Proxy pool: $POOL_COUNT"
 
 echo "[4/4] Generate config"
 python3 src/generator.py \
-    --ru cache/filtered/ru.json \
-    --foreign cache/filtered/foreign.json \
+    --proxies cache/filtered/all.json \
     --ru-direct domains:lists/ru_direct_domains.txt \
     --ru-direct ips:lists/ru_direct_ips.txt \
     --output publish/mihomo.yaml

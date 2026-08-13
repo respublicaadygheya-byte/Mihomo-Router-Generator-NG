@@ -95,16 +95,15 @@ def clean_proxy(proxy):
     return proxy
 
 
-def generate_config(ru_proxies, foreign_proxies, ru_domains, ru_ips):
+def generate_config(proxy_list, ru_domains, ru_ips):
     """Генерация простой целевой Mihomo-схемы."""
 
     proxies = []
-    foreign_names = []
+    proxy_names = []
 
-    # ВСЕ VPN-ноды идут в FOREIGN.
-    # RU/FOREIGN — только классификация на этапе splitter,
-    # но в итоговом YAML все ноды являются VPN-нodes.
-    all_proxies = list(ru_proxies) + list(foreign_proxies)
+    # Все VPN-ноды идут в единый пул.
+    # FOREIGN содержит весь набор доступных прокси.
+    all_proxies = list(proxy_list)
 
     for p in all_proxies:
         p = clean_proxy(p)
@@ -112,7 +111,7 @@ def generate_config(ru_proxies, foreign_proxies, ru_domains, ru_ips):
         original_name = p.get('name', 'PROXY')
         p['name'] = unique_name(sanitize_name(original_name))
 
-        foreign_names.append(p['name'])
+        proxy_names.append(p['name'])
         proxies.append(p)
 
     # --------------------------------------------------------
@@ -169,7 +168,7 @@ def generate_config(ru_proxies, foreign_proxies, ru_domains, ru_ips):
                 'type': 'select',
                 'proxies': [
                     'FOREIGN'
-                ] + foreign_names
+                ] + proxy_names
             },
             {
                 'name': 'FOREIGN',
@@ -177,7 +176,7 @@ def generate_config(ru_proxies, foreign_proxies, ru_domains, ru_ips):
                 'url': 'http://cp.cloudflare.com/generate_204',
                 'interval': 300,
                 'tolerance': 100,
-                'proxies': foreign_names
+                'proxies': proxy_names
             }
         ],
 
@@ -192,15 +191,18 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
+        '--proxies',
+        help='All proxy JSON'
+    )
+
+    parser.add_argument(
         '--ru',
-        required=True,
-        help='RU proxies JSON'
+        help='Legacy RU proxies JSON'
     )
 
     parser.add_argument(
         '--foreign',
-        required=True,
-        help='Foreign proxies JSON'
+        help='Legacy foreign proxies JSON'
     )
 
     parser.add_argument(
@@ -218,20 +220,20 @@ def main():
     args = parser.parse_args()
 
 
-    try:
-        with open(args.ru, 'r', encoding='utf-8') as f:
-            ru_proxies = json.load(f)
+    proxies = []
 
-    except FileNotFoundError:
-        ru_proxies = []
+    if args.proxies:
+        with open(args.proxies, 'r', encoding='utf-8') as f:
+            proxies = json.load(f)
 
+    else:
+        if args.ru:
+            with open(args.ru, 'r', encoding='utf-8') as f:
+                proxies.extend(json.load(f))
 
-    try:
-        with open(args.foreign, 'r', encoding='utf-8') as f:
-            foreign_proxies = json.load(f)
-
-    except FileNotFoundError:
-        foreign_proxies = []
+        if args.foreign:
+            with open(args.foreign, 'r', encoding='utf-8') as f:
+                proxies.extend(json.load(f))
 
 
     ru_domains = []
@@ -254,8 +256,7 @@ def main():
 
 
     config = generate_config(
-        ru_proxies,
-        foreign_proxies,
+        proxies,
         ru_domains,
         ru_ips
     )
@@ -273,8 +274,7 @@ def main():
 
 
     print(f"✅ Конфиг сгенерирован: {args.output}")
-    print(f"   Российских прокси: {len(ru_proxies)}")
-    print(f"   Иностранных прокси: {len(foreign_proxies)}")
+    print(f"   Всего прокси: {len(proxies)}")
     print(f"   DIRECT доменов: {len(ru_domains)}")
     print(f"   DIRECT IP: {len(ru_ips)}")
 
