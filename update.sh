@@ -21,9 +21,13 @@ python3 src/checker.py cache/imported/proxies.json cache/filtered/available.json
 AVAIL=$(jq '. | length' cache/filtered/available.json 2>/dev/null || echo "0")
 echo "  Working proxies: $AVAIL"
 
-echo "[3/4] Prepare proxy pool"
+echo "[3/4] Generate providers"
 
-cp cache/filtered/available.json cache/filtered/all.json
+python3 -m src.providers.warp.provider
+
+echo "[3/4] Merge proxy pool"
+
+python3 src/merge_providers.py
 
 POOL_COUNT=$(jq '. | length' cache/filtered/all.json 2>/dev/null || echo "0")
 echo "  Proxy pool: $POOL_COUNT"
