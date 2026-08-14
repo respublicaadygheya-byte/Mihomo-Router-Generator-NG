@@ -85,13 +85,28 @@ def main():
     # Удаляем из proxy-groups ссылки на отброшенные proxy
     valid_names = {p["name"] for p in valid}
 
+    # Names of proxy-groups must also survive filtering.
+    # Otherwise nested groups like WARP AUTO disappear.
+    group_names = {
+        g["name"]
+        for g in config.get("proxy-groups", [])
+    }
+
+    special_names = {
+        "DIRECT",
+        "REJECT",
+    }
+
     for group in config.get("proxy-groups", []):
         if "proxies" in group:
             group["proxies"] = [
                 name
                 for name in group["proxies"]
-                if name in valid_names
-                or name in {"DIRECT", "REJECT", "FOREIGN", "PROXY"}
+                if (
+                    name in valid_names
+                    or name in group_names
+                    or name in special_names
+                )
             ]
 
     with open(output_file, "w", encoding="utf-8") as f:
