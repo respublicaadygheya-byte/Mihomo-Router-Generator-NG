@@ -9,30 +9,24 @@ WARP_ACCOUNT_FILE = WARP_CACHE_DIR / "account.json"
 WARP_OUTPUT_FILE = PROVIDERS_CACHE_DIR / "warp.json"
 
 
-WARP_ENDPOINTS = [
+FALLBACK_WARP_SERVERS = [
     {
-        "name": "Cloudflare EU-1",
+        "name": "API Endpoint",
+        "use_account_server": True,
+    },
+    {
+        "name": "Anycast-2",
+        "server": "188.114.97.1",
+        "port": 2408,
+    },
+    {
+        "name": "EU-1",
         "server": "162.159.192.1",
         "port": 2408,
     },
     {
-        "name": "Cloudflare EU-2",
+        "name": "EU-2",
         "server": "162.159.192.2",
-        "port": 2408,
-    },
-    {
-        "name": "Cloudflare EU-3",
-        "server": "162.159.193.1",
-        "port": 2408,
-    },
-    {
-        "name": "Cloudflare Anycast-1",
-        "server": "188.114.96.1",
-        "port": 2408,
-    },
-    {
-        "name": "Cloudflare Anycast-2",
-        "server": "188.114.97.1",
         "port": 2408,
     },
 ]

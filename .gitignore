@@ -5,3 +5,7 @@ publish/
 *.diff
 __pycache__/
 .DS_Store
+
+# WARP sensitive cache
+cache/warp/
+cache/providers/warp.json

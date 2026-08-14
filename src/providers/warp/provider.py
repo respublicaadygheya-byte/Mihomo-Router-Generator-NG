@@ -2,7 +2,7 @@ import json
 from typing import List, Dict, Any
 
 from .config import (
-    WARP_ENDPOINTS,
+    FALLBACK_WARP_SERVERS,
     WARP_OUTPUT_FILE,
     PROVIDERS_CACHE_DIR,
 )
@@ -12,44 +12,48 @@ from .register import get_or_register_account
 
 class WarpProvider:
 
-    def __init__(self, endpoints=None):
-        self.endpoints = endpoints or WARP_ENDPOINTS
-
-
     def generate_nodes(self) -> List[Dict[str, Any]]:
 
         account = get_or_register_account()
 
         if not account:
-            print("[WARP] No account")
+            print("[WARP] No account available")
             return []
-
 
         nodes = []
 
-        for endpoint in self.endpoints:
+        for target in FALLBACK_WARP_SERVERS:
+
+            server = (
+                account["server"]
+                if target.get("use_account_server")
+                else target["server"]
+            )
+
+            port = (
+                account.get("port", 2408)
+                if target.get("use_account_server")
+                else target.get("port", 2408)
+            )
 
             node = {
-                "name": f"[WARP] {endpoint['name']}",
+                "name": f"[WARP] Cloudflare {target['name']}",
                 "type": "wireguard",
-                "server": endpoint["server"],
-                "port": endpoint["port"],
-
+                "server": server,
+                "port": port,
                 "ip": account["ipv4"],
-
                 "public-key": account["peer_public_key"],
                 "private-key": account["private_key"],
-
-                "reserved": account["reserved"],
-
+                "reserved": account.get(
+                    "reserved",
+                    [0, 0, 0]
+                ),
                 "udp": True,
-                "mtu": 1280
+                "mtu": 1280,
             }
-
 
             if account.get("ipv6"):
                 node["ipv6"] = account["ipv6"]
-
 
             nodes.append(node)
 
@@ -58,7 +62,6 @@ class WarpProvider:
             parents=True,
             exist_ok=True
         )
-
 
         with open(
             WARP_OUTPUT_FILE,
@@ -74,19 +77,16 @@ class WarpProvider:
 
 
         print(
-            f"[WARP] Generated {len(nodes)} nodes"
+            f"[WARP] Generated {len(nodes)} candidate nodes -> {WARP_OUTPUT_FILE}"
         )
 
         return nodes
 
 
-
 if __name__ == "__main__":
 
-    provider = WarpProvider()
-
-    nodes = provider.generate_nodes()
+    nodes = WarpProvider().generate_nodes()
 
     print(
-        f"Done: {len(nodes)}"
+        f"Done: generated {len(nodes)} WARP nodes."
     )
