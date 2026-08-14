@@ -4,6 +4,11 @@ import sys
 import argparse
 import yaml
 from pathlib import Path
+try:
+    from src.providers.warp_import.provider import load_warp_import
+except ModuleNotFoundError:
+    from providers.warp_import.provider import load_warp_import
+
 
 
 used_names = set()
@@ -152,6 +157,22 @@ def generate_config(proxy_list, ru_domains, ru_ips):
     #   └── url-test -> все VPN-ноды
     # --------------------------------------------------------
 
+    # --------------------------------------------------------
+    # Split WARP and normal VPN nodes
+    # --------------------------------------------------------
+
+    warp_names = [
+        p['name']
+        for p in proxies
+        if p.get('type') == 'wireguard'
+    ]
+
+    vpn_names = [
+        p['name']
+        for p in proxies
+        if p.get('type') != 'wireguard'
+    ]
+
     config = {
         'mixed-port': 7890,
         'allow-lan': True,
@@ -166,18 +187,34 @@ def generate_config(proxy_list, ru_domains, ru_ips):
             {
                 'name': 'PROXY',
                 'type': 'select',
-                'proxies': [
-                    'FOREIGN'
-                ] + proxy_names
+                'proxies': (
+                    (['FOREIGN'] if vpn_names else [])
+                    + (['🚀 WARP AUTO'] if warp_names else [])
+                    + ['DIRECT']
+                )
             },
-            {
-                'name': 'FOREIGN',
-                'type': 'url-test',
-                'url': 'http://cp.cloudflare.com/generate_204',
-                'interval': 300,
-                'tolerance': 100,
-                'proxies': proxy_names
-            }
+            *(
+                [{
+                    'name': 'FOREIGN',
+                    'type': 'url-test',
+                    'url': 'http://cp.cloudflare.com/generate_204',
+                    'interval': 300,
+                    'tolerance': 100,
+                    'proxies': vpn_names
+                }]
+                if vpn_names else []
+            ),
+            *(
+                [{
+                    'name': '🚀 WARP AUTO',
+                    'type': 'url-test',
+                    'url': 'http://cp.cloudflare.com/generate_204',
+                    'interval': 300,
+                    'tolerance': 50,
+                    'proxies': warp_names
+                }]
+                if warp_names else []
+            )
         ],
 
         'rules': rules
@@ -189,6 +226,12 @@ def generate_config(proxy_list, ru_domains, ru_ips):
 def main():
 
     parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        '--warp-import',
+        type=str,
+        help='Path to external AmneziaWG YAML file'
+    )
 
     parser.add_argument(
         '--proxies',
@@ -254,6 +297,11 @@ def main():
                 elif typ == 'ips':
                     ru_ips.extend(load_list(path))
 
+
+    if getattr(args, 'warp_import', None):
+        warp_nodes = load_warp_import(args.warp_import)
+        if warp_nodes:
+            proxies.extend(warp_nodes)
 
     config = generate_config(
         proxies,

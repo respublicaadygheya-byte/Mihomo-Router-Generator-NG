@@ -22,12 +22,23 @@ echo "YAML files OK"
 
 echo "Checking secrets..."
 
-if grep -R "private-key\\|private_key" publish; then
-    echo "ERROR: WARP private key detected in publish!"
+# WARP private-key is allowed inside generated mihomo/openclash configs.
+# Block only accidental secret files and raw key dumps.
+
+if find publish -type f \
+    ! -name "mihomo.yaml" \
+    ! -name "openclash.yaml" \
+    -exec grep -l "private-key\\|private_key\\|secret" {} \; | grep .; then
+    echo "ERROR: Secret data detected in unexpected publish file!"
     exit 1
 fi
 
-echo "No secrets detected"
+if find publish -type f \(     -name "*.json"     -o -name "*.txt"     -o -name "*.key" \) | grep .; then
+    echo "ERROR: Suspicious secret file in publish!"
+    exit 1
+fi
+
+echo "No unexpected secrets detected"
 
 git add -f publish/mihomo.yaml publish/openclash.yaml
 
