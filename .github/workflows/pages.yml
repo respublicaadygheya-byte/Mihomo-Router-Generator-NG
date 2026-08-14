@@ -11,7 +11,9 @@ permissions:
   id-token: write
 
 jobs:
+
   deploy:
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -19,17 +21,50 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
+
+
+      - name: Prepare site
+        run: |
+          mkdir -p site
+
+          cp publish/mihomo.yaml site/mihomo.yaml
+          cp publish/openclash.yaml site/openclash.yaml
+
+          cat > site/index.html <<'HTML'
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mihomo Router Generator</title>
+</head>
+
+<body>
+
+<h1>Mihomo Router Generator</h1>
+
+<ul>
+<li><a href="mihomo.yaml">Mihomo YAML</a></li>
+<li><a href="openclash.yaml">OpenClash YAML</a></li>
+</ul>
+
+</body>
+</html>
+HTML
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './publish'
+          path: ./site
 
-      - name: Deploy
+
+      - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -20,6 +20,13 @@ test -s publish/openclash.yaml
 
 echo "YAML files OK"
 
+mkdir -p site
+
+cp publish/mihomo.yaml site/mihomo.yaml
+cp publish/openclash.yaml site/openclash.yaml
+
+echo "GitHub Pages files updated"
+
 echo "Checking secrets..."
 
 # WARP private-key is allowed inside generated mihomo/openclash configs.

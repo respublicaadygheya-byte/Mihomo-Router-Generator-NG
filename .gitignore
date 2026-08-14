@@ -9,3 +9,6 @@ __pycache__/
 # WARP sensitive cache
 cache/warp/
 cache/providers/warp.json
+
+# GitHub Pages generated files
+site/*.yaml
