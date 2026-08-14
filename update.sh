@@ -52,3 +52,20 @@ echo "=============================="
 echo "UPDATE COMPLETE"
 echo "=============================="
 ls -lh publish/
+
+echo
+echo "Checking Git changes..."
+
+cd /root/Mihomo-Router-Generator-NG
+
+git add -f publish/mihomo.yaml publish/openclash.yaml
+
+if git diff --cached --quiet; then
+    echo "No config changes detected."
+else
+    git commit -m "Auto-update Mihomo configs: $(date '+%Y-%m-%d %H:%M:%S')"
+    git push origin main
+    echo "GitHub push completed."
+fi
+
+echo "Auto update finished: $(date)"
