@@ -1,0 +1,70 @@
+[
+  {
+    "name": "[WARP] Cloudflare API Endpoint",
+    "type": "wireguard",
+    "server": "162.159.192.8",
+    "port": 2408,
+    "ip": "172.16.0.2",
+    "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+    "private-key": "mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=",
+    "reserved": [
+      0,
+      0,
+      0
+    ],
+    "udp": true,
+    "mtu": 1280,
+    "ipv6": "2606:4700:110:82e9:9a15:9bc2:59c9:daa6"
+  },
+  {
+    "name": "[WARP] Cloudflare Anycast-2",
+    "type": "wireguard",
+    "server": "188.114.97.1",
+    "port": 2408,
+    "ip": "172.16.0.2",
+    "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+    "private-key": "mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=",
+    "reserved": [
+      0,
+      0,
+      0
+    ],
+    "udp": true,
+    "mtu": 1280,
+    "ipv6": "2606:4700:110:82e9:9a15:9bc2:59c9:daa6"
+  },
+  {
+    "name": "[WARP] Cloudflare EU-1",
+    "type": "wireguard",
+    "server": "162.159.192.1",
+    "port": 2408,
+    "ip": "172.16.0.2",
+    "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+    "private-key": "mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=",
+    "reserved": [
+      0,
+      0,
+      0
+    ],
+    "udp": true,
+    "mtu": 1280,
+    "ipv6": "2606:4700:110:82e9:9a15:9bc2:59c9:daa6"
+  },
+  {
+    "name": "[WARP] Cloudflare EU-2",
+    "type": "wireguard",
+    "server": "162.159.192.2",
+    "port": 2408,
+    "ip": "172.16.0.2",
+    "public-key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+    "private-key": "mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=",
+    "reserved": [
+      0,
+      0,
+      0
+    ],
+    "udp": true,
+    "mtu": 1280,
+    "ipv6": "2606:4700:110:82e9:9a15:9bc2:59c9:daa6"
+  }
+]
