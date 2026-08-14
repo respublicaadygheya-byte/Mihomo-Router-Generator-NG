@@ -12,7 +12,6 @@ permissions:
 
 jobs:
   deploy:
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -20,7 +19,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -34,25 +32,22 @@ jobs:
           cp publish/mihomo.yaml site/mihomo.yaml
           cp publish/openclash.yaml site/openclash.yaml
 
-          cat > site/index.html <<'HTML'
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Mihomo Router Generator</title>
-</head>
-
-<body>
-<h1>Mihomo Router Generator</h1>
-
-<ul>
-<li><a href="mihomo.yaml">Mihomo YAML</a></li>
-<li><a href="openclash.yaml">OpenClash YAML</a></li>
-</ul>
-
-</body>
-</html>
-HTML
+          printf '%s\n' \
+            '<!DOCTYPE html>' \
+            '<html>' \
+            '<head>' \
+            '<meta charset="utf-8">' \
+            '<title>Mihomo Router Generator</title>' \
+            '</head>' \
+            '<body>' \
+            '<h1>Mihomo Router Generator</h1>' \
+            '<ul>' \
+            '<li><a href="mihomo.yaml">Mihomo YAML</a></li>' \
+            '<li><a href="openclash.yaml">OpenClash YAML</a></li>' \
+            '</ul>' \
+            '</body>' \
+            '</html>' \
+            > site/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
