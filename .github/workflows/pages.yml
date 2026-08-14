@@ -11,7 +11,6 @@ permissions:
   id-token: write
 
 jobs:
-
   deploy:
 
     environment:
@@ -25,9 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-
-      - name: Prepare site
+      - name: Prepare configs
         run: |
+          chmod +x update.sh
+          ./update.sh
+
           mkdir -p site
 
           cp publish/mihomo.yaml site/mihomo.yaml
@@ -42,7 +43,6 @@ jobs:
 </head>
 
 <body>
-
 <h1>Mihomo Router Generator</h1>
 
 <ul>
@@ -54,16 +54,13 @@ jobs:
 </html>
 HTML
 
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site
-
 
       - name: Deploy Pages
         id: deployment
