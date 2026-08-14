@@ -20,6 +20,15 @@ test -s publish/openclash.yaml
 
 echo "YAML files OK"
 
+echo "Checking secrets..."
+
+if grep -R "private-key\\|private_key" publish; then
+    echo "ERROR: WARP private key detected in publish!"
+    exit 1
+fi
+
+echo "No secrets detected"
+
 git add -f publish/mihomo.yaml publish/openclash.yaml
 
 if git diff --cached --quiet; then
