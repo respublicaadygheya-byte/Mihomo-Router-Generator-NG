@@ -13,3 +13,10 @@ cache/providers/warp.json
 
 # GitHub Pages generated files
 site/*.yaml
+
+# Local backups
+*.before-*
+*.backup
+
+# Runtime cache
+cache/providers/*-history.json
