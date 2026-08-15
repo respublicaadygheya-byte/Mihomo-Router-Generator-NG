@@ -21,6 +21,7 @@ def get_free_port():
 
 
 def check_warp(node):
+
     port = get_free_port()
 
     cfg = {
@@ -33,7 +34,9 @@ def check_warp(node):
             {
                 "name": "TEST",
                 "type": "select",
-                "proxies": [node["name"]],
+                "proxies": [
+                    node["name"]
+                ],
             }
         ],
         "rules": [
@@ -41,16 +44,21 @@ def check_warp(node):
         ],
     }
 
+
     with tempfile.TemporaryDirectory() as tmp:
+
         cfg_file = Path(tmp) / "config.yaml"
 
+
         with open(cfg_file, "w", encoding="utf-8") as f:
+
             yaml.safe_dump(
                 cfg,
                 f,
                 allow_unicode=True,
                 sort_keys=False,
             )
+
 
         proc = subprocess.Popen(
             [
@@ -64,60 +72,76 @@ def check_warp(node):
             stderr=subprocess.DEVNULL,
         )
 
+
         try:
+
             deadline = time.time() + 5
 
             while time.time() < deadline:
+
                 with socket.socket(
                     socket.AF_INET,
                     socket.SOCK_STREAM,
                 ) as s:
-                    if s.connect_ex(("127.0.0.1", port)) == 0:
+
+                    if s.connect_ex(
+                        ("127.0.0.1", port)
+                    ) == 0:
                         break
 
                 time.sleep(0.1)
+
             else:
-                return False
+                return None
 
-            proxy_url = f"http://127.0.0.1:{port}"
 
-            response = requests.get(
+            proxy = f"http://127.0.0.1:{port}"
+
+
+            start = time.time()
+
+
+            r = requests.get(
                 TEST_URL,
                 proxies={
-                    "http": proxy_url,
-                    "https": proxy_url,
+                    "http": proxy,
+                    "https": proxy,
                 },
                 timeout=10,
             )
 
-            return response.status_code in (200, 204)
 
-        except Exception as exc:
-            print(
-                f"[WARP CHECK] "
-                f"{node.get('name', 'UNKNOWN')}: {exc}"
+            latency = round(
+                (time.time() - start) * 1000,
+                2
             )
-            return False
+
+
+            if r.status_code in (200, 204):
+
+                checked = node.copy()
+
+                checked["latency"] = latency
+                checked["alive"] = True
+
+                return checked
+
+
+            return None
+
+
+        except Exception:
+
+            return None
+
 
         finally:
+
             proc.terminate()
 
             try:
                 proc.wait(timeout=2)
+
             except subprocess.TimeoutExpired:
+
                 proc.kill()
-                proc.wait()
-
-
-if __name__ == "__main__":
-    from .provider import WarpProvider
-
-    nodes = WarpProvider().generate_nodes()
-
-    for node in nodes:
-        result = check_warp(node)
-
-        print(
-            f"{node['name']}: "
-            f"{'OK' if result else 'FAIL'}"
-        )

@@ -2,12 +2,13 @@ import json
 from typing import List, Dict, Any
 
 from .config import (
-    FALLBACK_WARP_SERVERS,
     WARP_OUTPUT_FILE,
     PROVIDERS_CACHE_DIR,
 )
 
 from .register import get_or_register_account
+from .scanner import scan_endpoints
+from .checker import check_warp
 
 
 class WarpProvider:
@@ -22,25 +23,22 @@ class WarpProvider:
 
         nodes = []
 
-        for target in FALLBACK_WARP_SERVERS:
+        endpoints = scan_endpoints()
 
-            server = (
-                account["server"]
-                if target.get("use_account_server")
-                else target["server"]
-            )
+        print(
+            f"[WARP] Testing {len(endpoints)} candidates..."
+        )
 
-            port = (
-                account.get("port", 2408)
-                if target.get("use_account_server")
-                else target.get("port", 2408)
-            )
+        for idx, target in enumerate(endpoints, start=1):
 
             node = {
-                "name": f"[WARP] Cloudflare {target['name']}",
+                "name": (
+                    f"[WARP] Auto-{idx} "
+                    f"{target['server']}"
+                ),
                 "type": "wireguard",
-                "server": server,
-                "port": port,
+                "server": target["server"],
+                "port": target["port"],
                 "ip": account["ipv4"],
                 "public-key": account["peer_public_key"],
                 "private-key": account["private_key"],
@@ -55,8 +53,35 @@ class WarpProvider:
             if account.get("ipv6"):
                 node["ipv6"] = account["ipv6"]
 
-            nodes.append(node)
+            checked = check_warp(node)
 
+            if checked:
+                nodes.append(checked)
+
+                print(
+                    f"[WARP] KEEP: {checked['name']} "
+                    f"{checked.get('latency')} ms"
+                )
+
+            else:
+                print(
+                    f"[WARP] DROP: {node['name']}"
+                )
+
+
+        nodes.sort(
+            key=lambda x: x.get(
+                "latency",
+                9999
+            )
+        )
+
+        print("[WARP] Sorted by latency:")
+        for n in nodes:
+            print(
+                f"  {n['name']} "
+                f"{n.get('latency')} ms"
+            )
 
         PROVIDERS_CACHE_DIR.mkdir(
             parents=True,
@@ -75,9 +100,8 @@ class WarpProvider:
                 ensure_ascii=False
             )
 
-
         print(
-            f"[WARP] Generated {len(nodes)} candidate nodes -> {WARP_OUTPUT_FILE}"
+            f"[WARP] Generated {len(nodes)} working nodes -> {WARP_OUTPUT_FILE}"
         )
 
         return nodes

@@ -167,10 +167,26 @@ def generate_config(proxy_list, ru_domains, ru_ips):
     # Split WARP and normal VPN nodes
     # --------------------------------------------------------
 
-    warp_names = [
-        p['name']
+    warp_nodes = [
+        p
         for p in proxies
         if p.get('type') == 'wireguard'
+    ]
+
+    warp_nodes.sort(
+        key=lambda x: x.get(
+            'latency',
+            9999
+        )
+    )
+
+    WARP_LIMIT = 50
+
+    warp_nodes = warp_nodes[:WARP_LIMIT]
+
+    warp_names = [
+        p['name']
+        for p in warp_nodes
     ]
 
     vpn_names = [
