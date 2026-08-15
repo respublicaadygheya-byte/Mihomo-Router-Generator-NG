@@ -11,6 +11,7 @@ from .config import (
 from .register import get_or_register_account
 from .scanner import scan_endpoints
 from .checker import check_warp
+from .awg_profiles import AWG_PROFILES
 
 
 
@@ -18,19 +19,9 @@ MAX_NODES = 100
 
 
 
-def add_awg(node):
+def add_awg(node, profile):
 
-    node["amnezia-wg-option"] = {
-        "jc": 4,
-        "jmin": 40,
-        "jmax": 70,
-        "s1": 0,
-        "s2": 0,
-        "h1": 1,
-        "h2": 2,
-        "h3": 3,
-        "h4": 4,
-    }
+    node["amnezia-wg-option"] = profile.copy()
 
     return node
 
@@ -136,9 +127,36 @@ class WarpProvider:
 
             if target.get("mode") == "amnezia":
 
-                node = add_awg(node)
+                for profile in AWG_PROFILES:
 
-                node["protocol"] = "amnezia-wg"
+                    awg_node = node.copy()
+
+                    awg_node = add_awg(
+                        awg_node,
+                        profile
+                    )
+
+                    awg_node["protocol"] = "amnezia-wg"
+
+                    awg_node["name"] = (
+                        f"[WARP] AWG {target['server']} jc{profile['jc']}"
+                    )
+
+                    checked = check_warp(awg_node)
+
+                    if checked:
+
+                        nodes.append(checked)
+
+                        print(
+                            "[WARP AWG KEEP]",
+                            awg_node["server"],
+                            profile["jc"],
+                            checked.get("latency")
+                        )
+
+                continue
+
 
                 node["name"] = (
                     f"[WARP] AWG {target['server']}"
