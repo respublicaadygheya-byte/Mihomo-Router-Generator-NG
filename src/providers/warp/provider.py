@@ -94,6 +94,12 @@ class WarpProvider:
                 "type":
                     "wireguard",
 
+                "provider":
+                    "warp",
+
+                "protocol":
+                    "wireguard",
+
                 "server":
                     target["server"],
 
@@ -131,6 +137,9 @@ class WarpProvider:
             if target.get("mode") == "amnezia":
 
                 node = add_awg(node)
+
+                node["protocol"] = "amnezia-wg"
+
                 node["name"] = (
                     f"[WARP] AWG {target['server']}"
                 )
@@ -159,9 +168,22 @@ class WarpProvider:
 
         for n in nodes:
 
-            unique[
-                n["server"]
-            ] = n
+            key = n["server"]
+
+            if key in unique:
+
+                merged = unique[key].copy()
+
+                for k, v in n.items():
+
+                    if v not in (None, ""):
+                        merged[k] = v
+
+                unique[key] = merged
+
+            else:
+
+                unique[key] = n
 
 
 
