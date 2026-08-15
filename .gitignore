@@ -20,3 +20,4 @@ site/*.yaml
 
 # Runtime cache
 cache/providers/*-history.json
+backups/

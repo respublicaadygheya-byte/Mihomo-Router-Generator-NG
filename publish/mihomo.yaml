@@ -3216,300 +3216,12 @@ proxies:
     path: /v1
     headers:
       Host: rzd.ru
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-6 WARP-AWG-6 🇩🇪 DE
-  server: de.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-7 WARP-AWG-7 🇪🇪 EE
-  server: ee.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-3 WARP-AWG-3 🇫🇮 FI
-  server: fi.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-5 WARP-AWG-5 🇱🇻 LV
-  server: lv.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-2 WARP-AWG-2 🇳🇱 NL
-  server: nl.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-1 WARP-AWG-1 🇵🇱 PL
-  server: pl.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-4 WARP-AWG-4 🇷🇺 RU
-  server: ru0.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-9 WARP-AWG-9 LTE 🇩🇪 DE
+- name: WARP AWG tel.de.tribukvy.ltd
+  type: wireguard
+  provider: warp
+  protocol: amnezia-wg
   server: tel.de.tribukvy.ltd
   port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-10 WARP-AWG-10 LTE 🇫🇮 FI
-  server: tel.fi.tribukvy.ltd
-  port: 500
-- type: wireguard
-  ip: 172.16.0.2
-  ipv6: 2606:4700:110:85f2:16e:7411:19a0:93fb
-  private-key: dxlB+vg0leyCJ6XuYCxLZoxkq005Ec+4Rc9UJdy/34o=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  allowed-ips:
-  - 0.0.0.0/0
-  udp: true
-  mtu: 1280
-  remote-dns-resolve: true
-  dns:
-  - 1.1.1.1
-  - 1.0.0.1
-  - 2606:4700:4700::1111
-  - 2606:4700:4700::1001
-  amnezia-wg-option:
-    jc: 4
-    jmin: 40
-    jmax: 70
-    s1: 0
-    s2: 0
-    h1: 1
-    h2: 2
-    h3: 3
-    h4: 4
-    i1: <b 0xc800000001018800002b45615e996de27ff5ec5f583061ab38eac69fd8fec356802847cd1c7c15a87402bb0a433d4054defedc066e>
-  name: WARP-AWG-8 WARP-AWG-8 LTE 🇵🇱 PL
-  server: tel.pl.tribukvy.ltd
-  port: 500
-- name: WARP Auto 162.159.192.1
-  type: wireguard
-  server: 162.159.192.1
-  port: 2408
   ip: 172.16.0.2
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
   private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
@@ -3520,9 +3232,75 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 87.87
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+  latency: 224.74
+- name: WARP AWG tel.fi.tribukvy.ltd
+  type: wireguard
+  provider: warp
+  protocol: amnezia-wg
+  server: tel.fi.tribukvy.ltd
+  port: 500
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+  latency: 305.04
+- name: WARP AWG tel.pl.tribukvy.ltd
+  type: wireguard
+  provider: warp
+  protocol: amnezia-wg
+  server: tel.pl.tribukvy.ltd
+  port: 500
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  amnezia-wg-option:
+    jc: 4
+    jmin: 40
+    jmax: 70
+    s1: 0
+    s2: 0
+    h1: 1
+    h2: 2
+    h3: 3
+    h4: 4
+  latency: 183.37
 - name: WARP Auto 162.159.192.10
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.10
   port: 2408
   ip: 172.16.0.2
@@ -3535,9 +3313,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 82.59
+  latency: 73.7
 - name: WARP Auto 162.159.192.11
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.11
   port: 2408
   ip: 172.16.0.2
@@ -3550,9 +3330,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 61.4
+  latency: 69.04
 - name: WARP Auto 162.159.192.12
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.12
   port: 2408
   ip: 172.16.0.2
@@ -3565,39 +3347,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 49.56
-- name: WARP Auto 162.159.192.13
-  type: wireguard
-  server: 162.159.192.13
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 59.57
-- name: WARP Auto 162.159.192.14
-  type: wireguard
-  server: 162.159.192.14
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 64.66
+  latency: 52.95
 - name: WARP Auto 162.159.192.15
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.15
   port: 2408
   ip: 172.16.0.2
@@ -3610,9 +3364,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 77.29
+  latency: 59.57
 - name: WARP Auto 162.159.192.16
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.16
   port: 2408
   ip: 172.16.0.2
@@ -3625,24 +3381,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 102.79
-- name: WARP Auto 162.159.192.17
-  type: wireguard
-  server: 162.159.192.17
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 93.99
+  latency: 51.39
 - name: WARP Auto 162.159.192.18
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.18
   port: 2408
   ip: 172.16.0.2
@@ -3655,24 +3398,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 72.59
-- name: WARP Auto 162.159.192.19
-  type: wireguard
-  server: 162.159.192.19
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 49.16
+  latency: 71.51
 - name: WARP Auto 162.159.192.2
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.2
   port: 2408
   ip: 172.16.0.2
@@ -3685,24 +3415,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 54.98
-- name: WARP Auto 162.159.192.20
-  type: wireguard
-  server: 162.159.192.20
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 57.47
+  latency: 56.13
 - name: WARP Auto 162.159.192.21
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.21
   port: 2408
   ip: 172.16.0.2
@@ -3715,9 +3432,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 112.89
+  latency: 73.07
 - name: WARP Auto 162.159.192.22
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.22
   port: 2408
   ip: 172.16.0.2
@@ -3730,9 +3449,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 73.13
+  latency: 67.71
 - name: WARP Auto 162.159.192.23
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.23
   port: 2408
   ip: 172.16.0.2
@@ -3745,9 +3466,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 71.44
+  latency: 76.7
 - name: WARP Auto 162.159.192.24
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.24
   port: 2408
   ip: 172.16.0.2
@@ -3760,9 +3483,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 60.38
+  latency: 56.86
 - name: WARP Auto 162.159.192.25
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.25
   port: 2408
   ip: 172.16.0.2
@@ -3775,9 +3500,28 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 101.14
+  latency: 73.77
+- name: WARP Auto 162.159.192.26
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.192.26
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 58.52
 - name: WARP Auto 162.159.192.27
   type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.27
   port: 2408
   ip: 172.16.0.2
@@ -3790,1179 +3534,11 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 54.35
-- name: WARP Auto 162.159.192.29
-  type: wireguard
-  server: 162.159.192.29
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 104.62
-- name: WARP Auto 162.159.192.3
-  type: wireguard
-  server: 162.159.192.3
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 90.19
-- name: WARP Auto 162.159.192.30
-  type: wireguard
-  server: 162.159.192.30
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 67.11
-- name: WARP Auto 162.159.192.31
-  type: wireguard
-  server: 162.159.192.31
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 47.31
-- name: WARP Auto 162.159.192.32
-  type: wireguard
-  server: 162.159.192.32
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 56.18
-- name: WARP Auto 162.159.192.4
-  type: wireguard
-  server: 162.159.192.4
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 51.19
-- name: WARP Auto 162.159.192.5
-  type: wireguard
-  server: 162.159.192.5
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 60.53
-- name: WARP Auto 162.159.192.6
-  type: wireguard
-  server: 162.159.192.6
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 78.28
-- name: WARP Auto 162.159.192.7
-  type: wireguard
-  server: 162.159.192.7
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 84.5
-- name: WARP Auto 162.159.192.8
-  type: wireguard
-  server: 162.159.192.8
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 61.11
-- name: WARP Auto 162.159.192.9
-  type: wireguard
-  server: 162.159.192.9
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 57.04
-- name: WARP Auto 162.159.193.14
-  type: wireguard
-  server: 162.159.193.14
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 51.46
-- name: WARP Auto 162.159.193.16
-  type: wireguard
-  server: 162.159.193.16
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 81.19
-- name: WARP Auto 162.159.193.18
-  type: wireguard
-  server: 162.159.193.18
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 59.37
-- name: WARP Auto 162.159.193.2
-  type: wireguard
-  server: 162.159.193.2
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 47.16
-- name: WARP Auto 162.159.193.23
-  type: wireguard
-  server: 162.159.193.23
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 87.74
-- name: WARP Auto 162.159.193.27
-  type: wireguard
-  server: 162.159.193.27
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 69.2
-- name: WARP Auto 162.159.193.29
-  type: wireguard
-  server: 162.159.193.29
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 67.06
-- name: WARP Auto 162.159.193.30
-  type: wireguard
-  server: 162.159.193.30
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 86.37
-- name: WARP Auto 162.159.193.32
-  type: wireguard
-  server: 162.159.193.32
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 71.13
-- name: WARP Auto 162.159.193.4
-  type: wireguard
-  server: 162.159.193.4
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 67.47
-- name: WARP Auto 162.159.193.7
-  type: wireguard
-  server: 162.159.193.7
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 56.77
-- name: WARP Auto 162.159.193.8
-  type: wireguard
-  server: 162.159.193.8
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 59.72
-- name: WARP Auto 188.114.96.10
-  type: wireguard
-  server: 188.114.96.10
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 101.07
-- name: WARP Auto 188.114.96.12
-  type: wireguard
-  server: 188.114.96.12
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 89.65
-- name: WARP Auto 188.114.96.14
-  type: wireguard
-  server: 188.114.96.14
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 57.15
-- name: WARP Auto 188.114.96.15
-  type: wireguard
-  server: 188.114.96.15
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 97.67
-- name: WARP Auto 188.114.96.16
-  type: wireguard
-  server: 188.114.96.16
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 87.28
-- name: WARP Auto 188.114.96.17
-  type: wireguard
-  server: 188.114.96.17
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 67.21
-- name: WARP Auto 188.114.96.18
-  type: wireguard
-  server: 188.114.96.18
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 73.68
-- name: WARP Auto 188.114.96.19
-  type: wireguard
-  server: 188.114.96.19
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 80.36
-- name: WARP Auto 188.114.96.2
-  type: wireguard
-  server: 188.114.96.2
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 67.55
-- name: WARP Auto 188.114.96.20
-  type: wireguard
-  server: 188.114.96.20
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 80.3
-- name: WARP Auto 188.114.96.22
-  type: wireguard
-  server: 188.114.96.22
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 96.21
-- name: WARP Auto 188.114.96.23
-  type: wireguard
-  server: 188.114.96.23
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 60.82
-- name: WARP Auto 188.114.96.24
-  type: wireguard
-  server: 188.114.96.24
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 86.23
-- name: WARP Auto 188.114.96.25
-  type: wireguard
-  server: 188.114.96.25
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 60.46
-- name: WARP Auto 188.114.96.26
-  type: wireguard
-  server: 188.114.96.26
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 93.33
-- name: WARP Auto 188.114.96.27
-  type: wireguard
-  server: 188.114.96.27
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 55.82
-- name: WARP Auto 188.114.96.28
-  type: wireguard
-  server: 188.114.96.28
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 98.05
-- name: WARP Auto 188.114.96.29
-  type: wireguard
-  server: 188.114.96.29
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 61.13
-- name: WARP Auto 188.114.96.3
-  type: wireguard
-  server: 188.114.96.3
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 66.62
-- name: WARP Auto 188.114.96.30
-  type: wireguard
-  server: 188.114.96.30
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 97.75
-- name: WARP Auto 188.114.96.31
-  type: wireguard
-  server: 188.114.96.31
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 105.8
-- name: WARP Auto 188.114.96.32
-  type: wireguard
-  server: 188.114.96.32
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 105.97
-- name: WARP Auto 188.114.96.4
-  type: wireguard
-  server: 188.114.96.4
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 87.76
-- name: WARP Auto 188.114.96.5
-  type: wireguard
-  server: 188.114.96.5
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 86.97
-- name: WARP Auto 188.114.96.6
-  type: wireguard
-  server: 188.114.96.6
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 98.82
-- name: WARP Auto 188.114.97.1
-  type: wireguard
-  server: 188.114.97.1
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 50.01
-- name: WARP Auto 188.114.97.10
-  type: wireguard
-  server: 188.114.97.10
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 55.94
-- name: WARP Auto 188.114.97.11
-  type: wireguard
-  server: 188.114.97.11
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 98.86
-- name: WARP Auto 188.114.97.12
-  type: wireguard
-  server: 188.114.97.12
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 103.47
-- name: WARP Auto 188.114.97.13
-  type: wireguard
-  server: 188.114.97.13
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 85.63
-- name: WARP Auto 188.114.97.14
-  type: wireguard
-  server: 188.114.97.14
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 53.87
-- name: WARP Auto 188.114.97.15
-  type: wireguard
-  server: 188.114.97.15
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 78.13
-- name: WARP Auto 188.114.97.16
-  type: wireguard
-  server: 188.114.97.16
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 88.75
-- name: WARP Auto 188.114.97.17
-  type: wireguard
-  server: 188.114.97.17
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 53.63
-- name: WARP Auto 188.114.97.19
-  type: wireguard
-  server: 188.114.97.19
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 68.81
-- name: WARP Auto 188.114.97.2
-  type: wireguard
-  server: 188.114.97.2
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 65.18
-- name: WARP Auto 188.114.97.20
-  type: wireguard
-  server: 188.114.97.20
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 59.99
-- name: WARP Auto 188.114.97.21
-  type: wireguard
-  server: 188.114.97.21
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 95.46
-- name: WARP Auto 188.114.97.22
-  type: wireguard
-  server: 188.114.97.22
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 100.74
-- name: WARP Auto 188.114.97.24
-  type: wireguard
-  server: 188.114.97.24
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 87.25
-- name: WARP Auto 188.114.97.25
-  type: wireguard
-  server: 188.114.97.25
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 63.39
-- name: WARP Auto 188.114.97.26
-  type: wireguard
-  server: 188.114.97.26
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 58.58
-- name: WARP Auto 188.114.97.28
-  type: wireguard
-  server: 188.114.97.28
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 95.63
-- name: WARP Auto 188.114.97.29
-  type: wireguard
-  server: 188.114.97.29
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 85.26
-- name: WARP Auto 188.114.97.3
-  type: wireguard
-  server: 188.114.97.3
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 102.95
-- name: WARP Auto 188.114.97.30
-  type: wireguard
-  server: 188.114.97.30
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 86.33
-- name: WARP Auto 188.114.97.31
-  type: wireguard
-  server: 188.114.97.31
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 64.99
-- name: WARP Auto 188.114.97.32
-  type: wireguard
-  server: 188.114.97.32
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 72.5
-- name: WARP Auto 188.114.97.4
-  type: wireguard
-  server: 188.114.97.4
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 74.09
-- name: WARP Auto 188.114.97.5
-  type: wireguard
-  server: 188.114.97.5
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 106.6
-- name: WARP Auto 188.114.97.6
-  type: wireguard
-  server: 188.114.97.6
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 50.85
-- name: WARP Auto 188.114.97.7
-  type: wireguard
-  server: 188.114.97.7
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 76.46
-- name: WARP Auto 188.114.97.8
-  type: wireguard
-  server: 188.114.97.8
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 74.48
-- name: WARP Auto 188.114.97.9
-  type: wireguard
-  server: 188.114.97.9
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 64.9
-- name: WARP Auto-114 188.114.97.18
-  type: wireguard
-  server: 188.114.97.18
-  port: 2408
-  ip: 172.16.0.2
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
-  reserved:
-  - 0
-  - 0
-  - 0
-  udp: true
-  mtu: 1280
-  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 72.07
-- name: WARP Auto-28 162.159.192.28
-  type: wireguard
+  latency: 72.98
+- name: WARP Auto 162.159.192.28
+  type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 162.159.192.28
   port: 2408
   ip: 172.16.0.2
@@ -4975,10 +3551,12 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 79.57
-- name: WARP Auto-73 188.114.96.9
+  latency: 62.03
+- name: WARP Auto 162.159.192.32
   type: wireguard
-  server: 188.114.96.9
+  provider: warp
+  protocol: wireguard
+  server: 162.159.192.32
   port: 2408
   ip: 172.16.0.2
   public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
@@ -4990,9 +3568,725 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 63.57
-- name: WARP Auto-85 188.114.96.21
+  latency: 76.71
+- name: WARP Auto 162.159.192.5
   type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.192.5
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 48.95
+- name: WARP Auto 162.159.192.7
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.192.7
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 78.31
+- name: WARP Auto 162.159.193.1
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.1
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 62.15
+- name: WARP Auto 162.159.193.10
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.10
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 62.63
+- name: WARP Auto 162.159.193.11
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.11
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 70.5
+- name: WARP Auto 162.159.193.12
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.12
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 64.44
+- name: WARP Auto 162.159.193.13
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.13
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 75.41
+- name: WARP Auto 162.159.193.14
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.14
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 74.16
+- name: WARP Auto 162.159.193.15
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.15
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 59.15
+- name: WARP Auto 162.159.193.16
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.16
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 77.75
+- name: WARP Auto 162.159.193.17
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.17
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 67.28
+- name: WARP Auto 162.159.193.18
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.18
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 66.84
+- name: WARP Auto 162.159.193.2
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.2
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 67.79
+- name: WARP Auto 162.159.193.20
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.20
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 74.71
+- name: WARP Auto 162.159.193.21
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.21
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 61.61
+- name: WARP Auto 162.159.193.23
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.23
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 60.92
+- name: WARP Auto 162.159.193.24
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.24
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 61.42
+- name: WARP Auto 162.159.193.25
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.25
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 67.35
+- name: WARP Auto 162.159.193.26
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.26
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 66.69
+- name: WARP Auto 162.159.193.28
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.28
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 70.22
+- name: WARP Auto 162.159.193.29
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.29
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 66.01
+- name: WARP Auto 162.159.193.3
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.3
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 58.46
+- name: WARP Auto 162.159.193.30
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.30
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 72.97
+- name: WARP Auto 162.159.193.31
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.31
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 61.27
+- name: WARP Auto 162.159.193.32
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.32
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 58.51
+- name: WARP Auto 162.159.193.4
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.4
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 67.66
+- name: WARP Auto 162.159.193.5
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.5
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 60.27
+- name: WARP Auto 162.159.193.6
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.6
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 54.6
+- name: WARP Auto 162.159.193.7
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.7
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 56.67
+- name: WARP Auto 162.159.193.8
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.8
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 62.29
+- name: WARP Auto 162.159.193.9
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 162.159.193.9
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 61.92
+- name: WARP Auto 188.114.96.1
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.1
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 73.34
+- name: WARP Auto 188.114.96.11
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.11
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 73.95
+- name: WARP Auto 188.114.96.12
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.12
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 67.12
+- name: WARP Auto 188.114.96.13
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.13
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 77.9
+- name: WARP Auto 188.114.96.14
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.14
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 78.19
+- name: WARP Auto 188.114.96.15
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.15
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 59.14
+- name: WARP Auto 188.114.96.16
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.16
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 68.67
+- name: WARP Auto 188.114.96.17
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.17
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 65.52
+- name: WARP Auto 188.114.96.18
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.18
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 74.71
+- name: WARP Auto 188.114.96.19
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.19
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 62.21
+- name: WARP Auto 188.114.96.20
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.20
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 61.65
+- name: WARP Auto 188.114.96.21
+  type: wireguard
+  provider: warp
+  protocol: wireguard
   server: 188.114.96.21
   port: 2408
   ip: 172.16.0.2
@@ -5005,13 +4299,711 @@ proxies:
   udp: true
   mtu: 1280
   ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
-  latency: 95.29
+  latency: 73.02
+- name: WARP Auto 188.114.96.22
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.22
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 56.28
+- name: WARP Auto 188.114.96.23
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.23
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 76.12
+- name: WARP Auto 188.114.96.24
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.24
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 60.5
+- name: WARP Auto 188.114.96.25
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.25
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 62.43
+- name: WARP Auto 188.114.96.26
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.26
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 47.38
+- name: WARP Auto 188.114.96.27
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.27
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 55.26
+- name: WARP Auto 188.114.96.28
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.28
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 67.12
+- name: WARP Auto 188.114.96.29
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.29
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 64.66
+- name: WARP Auto 188.114.96.3
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.3
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 60.69
+- name: WARP Auto 188.114.96.30
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.30
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 74.35
+- name: WARP Auto 188.114.96.31
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.31
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 63.87
+- name: WARP Auto 188.114.96.32
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.32
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 66.97
+- name: WARP Auto 188.114.96.4
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.4
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 71.33
+- name: WARP Auto 188.114.96.5
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.5
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 65.99
+- name: WARP Auto 188.114.96.6
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.6
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 74.31
+- name: WARP Auto 188.114.96.7
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.7
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 63.01
+- name: WARP Auto 188.114.96.8
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.8
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 72.62
+- name: WARP Auto 188.114.96.9
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.96.9
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 71.35
+- name: WARP Auto 188.114.97.1
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.1
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 60.51
+- name: WARP Auto 188.114.97.10
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.10
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 63.07
+- name: WARP Auto 188.114.97.11
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.11
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 68.47
+- name: WARP Auto 188.114.97.14
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.14
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 54.18
+- name: WARP Auto 188.114.97.15
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.15
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 74.24
+- name: WARP Auto 188.114.97.16
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.16
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 77.6
+- name: WARP Auto 188.114.97.18
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.18
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 72.28
+- name: WARP Auto 188.114.97.19
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.19
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 65.13
+- name: WARP Auto 188.114.97.2
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.2
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 66.7
+- name: WARP Auto 188.114.97.20
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.20
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 53.04
+- name: WARP Auto 188.114.97.22
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.22
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 73.76
+- name: WARP Auto 188.114.97.24
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.24
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 52.07
+- name: WARP Auto 188.114.97.25
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.25
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 70.62
+- name: WARP Auto 188.114.97.26
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.26
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 72.27
+- name: WARP Auto 188.114.97.27
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.27
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 68.26
+- name: WARP Auto 188.114.97.29
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.29
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 69.1
+- name: WARP Auto 188.114.97.3
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.3
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 56.67
+- name: WARP Auto 188.114.97.30
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.30
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 56.98
+- name: WARP Auto 188.114.97.32
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.32
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 50.12
+- name: WARP Auto 188.114.97.5
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.5
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 78.35
+- name: WARP Auto 188.114.97.7
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.7
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 63.19
+- name: WARP Auto 188.114.97.8
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.8
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 62.34
+- name: WARP Auto 188.114.97.9
+  type: wireguard
+  provider: warp
+  protocol: wireguard
+  server: 188.114.97.9
+  port: 2408
+  ip: 172.16.0.2
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  private-key: mJVFn+iDOZFNId22O0mC3W4BjrmnJNC1S0Xxq4odU2Q=
+  reserved:
+  - 0
+  - 0
+  - 0
+  udp: true
+  mtu: 1280
+  ipv6: 2606:4700:110:82e9:9a15:9bc2:59c9:daa6
+  latency: 77.48
 proxy-groups:
 - name: PROXY
   type: select
   proxies:
   - FOREIGN
   - 🚀 WARP AUTO
+  - 🔥 AWG AUTO
   - DIRECT
 - name: FOREIGN
   type: url-test
@@ -5274,198 +5266,114 @@ proxy-groups:
   interval: 300
   tolerance: 50
   proxies:
-  - WARP Auto 162.159.193.2
-  - WARP Auto 162.159.192.31
-  - WARP Auto 162.159.192.19
-  - WARP Auto 162.159.192.12
-  - WARP Auto 188.114.97.1
-  - WARP Auto 188.114.97.6
-  - WARP Auto 162.159.192.4
-  - WARP Auto 162.159.193.14
-  - WARP Auto 188.114.97.17
-  - WARP Auto 188.114.97.14
-  - WARP Auto 162.159.192.27
-  - WARP Auto 162.159.192.2
-  - WARP Auto 188.114.96.27
-  - WARP Auto 188.114.97.10
-  - WARP Auto 162.159.192.32
-  - WARP Auto 162.159.193.7
-  - WARP Auto 162.159.192.9
-  - WARP Auto 188.114.96.14
-  - WARP Auto 162.159.192.20
-  - WARP Auto 188.114.97.26
-  - WARP Auto 162.159.193.18
-  - WARP Auto 162.159.192.13
-  - WARP Auto 162.159.193.8
-  - WARP Auto 188.114.97.20
-  - WARP Auto 162.159.192.24
-  - WARP Auto 188.114.96.25
-  - WARP Auto 162.159.192.5
-  - WARP Auto 188.114.96.23
-  - WARP Auto 162.159.192.8
-  - WARP Auto 188.114.96.29
-  - WARP Auto 162.159.192.11
-  - WARP Auto 188.114.97.25
-  - WARP Auto-73 188.114.96.9
-  - WARP Auto 162.159.192.14
-  - WARP Auto 188.114.97.9
-  - WARP Auto 188.114.97.31
-  - WARP Auto 188.114.97.2
-  - WARP Auto 188.114.96.3
-  - WARP Auto 162.159.193.29
-  - WARP Auto 162.159.192.30
-  - WARP Auto 188.114.96.17
-  - WARP Auto 162.159.193.4
-  - WARP Auto 188.114.96.2
-  - WARP Auto 188.114.97.19
-  - WARP Auto 162.159.193.27
-  - WARP Auto 162.159.193.32
-  - WARP Auto 162.159.192.23
-  - WARP Auto-114 188.114.97.18
-  - WARP Auto 188.114.97.32
-  - WARP Auto 162.159.192.18
-  - WARP Auto 162.159.192.22
-  - WARP Auto 188.114.96.18
-  - WARP Auto 188.114.97.4
-  - WARP Auto 188.114.97.8
-  - WARP Auto 188.114.97.7
-  - WARP Auto 162.159.192.15
-  - WARP Auto 188.114.97.15
-  - WARP Auto 162.159.192.6
-  - WARP Auto-28 162.159.192.28
-  - WARP Auto 188.114.96.20
-  - WARP Auto 188.114.96.19
-  - WARP Auto 162.159.193.16
-  - WARP Auto 162.159.192.10
-  - WARP Auto 162.159.192.7
-  - WARP Auto 188.114.97.29
-  - WARP Auto 188.114.97.13
-  - WARP Auto 188.114.96.24
-  - WARP Auto 188.114.97.30
-  - WARP Auto 162.159.193.30
-  - WARP Auto 188.114.96.5
-  - WARP Auto 188.114.97.24
-  - WARP Auto 188.114.96.16
-  - WARP Auto 162.159.193.23
-  - WARP Auto 188.114.96.4
-  - WARP Auto 162.159.192.1
-  - WARP Auto 188.114.97.16
-  - WARP Auto 188.114.96.12
-  - WARP Auto 162.159.192.3
   - WARP Auto 188.114.96.26
-  - WARP Auto 162.159.192.17
-  - WARP Auto-85 188.114.96.21
-  - WARP Auto 188.114.97.21
-  - WARP Auto 188.114.97.28
-  - WARP Auto 188.114.96.22
-  - WARP Auto 188.114.96.15
-  - WARP Auto 188.114.96.30
-  - WARP Auto 188.114.96.28
-  - WARP Auto 188.114.96.6
-  - WARP Auto 188.114.97.11
-  - WARP Auto 188.114.97.22
-  - WARP Auto 188.114.96.10
-  - WARP Auto 162.159.192.25
+  - WARP Auto 162.159.192.5
+  - WARP Auto 188.114.97.32
   - WARP Auto 162.159.192.16
+  - WARP Auto 188.114.97.24
+  - WARP Auto 162.159.192.12
+  - WARP Auto 188.114.97.20
+  - WARP Auto 188.114.97.14
+  - WARP Auto 162.159.193.6
+  - WARP Auto 188.114.96.27
+  - WARP Auto 162.159.192.2
+  - WARP Auto 188.114.96.22
+  - WARP Auto 162.159.193.7
   - WARP Auto 188.114.97.3
-  - WARP Auto 188.114.97.12
-  - WARP Auto 162.159.192.29
+  - WARP Auto 162.159.192.24
+  - WARP Auto 188.114.97.30
+  - WARP Auto 162.159.193.3
+  - WARP Auto 162.159.193.32
+  - WARP Auto 162.159.192.26
+  - WARP Auto 188.114.96.15
+  - WARP Auto 162.159.193.15
+  - WARP Auto 162.159.192.15
+  - WARP Auto 162.159.193.5
+  - WARP Auto 188.114.96.24
+  - WARP Auto 188.114.97.1
+  - WARP Auto 188.114.96.3
+  - WARP Auto 162.159.193.23
+  - WARP Auto 162.159.193.31
+  - WARP Auto 162.159.193.24
+  - WARP Auto 162.159.193.21
+  - WARP Auto 188.114.96.20
+  - WARP Auto 162.159.193.9
+  - WARP Auto 162.159.192.28
+  - WARP Auto 162.159.193.1
+  - WARP Auto 188.114.96.19
+  - WARP Auto 162.159.193.8
+  - WARP Auto 188.114.97.8
+  - WARP Auto 188.114.96.25
+  - WARP Auto 162.159.193.10
+  - WARP Auto 188.114.96.7
+  - WARP Auto 188.114.97.10
+  - WARP Auto 188.114.97.7
   - WARP Auto 188.114.96.31
+  - WARP Auto 162.159.193.12
+  - WARP Auto 188.114.96.29
+  - WARP Auto 188.114.97.19
+  - WARP Auto 188.114.96.17
+  - WARP Auto 188.114.96.5
+  - WARP Auto 162.159.193.29
+  - WARP Auto 162.159.193.26
+  - WARP Auto 188.114.97.2
+  - WARP Auto 162.159.193.18
   - WARP Auto 188.114.96.32
-  - WARP Auto 188.114.97.5
+  - WARP Auto 188.114.96.12
+  - WARP Auto 188.114.96.28
+  - WARP Auto 162.159.193.17
+  - WARP Auto 162.159.193.25
+  - WARP Auto 162.159.193.4
+  - WARP Auto 162.159.192.22
+  - WARP Auto 162.159.193.2
+  - WARP Auto 188.114.97.27
+  - WARP Auto 188.114.97.11
+  - WARP Auto 188.114.96.16
+  - WARP Auto 162.159.192.11
+  - WARP Auto 188.114.97.29
+  - WARP Auto 162.159.193.28
+  - WARP Auto 162.159.193.11
+  - WARP Auto 188.114.97.25
+  - WARP Auto 188.114.96.4
+  - WARP Auto 188.114.96.9
+  - WARP Auto 162.159.192.18
+  - WARP Auto 188.114.97.26
+  - WARP Auto 188.114.97.18
+  - WARP Auto 188.114.96.8
+  - WARP Auto 162.159.193.30
+  - WARP Auto 162.159.192.27
+  - WARP Auto 188.114.96.21
   - WARP Auto 162.159.192.21
+  - WARP Auto 188.114.96.1
+  - WARP Auto 162.159.192.10
+  - WARP Auto 188.114.97.22
+  - WARP Auto 162.159.192.25
+  - WARP Auto 188.114.96.11
+  - WARP Auto 162.159.193.14
+  - WARP Auto 188.114.97.15
+  - WARP Auto 188.114.96.6
+  - WARP Auto 188.114.96.30
+  - WARP Auto 162.159.193.20
+  - WARP Auto 188.114.96.18
+  - WARP Auto 162.159.193.13
+  - WARP Auto 188.114.96.23
+  - WARP Auto 162.159.192.23
+  - WARP Auto 162.159.192.32
+  - WARP Auto 188.114.97.9
+  - WARP Auto 188.114.97.16
+  - WARP Auto 162.159.193.16
+  - WARP Auto 188.114.96.13
+  - WARP Auto 188.114.96.14
+  - WARP Auto 162.159.192.7
+  - WARP Auto 188.114.97.5
+- name: 🔥 AWG AUTO
+  type: url-test
+  url: http://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+  proxies:
+  - WARP AWG tel.pl.tribukvy.ltd
+  - WARP AWG tel.de.tribukvy.ltd
+  - WARP AWG tel.fi.tribukvy.ltd
 rules:
-- DOMAIN-SUFFIX,ru,DIRECT
-- DOMAIN-SUFFIX,рф,DIRECT
-- DOMAIN-SUFFIX,yandex.ru,DIRECT
-- DOMAIN-SUFFIX,yandex.com,DIRECT
-- DOMAIN-SUFFIX,ya.ru,DIRECT
-- DOMAIN-SUFFIX,vk.com,DIRECT
-- DOMAIN-SUFFIX,mail.ru,DIRECT
-- DOMAIN-SUFFIX,ok.ru,DIRECT
-- DOMAIN-SUFFIX,rambler.ru,DIRECT
-- DOMAIN-SUFFIX,rbc.ru,DIRECT
-- DOMAIN-SUFFIX,rt.com,DIRECT
-- DOMAIN-SUFFIX,sberbank.ru,DIRECT
-- DOMAIN-SUFFIX,tinkoff.ru,DIRECT
-- DOMAIN-SUFFIX,gazprom.ru,DIRECT
-- DOMAIN-SUFFIX,lenta.ru,DIRECT
-- DOMAIN-SUFFIX,gazeta.ru,DIRECT
-- DOMAIN-SUFFIX,mos.ru,DIRECT
-- DOMAIN-SUFFIX,gov.ru,DIRECT
-- DOMAIN-SUFFIX,edu.ru,DIRECT
-- IP-CIDR,5.255.0.0/16,DIRECT,no-resolve
-- IP-CIDR,5.45.0.0/16,DIRECT,no-resolve
-- IP-CIDR,31.13.0.0/16,DIRECT,no-resolve
-- IP-CIDR,37.9.0.0/16,DIRECT,no-resolve
-- IP-CIDR,37.140.0.0/16,DIRECT,no-resolve
-- IP-CIDR,46.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,62.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,77.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,80.64.0.0/16,DIRECT,no-resolve
-- IP-CIDR,85.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,87.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,88.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,89.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,91.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,92.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,93.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,94.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,95.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,128.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,129.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,130.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,131.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,132.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,133.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,134.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,135.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,136.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,137.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,138.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,139.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,141.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,142.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,143.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,144.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,145.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,146.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,147.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,148.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,149.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,151.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,152.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,153.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,154.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,155.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,156.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,157.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,158.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,159.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,160.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,161.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,162.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,163.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,164.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,165.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,166.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,167.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,168.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,169.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,170.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,171.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,172.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,173.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,174.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,175.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,176.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,178.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,185.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,188.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,193.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,194.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,195.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,212.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,213.0.0.0/16,DIRECT,no-resolve
-- IP-CIDR,217.0.0.0/16,DIRECT,no-resolve
 - MATCH,PROXY

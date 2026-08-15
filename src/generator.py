@@ -4,18 +4,6 @@ import sys
 import argparse
 import yaml
 from pathlib import Path
-try:
-    from src.providers.warp_import.provider import load_warp_import
-except ModuleNotFoundError:
-    from providers.warp_import.provider import load_warp_import
-
-
-try:
-    from src.warp_storage import merge_warp_history
-except ModuleNotFoundError:
-    from warp_storage import merge_warp_history
-
-
 
 used_names = set()
 
@@ -170,10 +158,25 @@ def generate_config(proxy_list, ru_domains, ru_ips):
     warp_nodes = [
         p
         for p in proxies
-        if p.get('type') == 'wireguard'
+        if p.get('provider') == 'warp'
+        and p.get('protocol') == 'wireguard'
+    ]
+
+    awg_nodes = [
+        p
+        for p in proxies
+        if p.get('provider') == 'warp'
+        and p.get('protocol') == 'amnezia-wg'
     ]
 
     warp_nodes.sort(
+        key=lambda x: x.get(
+            'latency',
+            9999
+        )
+    )
+
+    awg_nodes.sort(
         key=lambda x: x.get(
             'latency',
             9999
@@ -189,10 +192,15 @@ def generate_config(proxy_list, ru_domains, ru_ips):
         for p in warp_nodes
     ]
 
+    awg_names = [
+        p['name']
+        for p in awg_nodes
+    ]
+
     vpn_names = [
         p['name']
         for p in proxies
-        if p.get('type') != 'wireguard'
+        if p.get('provider') != 'warp'
     ]
 
     config = {
@@ -212,6 +220,7 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                 'proxies': (
                     (['FOREIGN'] if vpn_names else [])
                     + (['🚀 WARP AUTO'] if warp_names else [])
+                    + (['🔥 AWG AUTO'] if awg_names else [])
                     + ['DIRECT']
                 )
             },
@@ -236,6 +245,17 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                     'proxies': warp_names
                 }]
                 if warp_names else []
+            ),
+            *(
+                [{
+                    'name': '🔥 AWG AUTO',
+                    'type': 'url-test',
+                    'url': 'http://cp.cloudflare.com/generate_204',
+                    'interval': 300,
+                    'tolerance': 50,
+                    'proxies': awg_names
+                }]
+                if awg_names else []
             )
         ],
 
@@ -320,31 +340,10 @@ def main():
                     ru_ips.extend(load_list(path))
 
 
-    if getattr(args, 'warp_import', None):
-        warp_nodes = load_warp_import(args.warp_import)
-        if warp_nodes:
-            proxies.extend(warp_nodes)
-
-
     # --------------------------------------------------------
-    # Persistent WARP history
-    # Process only WireGuard/WARP nodes.
-    # Other protocols remain untouched.
+    # Provider metadata already resolved upstream.
+    # Generator must not classify WARP by transport type.
     # --------------------------------------------------------
-
-    warp_nodes = [
-        p for p in proxies
-        if p.get("type") == "wireguard"
-    ]
-
-    other_nodes = [
-        p for p in proxies
-        if p.get("type") != "wireguard"
-    ]
-
-    warp_nodes = merge_warp_history(warp_nodes)
-
-    proxies = other_nodes + warp_nodes
 
 
     config = generate_config(

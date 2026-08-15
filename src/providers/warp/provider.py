@@ -192,7 +192,19 @@ class WarpProvider:
         )
 
 
-        nodes.sort(
+        awg_nodes = [
+            n for n in nodes
+            if n.get("protocol") == "amnezia-wg"
+        ]
+
+
+        warp_nodes = [
+            n for n in nodes
+            if n.get("protocol") != "amnezia-wg"
+        ]
+
+
+        warp_nodes.sort(
             key=lambda x:
             x.get(
                 "latency",
@@ -201,7 +213,10 @@ class WarpProvider:
         )
 
 
-        nodes = nodes[:MAX_NODES]
+        warp_nodes = warp_nodes[:MAX_NODES]
+
+
+        nodes = warp_nodes + awg_nodes
 
 
         PROVIDERS_CACHE_DIR.mkdir(
