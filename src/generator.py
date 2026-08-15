@@ -10,6 +10,12 @@ except ModuleNotFoundError:
     from providers.warp_import.provider import load_warp_import
 
 
+try:
+    from src.warp_storage import merge_warp_history
+except ModuleNotFoundError:
+    from warp_storage import merge_warp_history
+
+
 
 used_names = set()
 
@@ -302,6 +308,28 @@ def main():
         warp_nodes = load_warp_import(args.warp_import)
         if warp_nodes:
             proxies.extend(warp_nodes)
+
+
+    # --------------------------------------------------------
+    # Persistent WARP history
+    # Process only WireGuard/WARP nodes.
+    # Other protocols remain untouched.
+    # --------------------------------------------------------
+
+    warp_nodes = [
+        p for p in proxies
+        if p.get("type") == "wireguard"
+    ]
+
+    other_nodes = [
+        p for p in proxies
+        if p.get("type") != "wireguard"
+    ]
+
+    warp_nodes = merge_warp_history(warp_nodes)
+
+    proxies = other_nodes + warp_nodes
+
 
     config = generate_config(
         proxies,

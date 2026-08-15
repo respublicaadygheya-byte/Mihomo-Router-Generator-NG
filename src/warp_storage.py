@@ -7,31 +7,71 @@ HISTORY_FILE = Path(
 )
 
 
-def fingerprint(node):
-    return json.dumps(
-        node,
-        sort_keys=True,
-        ensure_ascii=False
+def is_awg(node):
+
+    server = str(node.get("server", ""))
+    port = node.get("port")
+
+    return (
+        port == 500
+        or "tribukvy" in server
+    )
+
+
+def node_id(node):
+
+    if is_awg(node):
+
+        server = node.get("server")
+
+        if not server:
+            return None
+
+        return (
+            "awg",
+            server,
+            node.get("port"),
+        )
+
+
+    name = node.get("name")
+    server = node.get("server")
+
+    if not name and not server:
+        return None
+
+    return (
+        "warp",
+        name,
+        server,
     )
 
 
 def load_history():
+
     if not HISTORY_FILE.exists():
         return []
 
     try:
+
         with open(
             HISTORY_FILE,
             "r",
             encoding="utf-8"
         ) as f:
-            return json.load(f)
+
+            data = json.load(f)
+
+            if isinstance(data, list):
+                return data
 
     except Exception as e:
+
         print(
             f"[WARP-HISTORY] Failed to load history: {e}"
         )
-        return []
+
+    return []
 
 
 def save_history(nodes):
@@ -59,18 +99,49 @@ def merge_warp_history(current):
 
     history = load_history()
 
-    result = []
-    seen = set()
+    storage = {}
 
-    for node in history + current:
 
-        fp = fingerprint(node)
+    for node in history:
 
-        if fp in seen:
+        key = node_id(node)
+
+        if key:
+            storage[key] = node
+
+
+    for node in current:
+
+        key = node_id(node)
+
+        if not key:
             continue
 
-        seen.add(fp)
-        result.append(node)
+
+        if key in storage:
+
+            merged = storage[key].copy()
+
+            for k, v in node.items():
+
+                if v not in (None, ""):
+                    merged[k] = v
+
+            storage[key] = merged
+
+        else:
+
+            storage[key] = node
+
+
+    result = sorted(
+        storage.values(),
+        key=lambda x: (
+            node_id(x)[0],
+            str(node_id(x))
+        )
+    )
+
 
     save_history(result)
 

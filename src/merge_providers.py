@@ -1,6 +1,11 @@
 import json
 from pathlib import Path
 
+try:
+    from src.warp_storage import merge_warp_history
+except ModuleNotFoundError:
+    from warp_storage import merge_warp_history
+
 
 AVAILABLE = Path("cache/filtered/available.json")
 WARP = Path("cache/providers/warp.json")
@@ -8,10 +13,16 @@ OUTPUT = Path("cache/filtered/all.json")
 
 
 def load_json(path):
+
     if not path.exists():
         return []
 
-    with open(path, "r", encoding="utf-8") as f:
+    with open(
+        path,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
         return json.load(f)
 
 
@@ -22,6 +33,8 @@ def main():
     available = load_json(AVAILABLE)
     warp = load_json(WARP)
 
+    warp = merge_warp_history(warp)
+
     proxies.extend(available)
     proxies.extend(warp)
 
@@ -30,6 +43,7 @@ def main():
         "w",
         encoding="utf-8"
     ) as f:
+
         json.dump(
             proxies,
             f,
@@ -43,4 +57,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
