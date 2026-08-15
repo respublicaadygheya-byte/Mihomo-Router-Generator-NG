@@ -1,98 +1,199 @@
 import json
 from typing import List, Dict, Any
 
+
 from .config import (
     WARP_OUTPUT_FILE,
     PROVIDERS_CACHE_DIR,
 )
+
 
 from .register import get_or_register_account
 from .scanner import scan_endpoints
 from .checker import check_warp
 
 
+
+MAX_NODES = 100
+
+
+
+def add_awg(node):
+
+    node["amnezia-wg-option"] = {
+        "jc": 4,
+        "jmin": 40,
+        "jmax": 70,
+        "s1": 0,
+        "s2": 0,
+        "h1": 1,
+        "h2": 2,
+        "h3": 3,
+        "h4": 4,
+    }
+
+    return node
+
+
+
 class WarpProvider:
 
-    def generate_nodes(self) -> List[Dict[str, Any]]:
+
+    def generate_nodes(self):
+
 
         account = get_or_register_account()
 
+
         if not account:
-            print("[WARP] No account available")
             return []
+
+
+
+        history_file = PROVIDERS_CACHE_DIR / "warp-history.json"
+
+
+        history = []
+
+
+        if history_file.exists():
+
+            with open(history_file, encoding="utf-8") as f:
+                history = json.load(f)
+
+
+
+        print(
+            f"[WARP] History: {len(history)} nodes"
+        )
+
 
         nodes = []
 
-        endpoints = scan_endpoints()
+        candidates = scan_endpoints()
+
 
         print(
-            f"[WARP] Testing {len(endpoints)} candidates..."
+            f"[WARP] Scanned: {len(candidates)} endpoints"
         )
 
-        for idx, target in enumerate(endpoints, start=1):
+
+
+        all_nodes = history.copy()
+
+
+
+        for target in candidates:
+
 
             node = {
-                "name": (
-                    f"[WARP] Auto-{idx} "
-                    f"{target['server']}"
-                ),
-                "type": "wireguard",
-                "server": target["server"],
-                "port": target["port"],
-                "ip": account["ipv4"],
-                "public-key": account["peer_public_key"],
-                "private-key": account["private_key"],
-                "reserved": account.get(
-                    "reserved",
-                    [0, 0, 0]
-                ),
+
+                "name":
+                    f"[WARP] Auto {target['server']}",
+
+                "type":
+                    "wireguard",
+
+                "server":
+                    target["server"],
+
+                "port":
+                    target["port"],
+
+                "ip":
+                    account["ipv4"],
+
+                "public-key":
+                    account["peer_public_key"],
+
+                "private-key":
+                    account["private_key"],
+
+                "reserved":
+                    account.get(
+                        "reserved",
+                        [0,0,0]
+                    ),
+
                 "udp": True,
-                "mtu": 1280,
+
+                "mtu":1280,
+
             }
+
+
 
             if account.get("ipv6"):
                 node["ipv6"] = account["ipv6"]
 
+
+
+            if target.get("mode") == "amnezia":
+
+                node = add_awg(node)
+                node["name"] = (
+                    f"[WARP] AWG {target['server']}"
+                )
+
+
+
             checked = check_warp(node)
 
+
             if checked:
+
                 nodes.append(checked)
 
                 print(
-                    f"[WARP] KEEP: {checked['name']} "
-                    f"{checked.get('latency')} ms"
+                    "[WARP] KEEP",
+                    node["server"],
+                    checked.get("latency")
                 )
 
-            else:
-                print(
-                    f"[WARP] DROP: {node['name']}"
-                )
+
+        nodes.extend(history)
+
+
+
+        unique = {}
+
+        for n in nodes:
+
+            unique[
+                n["server"]
+            ] = n
+
+
+
+        nodes = list(
+            unique.values()
+        )
 
 
         nodes.sort(
-            key=lambda x: x.get(
+            key=lambda x:
+            x.get(
                 "latency",
                 9999
             )
         )
 
-        print("[WARP] Sorted by latency:")
-        for n in nodes:
-            print(
-                f"  {n['name']} "
-                f"{n.get('latency')} ms"
-            )
+
+        nodes = nodes[:MAX_NODES]
+
 
         PROVIDERS_CACHE_DIR.mkdir(
             parents=True,
             exist_ok=True
         )
 
+
         with open(
             WARP_OUTPUT_FILE,
             "w",
             encoding="utf-8"
         ) as f:
+
             json.dump(
                 nodes,
                 f,
@@ -100,11 +201,28 @@ class WarpProvider:
                 ensure_ascii=False
             )
 
+
+        with open(
+            history_file,
+            "w",
+            encoding="utf-8"
+        ) as f:
+
+            json.dump(
+                nodes,
+                f,
+                indent=2,
+                ensure_ascii=False
+            )
+
+
         print(
-            f"[WARP] Generated {len(nodes)} working nodes -> {WARP_OUTPUT_FILE}"
+            f"[WARP] Saved {len(nodes)} nodes"
         )
 
+
         return nodes
+
 
 
 if __name__ == "__main__":

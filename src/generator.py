@@ -180,7 +180,7 @@ def generate_config(proxy_list, ru_domains, ru_ips):
         )
     )
 
-    WARP_LIMIT = 50
+    WARP_LIMIT = 100
 
     warp_nodes = warp_nodes[:WARP_LIMIT]
 
