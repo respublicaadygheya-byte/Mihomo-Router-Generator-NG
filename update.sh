@@ -21,9 +21,13 @@ python3 src/checker.py cache/imported/proxies.json cache/filtered/available.json
 AVAIL=$(jq '. | length' cache/filtered/available.json 2>/dev/null || echo "0")
 echo "  Working proxies: $AVAIL"
 
-echo "[3/4] Generate providers"
+echo "[3/4] Generate WARP providers"
 
 python3 -m src.providers.warp.provider
+
+echo "[3/4] Generate WARP MASQUE providers"
+
+python3 -m src.providers.warp.masque.provider
 
 echo "[3/4] Merge proxy pool"
 

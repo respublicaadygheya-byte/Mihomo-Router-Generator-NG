@@ -186,7 +186,11 @@ class WarpProvider:
 
         for n in nodes:
 
-            key = n["server"]
+            key = (
+                n["server"],
+                n.get("protocol"),
+                n.get("amnezia-wg-option", {}).get("jc")
+            )
 
             if key in unique:
 

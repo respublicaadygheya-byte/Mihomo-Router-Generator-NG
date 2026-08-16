@@ -1,0 +1,79 @@
+from .checker import check_masque
+from .register import get_or_register_masque
+from .scanner import scan_endpoints
+
+
+class MasqueProvider:
+
+    def generate_nodes(self):
+        account = get_or_register_masque()
+
+        if not account:
+            print("[WARP MASQUE] No account, skipping")
+            return []
+
+        candidates = scan_endpoints(account)
+
+        print(
+            f"[WARP MASQUE] "
+            f"Testing {len(candidates)} endpoint candidates..."
+        )
+
+        nodes = []
+
+        for target in candidates:
+            node = {
+                "name": (
+                    f"[WARP MASQUE] "
+                    f"{target['server']}:{target['port']}"
+                ),
+                "type": "masque",
+                "server": target["server"],
+                "port": target["port"],
+
+                # Client ECDSA P-256 private key.
+                "private-key": account["private_key"],
+
+                # Cloudflare edge ECDSA public key.
+                "public-key": account["peer_public_key"],
+
+                # WARP interface addresses assigned by Cloudflare.
+                "ip": account["assigned_ipv4"],
+
+                "ipv6": account.get("assigned_ipv6", ""),
+
+                "uri": "https://cloudflareaccess.com",
+                "sni": "consumer-masque.cloudflareclient.com",
+
+                "mtu": 1280,
+                "udp": True,
+                "network": "quic",
+                "remote-dns-resolve": True,
+            }
+
+            print(
+                f"[WARP MASQUE] "
+                f"Checking {target['server']}:{target['port']}..."
+            )
+
+            checked = check_masque(node)
+
+            if checked:
+                nodes.append(checked)
+                print(
+                    f"[WARP MASQUE] "
+                    f"OK {target['server']}:{target['port']} "
+                    f"({checked.get('latency')} ms)"
+                )
+            else:
+                print(
+                    f"[WARP MASQUE] "
+                    f"FAIL {target['server']}:{target['port']}"
+                )
+
+        print(
+            f"[WARP MASQUE] "
+            f"Working nodes: {len(nodes)}/{len(candidates)}"
+        )
+
+        return nodes

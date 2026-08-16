@@ -1,0 +1,76 @@
+from pathlib import Path
+import socket
+import subprocess
+import tempfile
+import time
+import urllib.request
+import yaml
+
+BASE_DIR = Path(__file__).resolve().parents[4]
+MIHOMO = BASE_DIR / "bin" / "mihomo.bin"
+TEST_URL = "http://cp.cloudflare.com/generate_204"
+
+
+def get_free_port():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(("127.0.0.1", 0))
+        return s.getsockname()[1]
+
+
+def check_masque(node):
+    port = get_free_port()
+
+    cfg = {
+        "mixed-port": port,
+        "allow-lan": False,
+        "mode": "rule",
+        "log-level": "warning",
+        "proxies": [node],
+        "proxy-groups": [{"name": "TEST", "type": "select", "proxies": [node["name"]]}],
+    }
+
+    cfg_path = None
+    proc = None
+
+    try:
+        with tempfile.NamedTemporaryFile("w", suffix=".yaml", delete=False) as f:
+            yaml.dump(cfg, f)
+            cfg_path = f.name
+
+        proc = subprocess.Popen(
+            [str(MIHOMO), "-f", cfg_path],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.PIPE,
+            text=True,
+        )
+
+        time.sleep(2.5)
+
+        if proc.poll() is not None:
+            return None
+
+        proxy_support = urllib.request.ProxyHandler({
+            "http": f"http://127.0.0.1:{port}",
+            "https": f"http://127.0.0.1:{port}",
+        })
+        opener = urllib.request.build_opener(proxy_support)
+
+        start = time.time()
+        req = urllib.request.Request(
+            TEST_URL, headers={"User-Agent": "curl/7.68.0"}
+        )
+        with opener.open(req, timeout=4) as resp:
+            if resp.status in (200, 204):
+                latency = round((time.time() - start) * 1000, 2)
+                return {**node, "latency": latency}
+
+    except Exception:
+        pass
+    finally:
+        if proc and proc.poll() is None:
+            proc.kill()
+            proc.wait()
+        if cfg_path:
+            Path(cfg_path).unlink(missing_ok=True)
+
+    return None

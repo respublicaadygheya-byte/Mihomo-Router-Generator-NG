@@ -8,6 +8,10 @@ PROVIDERS_CACHE_DIR = BASE_DIR / "cache" / "providers"
 WARP_ACCOUNT_FILE = WARP_CACHE_DIR / "account.json"
 WARP_OUTPUT_FILE = PROVIDERS_CACHE_DIR / "warp.json"
 
+WARP_MASQUE_OUTPUT_FILE = (
+    PROVIDERS_CACHE_DIR / "warp-masque.json"
+)
+
 
 FALLBACK_WARP_SERVERS = [
     {

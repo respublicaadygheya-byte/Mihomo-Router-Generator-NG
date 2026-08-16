@@ -9,6 +9,7 @@ except ModuleNotFoundError:
 
 AVAILABLE = Path("cache/filtered/available.json")
 WARP = Path("cache/providers/warp.json")
+WARP_MASQUE = Path("cache/providers/warp-masque.json")
 OUTPUT = Path("cache/filtered/all.json")
 
 
@@ -32,11 +33,13 @@ def main():
 
     available = load_json(AVAILABLE)
     warp = load_json(WARP)
+    warp_masque = load_json(WARP_MASQUE)
 
     warp = merge_warp_history(warp)
 
     proxies.extend(available)
     proxies.extend(warp)
+    proxies.extend(warp_masque)
 
     with open(
         OUTPUT,

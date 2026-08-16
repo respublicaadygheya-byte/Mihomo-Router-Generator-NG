@@ -197,6 +197,25 @@ def generate_config(proxy_list, ru_domains, ru_ips):
         for p in awg_nodes
     ]
 
+    masque_nodes = [
+        p
+        for p in proxies
+        if p.get('provider') == 'warp'
+        and p.get('protocol') == 'masque'
+    ]
+
+    masque_nodes.sort(
+        key=lambda x: x.get(
+            'latency',
+            9999
+        )
+    )
+
+    masque_names = [
+        p['name']
+        for p in masque_nodes
+    ]
+
     vpn_names = [
         p['name']
         for p in proxies
@@ -221,6 +240,7 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                     (['FOREIGN'] if vpn_names else [])
                     + (['🚀 WARP AUTO'] if warp_names else [])
                     + (['🔥 AWG AUTO'] if awg_names else [])
+                    + (['🌀 MASQUE AUTO'] if masque_names else [])
                     + ['DIRECT']
                 )
             },
@@ -256,6 +276,17 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                     'proxies': awg_names
                 }]
                 if awg_names else []
+            ),
+            *(
+                [{
+                    'name': '🌀 MASQUE AUTO',
+                    'type': 'url-test',
+                    'url': 'https://cloudflare.com/cdn-cgi/trace',
+                    'interval': 300,
+                    'tolerance': 50,
+                    'proxies': masque_names
+                }]
+                if masque_names else []
             )
         ],
 
