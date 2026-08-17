@@ -11,7 +11,7 @@ import yaml
 BASE_DIR = Path(__file__).resolve().parents[3]
 MIHOMO = BASE_DIR / "bin" / "mihomo.bin"
 
-TEST_URL = "http://cp.cloudflare.com/generate_204"
+TEST_URL = "https://cloudflare.com/cdn-cgi/trace"
 
 
 def get_free_port():
@@ -117,7 +117,19 @@ def check_warp(node):
             )
 
 
-            if r.status_code in (200, 204):
+            if r.status_code == 200:
+
+                trace = {}
+
+                for line in r.text.splitlines():
+                    if "=" in line:
+                        k, v = line.split("=", 1)
+                        trace[k] = v
+
+
+                if trace.get("warp", "").lower() != "on":
+                    return None
+
 
                 checked = node.copy()
 
