@@ -81,8 +81,8 @@ def scan_bpb():
                         "server": server,
                         "port": port,
                         "mode": "wireguard",
-                        "latency": latency,
-                        "loss": loss,
+                        "bpb_latency": latency,
+                        "bpb_loss": loss,
                     }
                 )
 
@@ -96,8 +96,8 @@ def scan_bpb():
 
     nodes.sort(
         key=lambda x: (
-            x["loss"],
-            x["latency"]
+            x["bpb_loss"],
+            x["bpb_latency"]
         )
     )
 
