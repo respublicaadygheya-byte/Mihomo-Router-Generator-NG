@@ -301,12 +301,6 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        '--warp-import',
-        type=str,
-        help='Path to external AmneziaWG YAML file'
-    )
-
-    parser.add_argument(
         '--proxies',
         help='All proxy JSON'
     )
