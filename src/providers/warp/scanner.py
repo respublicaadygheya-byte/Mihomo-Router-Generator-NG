@@ -1,3 +1,6 @@
+from .bpb import scan_bpb
+
+
 NETWORKS = [
     "162.159.192.",
     "162.159.193.",
@@ -25,10 +28,11 @@ def generate_candidates():
 
     result = []
 
-
     # Cloudflare WARP WG
     for net in NETWORKS:
+
         for i in range(1, 33):
+
             result.append(
                 {
                     "server": f"{net}{i}",
@@ -37,9 +41,9 @@ def generate_candidates():
                 }
             )
 
-
     # AmneziaWG
     for server in AMNEZIA_SERVERS:
+
         result.append(
             {
                 "server": server,
@@ -48,13 +52,24 @@ def generate_candidates():
             }
         )
 
-
     return result
-
 
 
 def scan_endpoints():
 
+    # Сначала используем BPB-Warp-Scanner.
+    bpb_nodes = scan_bpb()
+
+    if bpb_nodes:
+
+        print(
+            f"[WARP BPB] Loaded {len(bpb_nodes)} endpoints"
+        )
+
+        return bpb_nodes
+
+    # Если BPB недоступен или result.csv пуст,
+    # сохраняем старый fallback.
     candidates = generate_candidates()
 
     print(
@@ -64,8 +79,8 @@ def scan_endpoints():
     return candidates
 
 
-
 if __name__ == "__main__":
 
     for x in scan_endpoints():
+
         print(x)
