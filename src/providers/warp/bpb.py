@@ -81,6 +81,7 @@ def scan_bpb():
                         "server": server,
                         "port": port,
                         "mode": "wireguard",
+                        "source": "bpb",
                         "bpb_latency": latency,
                         "bpb_loss": loss,
                     }

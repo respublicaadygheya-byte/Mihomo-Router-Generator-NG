@@ -38,6 +38,7 @@ def generate_candidates():
                     "server": f"{net}{i}",
                     "port": 2408,
                     "mode": "wireguard",
+                    "source": "native",
                 }
             )
 
@@ -49,6 +50,7 @@ def generate_candidates():
                 "server": server,
                 "port": 500,
                 "mode": "amnezia",
+                "source": "native",
             }
         )
 
