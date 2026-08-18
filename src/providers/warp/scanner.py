@@ -4,24 +4,26 @@ from .native import generate_candidates
 
 def scan_endpoints():
 
-    # Сначала используем BPB-Warp-Scanner.
+    candidates = []
+
     bpb_nodes = scan_bpb()
 
     if bpb_nodes:
-
         print(
             f"[WARP BPB] Loaded {len(bpb_nodes)} endpoints"
         )
 
-        return bpb_nodes
+        candidates.extend(bpb_nodes)
 
-    # Если BPB недоступен или result.csv пуст,
-    # сохраняем старый fallback.
-    candidates = generate_candidates()
+
+    native_nodes = generate_candidates()
 
     print(
-        f"[WARP SCANNER] Generated {len(candidates)} endpoints"
+        f"[WARP NATIVE] Loaded {len(native_nodes)} endpoints"
     )
+
+    candidates.extend(native_nodes)
+
 
     return candidates
 
@@ -29,5 +31,4 @@ def scan_endpoints():
 if __name__ == "__main__":
 
     for x in scan_endpoints():
-
         print(x)
