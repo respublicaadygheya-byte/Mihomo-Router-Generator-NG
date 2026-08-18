@@ -142,7 +142,12 @@ def check_warp(node):
             return None
 
 
-        except Exception:
+        except Exception as e:
+
+            print(
+                f"[WARP CHECK ERROR] "
+                f"{type(e).__name__}: {e}"
+            )
 
             return None
 
