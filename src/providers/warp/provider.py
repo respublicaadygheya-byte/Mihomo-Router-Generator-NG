@@ -1,4 +1,5 @@
 import json
+from datetime import datetime, timezone
 from typing import List, Dict, Any
 
 
@@ -61,16 +62,74 @@ class WarpProvider:
 
         nodes = []
 
+
+        for item in history:
+
+            node = item.copy()
+
+            node.setdefault(
+                "source",
+                "history"
+            )
+
+
+            if "name" not in node:
+                node["name"] = (
+                    f"[WARP] History {node['server']}"
+                )
+
+            node["history"] = True
+
+
+            checked = check_warp(node)
+
+
+            if checked:
+
+                checked["last_seen"] = (
+                    datetime.now(timezone.utc)
+                    .isoformat()
+                )
+
+                nodes.append(checked)
+
+
+                print(
+                    "[WARP HISTORY KEEP]",
+                    checked["server"],
+                    checked.get("port"),
+                    checked.get("latency")
+                )
+
+
+        from collections import Counter
+
+        print()
+        print("=== AFTER HISTORY LOAD ===")
+        print("TOTAL:", len(nodes))
+
+        print(
+            Counter(
+                n.get("source", "UNKNOWN")
+                for n in nodes
+            )
+        )
+
+        print(
+            "HISTORY MARKED:",
+            sum(
+                1 for n in nodes
+                if n.get("history")
+            )
+        )
+
+
         candidates = scan_endpoints()
 
 
         print(
             f"[WARP] Scanned: {len(candidates)} endpoints"
         )
-
-
-
-        all_nodes = history.copy()
 
 
 
@@ -89,13 +148,22 @@ class WarpProvider:
                     "warp",
 
                 "protocol":
-                    "wireguard",
+                    target.get(
+                        "protocol",
+                        "wireguard"
+                    ),
 
                 "server":
                     target["server"],
 
                 "port":
                     target["port"],
+
+                "source":
+                    target.get(
+                        "source",
+                        "scanner"
+                    ),
 
                 "ip":
                     account["ipv4"],
@@ -138,6 +206,11 @@ class WarpProvider:
 
                     awg_node["protocol"] = "amnezia-wg"
 
+                    awg_node["source"] = target.get(
+                        "source",
+                        "scanner"
+                    )
+
                     awg_node["name"] = (
                         f"[WARP] AWG {target['server']} jc{profile['jc']}"
                     )
@@ -178,23 +251,102 @@ class WarpProvider:
                 )
 
 
-        nodes.extend(history)
 
+
+        from collections import Counter
+
+        print()
+        print("=== BEFORE DEDUP SOURCE ===")
+
+        print(
+            Counter(
+                n.get("source", "UNKNOWN")
+                for n in nodes
+            )
+        )
+
+        print()
+        print("=== BEFORE DEDUP TOTAL ===")
+        print(len(nodes))
+
+
+        print()
+        print("=== DEDUP INPUT STATS ===")
+
+        print(
+            "TOTAL:",
+            len(nodes)
+        )
+
+        print(
+            "HISTORY:",
+            sum(
+                1 for n in nodes
+                if n.get("history")
+            )
+        )
 
 
         unique = {}
 
+        duplicate_stats = {}
+        history_duplicate_stats = {}
+
         for n in nodes:
 
             key = (
-                n["server"],
+                n.get("server"),
+                n.get("port"),
+                n.get("type"),
                 n.get("protocol"),
                 n.get("amnezia-wg-option", {}).get("jc")
             )
 
             if key in unique:
 
-                merged = unique[key].copy()
+                old = unique[key]
+
+                old_source = old.get("source", "unknown")
+                new_source = n.get("source", "unknown")
+
+                pair = tuple(
+                    sorted(
+                        (
+                            old_source,
+                            new_source
+                        )
+                    )
+                )
+
+                duplicate_stats[pair] = (
+                    duplicate_stats.get(pair, 0) + 1
+                )
+
+                old_history = bool(
+                    old.get("history")
+                )
+
+                new_history = bool(
+                    n.get("history")
+                )
+
+                if old_history or new_history:
+
+                    history_pair = (
+                        "history" if old_history else "new",
+                        "history" if new_history else "new",
+                    )
+
+                    history_duplicate_stats[
+                        history_pair
+                    ] = (
+                        history_duplicate_stats.get(
+                            history_pair,
+                            0
+                        ) + 1
+                    )
+
+                merged = old.copy()
 
                 for k, v in n.items():
 
@@ -209,8 +361,68 @@ class WarpProvider:
 
 
 
+        dedup_removed = len(nodes) - len(unique)
+
         nodes = list(
             unique.values()
+        )
+
+
+        print()
+        print("=== DEDUP OUTPUT STATS ===")
+
+        print(
+            "TOTAL:",
+            len(nodes)
+        )
+
+        print(
+            "HISTORY:",
+            sum(
+                1 for n in nodes
+                if n.get("history")
+            )
+        )
+
+        print(
+            "REMOVED:",
+            dedup_removed
+        )
+
+
+        print()
+        print("=== DUPLICATE SOURCE STATS ===")
+
+        for pair, count in sorted(
+            duplicate_stats.items()
+        ):
+            print(
+                pair,
+                count
+            )
+
+        print(
+            "TOTAL DUPLICATES:",
+            sum(duplicate_stats.values())
+        )
+
+
+        print()
+        print("=== HISTORY DUPLICATE STATS ===")
+
+        for pair, count in sorted(
+            history_duplicate_stats.items()
+        ):
+            print(
+                pair,
+                count
+            )
+
+        print(
+            "HISTORY DUPLICATES:",
+            sum(
+                history_duplicate_stats.values()
+            )
         )
 
 
