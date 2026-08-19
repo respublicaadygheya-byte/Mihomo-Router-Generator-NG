@@ -5,33 +5,18 @@ mode: rule
 log-level: warning
 external-controller: 127.0.0.1:9090
 proxies:
-- name: 🌐TCP Пятёрочка V.O.I.D
+- name: 🇫🇷OVH
   type: vless
-  server: rusl2-e.ya-proxy.com
-  port: 443
-  uuid: 8b706aff-ca60-4632-9658-aeb5c0f48561
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
-    short-id: 226509f017e4c36d
-  servername: eda.x5.ru
-- name: 🇫🇮Hetzner
-  type: vless
-  server: 95.216.27.15
-  port: 2053
-  uuid: 0fbff144-bbed-44c0-972b-3ecb0d5579d6
+  server: 45.130.125.209
+  port: 80
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
   udp: true
   client-fingerprint: chrome
-  network: tcp
-  tls: true
-  reality-opts:
-    public-key: -Oj9x6Ts_2S_DdORCDilSpcLJcIYpL67uQ8VBFHL4yk
-    short-id: 2606b22a3c3b3971
-  servername: www.google.com
+  network: ws
+  ws-opts:
+    path: /http
+    headers:
+      Host: de.vpnbase.net
 - name: 🌐1984 🇷🇺 Russia 🏳️ SNI-VK VL
   type: vless
   server: 194.55.239.164
@@ -46,6 +31,60 @@ proxies:
     public-key: sdnD0vxmj8kHBOoVM8TE9IyBCGwnKNB8hZVaHp_Zfjk
     short-id: fe8d
   servername: ads.vk.ru
+- name: 🇫🇷OVH 2
+  type: vless
+  server: 45.130.125.207
+  port: 80
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
+  udp: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /http
+    headers:
+      Host: de.vpnbase.net
+- name: 🌐1137 🇷🇺 Russia 🏳️ CIDR-Yande
+  type: vless
+  server: 84.201.130.165
+  port: 443
+  uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 4_JdCXW-gE-NFYhMJq71nqmzzo29lJHuwA-9298xERg
+    short-id: c8331e510ed78f5e
+  servername: api-maps.yandex.ru
+- name: 🌐REALITYDE🇩🇪 144.31.168.133-44
+  type: vless
+  server: 144.31.168.133
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  servername: eu-central.cendora.ru
+- name: 🌐TCP Пятёрочка V.O.I.D
+  type: vless
+  server: rusl2-e.ya-proxy.com
+  port: 443
+  uuid: 8b706aff-ca60-4632-9658-aeb5c0f48561
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
+    short-id: 226509f017e4c36d
+  servername: eda.x5.ru
 - name: 🌐636ms Бельгия BE 🇧🇪 @vlesstroj
   type: vless
   server: 185.91.52.42
@@ -74,44 +113,33 @@ proxies:
     public-key: RRawEiil652RhrCcf0Oq94mBii7I21eN3YyOo34NrTY
     short-id: 47e4cb670b4e547d
   servername: app.prostocalc.com
-- name: 🇫🇷OVH 2
+- name: 🇫🇮Play2go International Limited
   type: vless
-  server: 45.130.125.207
-  port: 80
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /http
-    headers:
-      Host: de.vpnbase.net
-- name: 🇫🇷OVH
-  type: vless
-  server: 45.130.125.209
-  port: 80
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /http
-    headers:
-      Host: de.vpnbase.net
-- name: 🌐REALITYDE🇩🇪 144.31.168.133-44
-  type: vless
-  server: 144.31.168.133
-  port: 443
+  server: 87.121.89.80
+  port: 13443
   uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-    short-id: 00bca5982f82d083
-  servername: eu-central.cendora.ru
+    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
+    short-id: a7f3c91b2e6d84c0
+  servername: auto.cendora.ru
+- name: 🇫🇮Hetzner
+  type: vless
+  server: 95.216.27.15
+  port: 2053
+  uuid: 0fbff144-bbed-44c0-972b-3ecb0d5579d6
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  tls: true
+  reality-opts:
+    public-key: -Oj9x6Ts_2S_DdORCDilSpcLJcIYpL67uQ8VBFHL4yk
+    short-id: 2606b22a3c3b3971
+  servername: www.google.com
 - name: 🌐0228 🇫🇮 Finland 🏳️ SNI-X5 V
   type: vless
   server: 2.26.100.192
@@ -126,33 +154,6 @@ proxies:
     public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
     short-id: c226283c4de5b1ad
   servername: ads.x5.ru
-- name: 🇩🇪Aeza Group
-  type: vless
-  server: 77.110.99.144
-  port: 443
-  uuid: c1943f8a-11c6-402d-a439-dc0be226d916
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jArfQhwueyEcn5c5OkbtFavMJbiLM9aWH3Xbxnu6EEM
-  servername: yahoo.com
-- name: 🇬🇧Iomart Cloud Services Limited
-  type: vless
-  server: 95.154.221.128
-  port: 443
-  uuid: 81f2e3b4-c02e-4b71-a342-4d2b16176de1
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: CHsXtbkXDldP3yg8JsqpRJQtDJxGJduTSusSqQgtOTg
-    short-id: 2169f943611471f4
-  servername: foodnetwork.com
 - name: 🇩🇪Forestsnet
   type: vless
   server: 45.155.70.123
@@ -166,19 +167,18 @@ proxies:
     public-key: 0AVsyS7udTbxKRdSyQ2rtFC63icDQOVWq8FvAhhU-WY
     short-id: 58fbcddfaae3ade9
   servername: s1.test.anti-zapret.com
-- name: 🇺🇸Chsl One
+- name: 🇫🇷OVH 3
   type: vless
-  server: 193.233.90.178
-  port: 443
-  uuid: 638c5a31-7bcf-43b9-a9d5-28537ce2a141
+  server: 104.16.72.110
+  port: 80
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
   udp: true
   client-fingerprint: chrome
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: PL09r78ubjFaOILv5x6HPsCZeTdwhlRb3tuDY5vASwQ
-  servername: yandex.ru
+  network: ws
+  ws-opts:
+    path: /http
+    headers:
+      Host: de.vpnbase.net
 - name: 🌐🔒 VL-TCP-RLT 🇳🇱 NL-144.31.86.1
   type: vless
   server: 144.31.86.136
@@ -193,19 +193,6 @@ proxies:
     public-key: m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0
     short-id: dd3ff38418d29d22
   servername: eu-west.cendora.ru
-- name: 🌐EPODONIOS
-  type: vless
-  server: Bio.samandar.tokenized.name
-  port: 8585
-  uuid: 327a13d8-8d3d-41c8-b258-ae450b55fe2b
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  tls: true
-  reality-opts:
-    public-key: jUiGa2oc-HEOoSvv7fd8PWcKZv73tCNhsmo4Gm0Digo
-    short-id: 3c
-  servername: support-shield.nvidia.pl
 - name: 🌐@DeltaKroneckerGithub
   type: vless
   server: 87.121.105.50
@@ -220,19 +207,58 @@ proxies:
     public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
     short-id: 2186a755ed67b034
   servername: nordic.cendora.ru
-- name: 🇮🇹OVH
+- name: 🇩🇪Hetzner
   type: vless
-  server: 57.131.38.163
+  server: 162.55.242.208
   port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  uuid: 0d2a4938-cecd-44a3-a205-5a3089a369e8
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  tls: true
+  reality-opts:
+    public-key: QTaDxqLyJAvJ9uWKGwkKpYSGgnt6qQPNS-1WI_zKA2Q
+    short-id: ca83b007853bc115
+  servername: www.google.com
+- name: 🇺🇸Chsl One
+  type: vless
+  server: 193.233.90.178
+  port: 443
+  uuid: 638c5a31-7bcf-43b9-a9d5-28537ce2a141
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PL09r78ubjFaOILv5x6HPsCZeTdwhlRb3tuDY5vASwQ
+  servername: yandex.ru
+- name: 🌐EPODONIOS
+  type: vless
+  server: Bio.samandar.tokenized.name
+  port: 8585
+  uuid: 327a13d8-8d3d-41c8-b258-ae450b55fe2b
   udp: true
   client-fingerprint: chrome
   network: tcp
   tls: true
   reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-    short-id: 5b8a942318178e7b
-  servername: www.apple.com
+    public-key: jUiGa2oc-HEOoSvv7fd8PWcKZv73tCNhsmo4Gm0Digo
+    short-id: 3c
+  servername: support-shield.nvidia.pl
+- name: 🇩🇪WEYRO LTD
+  type: vless
+  server: api.getsavesafe.space
+  port: 443
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  udp: true
+  client-fingerprint: firefox
+  network: xhttp
+  tls: true
+  reality-opts:
+    public-key: fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8
+    short-id: 62b6d6e64d461d78
+  servername: api.getsavesafe.space
 - name: 🌐OpenRay 🇨🇦 CA-26473
   type: vless
   server: 158.69.112.254
@@ -247,31 +273,6 @@ proxies:
     public-key: wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y
     short-id: 3d3c1e645f763ee3
   servername: www.speedtest.net
-- name: 🇫🇷OVH 3
-  type: vless
-  server: 104.16.72.110
-  port: 80
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /http
-    headers:
-      Host: de.vpnbase.net
-- name: 🇩🇪WEYRO LTD
-  type: vless
-  server: api.getsavesafe.space
-  port: 443
-  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-  udp: true
-  client-fingerprint: firefox
-  network: xhttp
-  tls: true
-  reality-opts:
-    public-key: fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8
-    short-id: 62b6d6e64d461d78
-  servername: api.getsavesafe.space
 - name: 🇩🇪WEYRO LTD 2
   type: vless
   server: 103.109.234.129
@@ -286,20 +287,6 @@ proxies:
     public-key: gA6-Fj5hl4x-HOtbCcYqD99qsml4ActHRmw-VTkFU14
     short-id: 7d6b6b7a606c21cf
   servername: dep.opngtr.nl
-- name: 🇳🇱Play2go International Limited
-  type: vless
-  server: 150.241.94.59
-  port: 13443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-    short-id: a7f3c91b2e6d84c0
-  servername: auto.cendora.ru
 - name: 🇨🇦OVH
   type: vless
   server: 66.70.179.198
@@ -325,6 +312,20 @@ proxies:
     path: /http
     headers:
       Host: de.vpnbase.net
+- name: 🇳🇱Play2go International Limited
+  type: vless
+  server: 150.241.94.59
+  port: 13443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
+    short-id: a7f3c91b2e6d84c0
+  servername: auto.cendora.ru
 - name: 🇩🇪U1 Digital Services
   type: vless
   server: 144.31.76.198
@@ -366,20 +367,6 @@ proxies:
   reality-opts:
     public-key: fYAeaCv2jMnzpu7WzQmx38eBRW43kEfpUqj_RwnVnEA
   servername: gb.cdn.cachefleet.com
-- name: 🇫🇷Aeza Group
-  type: vless
-  server: node13.mxvpn.dev
-  port: 443
-  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
-    short-id: bbc68cec8bb8d2e3
-  servername: node13.mxvpn.dev
 - name: 🇫🇷ESTOXY OU
   type: vless
   server: 37.49.224.14
@@ -394,6 +381,33 @@ proxies:
     public-key: O3rHRttI1NLJhPj5tRc8IxrC0-psaGAdF7pIXL2iSyo
     short-id: 0c3c59e4f3527369
   servername: nimble-heron.cdn.cachefleet.com
+- name: 🇫🇷Aeza Group
+  type: vless
+  server: node13.mxvpn.dev
+  port: 443
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  servername: node13.mxvpn.dev
+- name: 🌐EPODONIOS 2
+  type: vless
+  server: 31.76.80.69
+  port: 2083
+  uuid: 8975546a-375c-4966-8064-19fc0f66f30a
+  udp: true
+  client-fingerprint: chrome
+  network: xhttp
+  tls: true
+  reality-opts:
+    public-key: zq3gOJkXi6laNuxMohL3lr-wFOKi4Z9oG7QuMMiTDAk
+    short-id: 29b21343ab4d
+  servername: www.amd.com
 - name: 🇩🇪Senko Digital
   type: vless
   server: 91.132.160.56
@@ -422,33 +436,6 @@ proxies:
     public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
     short-id: bbc68cec8bb8d2e3
   servername: node13.mxvpn.dev
-- name: 🌐EPODONIOS 2
-  type: vless
-  server: 31.76.80.69
-  port: 2083
-  uuid: 8975546a-375c-4966-8064-19fc0f66f30a
-  udp: true
-  client-fingerprint: chrome
-  network: xhttp
-  tls: true
-  reality-opts:
-    public-key: zq3gOJkXi6laNuxMohL3lr-wFOKi4Z9oG7QuMMiTDAk
-    short-id: 29b21343ab4d
-  servername: www.amd.com
-- name: 🇬🇧Hostkey Bv
-  type: vless
-  server: 185.232.117.194
-  port: 13868
-  uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: qFHvK-8mR8GhmykivRP_WIgys1NK_-DqQJAhOJaWVW4
-    short-id: e852dc
-  servername: amd.com
 - name: 🇩🇪WEYRO LTD 3
   type: vless
   server: 103.109.234.199
@@ -463,34 +450,32 @@ proxies:
     public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
     short-id: c37c2ae6f6eb0d71
   servername: de.savesafe.cc
-- name: 🌐🇳🇱 The Netherlands Eygelshove
+- name: 🇬🇧Hostkey Bv
   type: vless
-  server: 144.31.237.86
-  port: 443
-  uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
-  udp: true
-  client-fingerprint: ios
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
-    short-id: 660c1badc77a422b
-  servername: edge-nl.mystatic-cdn.ru
-- name: 🇫🇮Senko Digital
-  type: vless
-  server: 2.26.27.92
-  port: 443
-  uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d
+  server: 185.232.117.194
+  port: 13868
+  uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
   udp: true
   client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: a5axu6OJ0c1Cci6j5sAZP1rI4y5brnq67hK7SIGwVng
-    short-id: 5fa9a6a45806c1a9
-  servername: app.prostocalc.com
+    public-key: qFHvK-8mR8GhmykivRP_WIgys1NK_-DqQJAhOJaWVW4
+    short-id: e852dc
+  servername: amd.com
+- name: 🇫🇷OVH 5
+  type: vless
+  server: 104.16.72.41
+  port: 80
+  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
+  udp: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /http
+    headers:
+      Host: de.vpnbase.net
 - name: 🇺🇦Route 95
   type: vless
   server: 5.34.182.23
@@ -505,14 +490,34 @@ proxies:
     public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
     short-id: a7f3c91b2e6d84c0
   servername: auto.cendora.ru
-- name: 🇫🇷Contabo GmbH
+- name: 🇫🇮Senko Digital
   type: vless
-  server: 164.68.127.108
-  port: 24144
-  uuid: 7e85ed3f-3829-45b1-8b1c-6a2e45ebc967
+  server: 2.26.27.92
+  port: 443
+  uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: a5axu6OJ0c1Cci6j5sAZP1rI4y5brnq67hK7SIGwVng
+    short-id: 5fa9a6a45806c1a9
+  servername: app.prostocalc.com
+- name: 🌐🇳🇱 The Netherlands Eygelshove
+  type: vless
+  server: 144.31.237.86
+  port: 443
+  uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
+  udp: true
+  client-fingerprint: ios
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+    short-id: 660c1badc77a422b
+  servername: edge-nl.mystatic-cdn.ru
 - name: 🌐4Sarina-b0356cdc6c
   type: vless
   server: 46.250.250.149
@@ -526,6 +531,14 @@ proxies:
     public-key: 2mp1wwmKQyvIVuGujoT0AGoAHwP1IFXlZRj8jB_UnGo
     short-id: 61abecf0a82c31f5
   servername: www.cloudflare.com
+- name: 🇫🇷Contabo GmbH
+  type: vless
+  server: 164.68.127.108
+  port: 24144
+  uuid: 7e85ed3f-3829-45b1-8b1c-6a2e45ebc967
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
 - name: 🇵🇱HOSTES LTD
   type: vless
   server: 94.183.157.200
@@ -540,6 +553,18 @@ proxies:
     public-key: 1FryqGmMpa7T_bHmy3Uy11C5GWe6F2uzcsCYa9QXJBw
     short-id: ff993907a731979a
   servername: pol1.panel11.ru
+- name: 🇩🇪U1 Digital Services 2
+  type: vless
+  server: meow-frankfi.nethcloud.top
+  port: 8443
+  uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+  udp: true
+  client-fingerprint: firefox
+  network: xhttp
+  tls: true
+  reality-opts:
+    public-key: p9ISfhV0uZpKSgrK_8R6Mm4A01tWdzpKMlFR2TIj81s
+  servername: wikihow.com
 - name: 🌐18203NL0VLESSNoneext_raw.githu
   type: vless
   server: 144.31.237.79
@@ -554,30 +579,20 @@ proxies:
     public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
     short-id: 635a76c25a4b1820
   servername: www.amd.com
-- name: 🇩🇪U1 Digital Services 2
+- name: 🇫🇮Play2go International Limited 2
   type: vless
-  server: meow-frankfi.nethcloud.top
-  port: 8443
-  uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+  server: 2.26.85.243
+  port: 443
+  uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42
   udp: true
   client-fingerprint: firefox
-  network: xhttp
+  network: tcp
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: p9ISfhV0uZpKSgrK_8R6Mm4A01tWdzpKMlFR2TIj81s
-  servername: wikihow.com
-- name: 🇫🇷OVH 5
-  type: vless
-  server: 104.16.72.41
-  port: 80
-  uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /http
-    headers:
-      Host: de.vpnbase.net
+    public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
+    short-id: 9e4eced6e98ed4d4
+  servername: fn.orpheous.ru
 - name: 🇳🇱Servers Tech Fzco
   type: vless
   server: 195.63.135.112
@@ -606,33 +621,6 @@ proxies:
     public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
     short-id: c37c2ae6f6eb0d71
   servername: de.savesafe.cc
-- name: 🇫🇮Play2go International Limited 2
-  type: vless
-  server: 2.26.85.243
-  port: 443
-  uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
-    short-id: 9e4eced6e98ed4d4
-  servername: fn.orpheous.ru
-- name: 🇬🇧Global Connectivity Solutions Llp
-  type: vless
-  server: 138.124.181.51
-  port: 13868
-  uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
-  udp: true
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
-    short-id: e852dc
-  servername: www.ea.com
 - name: 🇺🇦Route 95 2
   type: vless
   server: 130.0.234.197
@@ -646,20 +634,19 @@ proxies:
   reality-opts:
     public-key: XIubADu7punjUa2oUfHj2vTmUzUJXN_xDrGsmf_LslY
   servername: gpuopen.com
-- name: 🇳🇴Gigahost AS
+- name: 🇬🇧Global Connectivity Solutions Llp
   type: vless
-  server: 151.242.168.181
-  port: 443
-  uuid: ed0930a3-9011-4dbe-a2b4-66773be94145
+  server: 138.124.181.51
+  port: 13868
+  uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
   udp: true
   client-fingerprint: firefox
-  network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ
-    short-id: 46babe29a750b634
-  servername: kibi-institut.de
+    public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
+    short-id: e852dc
+  servername: www.ea.com
 - name: 🇳🇱Oc Networks Limited
   type: vless
   server: 64.188.77.13
@@ -674,33 +661,6 @@ proxies:
     public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
     short-id: a7f3c91b2e6d84c0
   servername: auto.cendora.ru
-- name: 🇵🇱MEVSPACE sp z oo
-  type: vless
-  server: 193.34.213.38
-  port: 443
-  uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk
-    short-id: f49814084db8f3a6
-  servername: app.prostocalc.com
-- name: 🇩🇪WEYRO LTD 5
-  type: vless
-  server: 103.109.234.114
-  port: 443
-  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-  udp: true
-  client-fingerprint: firefox
-  network: xhttp
-  tls: true
-  reality-opts:
-    public-key: fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8
-    short-id: 62b6d6e64d461d78
-  servername: api.getsavesafe.space
 - name: 🇵🇱HOSTES LTD 2
   type: vless
   server: pol1.panel11.ru
@@ -715,47 +675,34 @@ proxies:
     public-key: 1FryqGmMpa7T_bHmy3Uy11C5GWe6F2uzcsCYa9QXJBw
     short-id: ff993907a731979a
   servername: pol1.panel11.ru
-- name: 🇫🇮Play2go International Limited 3
+- name: 🇵🇱MEVSPACE sp z oo
   type: vless
-  server: 83.143.112.146
+  server: 193.34.213.38
   port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d
   udp: true
   client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
-    short-id: 2186a755ed67b034
-  servername: nordic.cendora.ru
-- name: 🇩🇪U1 Digital Services 3
+    public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk
+    short-id: f49814084db8f3a6
+  servername: app.prostocalc.com
+- name: 🇳🇴Gigahost AS
   type: vless
-  server: 176.108.245.3
+  server: 151.242.168.181
   port: 443
-  uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+  uuid: ed0930a3-9011-4dbe-a2b4-66773be94145
   udp: true
   client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
-  servername: www.wikihow.com
-- name: 🇳🇱Oc Networks Limited 2
-  type: vless
-  server: 64.188.77.13
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0
-    short-id: dd3ff38418d29d22
-  servername: eu-west.cendora.ru
+    public-key: urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ
+    short-id: 46babe29a750b634
+  servername: kibi-institut.de
 - name: 🇸🇪QWINS LTD
   type: vless
   server: 132.243.231.94
@@ -770,34 +717,47 @@ proxies:
     public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
     short-id: 2d6d073dc88f22a8
   servername: se1.se-cdn.ru
-- name: 🇬🇧Global Connectivity Solutions Llp 2
+- name: 🇩🇪WEYRO LTD 5
   type: vless
-  server: isp01.skorostnet.space
-  port: 13868
-  uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
-    short-id: e852dc
-  servername: www.ea.com
-- name: 🇵🇱HOSTES LTD 4
-  type: vless
-  server: 94.183.157.246
+  server: 103.109.234.114
   port: 443
-  uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  udp: true
+  client-fingerprint: firefox
+  network: xhttp
+  tls: true
+  reality-opts:
+    public-key: fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8
+    short-id: 62b6d6e64d461d78
+  servername: api.getsavesafe.space
+- name: 🇷🇴Interkvm Host Srl
+  type: vless
+  server: 82.40.63.73
+  port: 443
+  uuid: 473e6f25-5878-000e-8917-2c67261df474
   udp: true
   client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: dkaIImQrQ1ZVQGNfyrNZbtkE-8hxp_u8AH99XDFgfHw
-    short-id: 75c55b707d25ae8d
-  servername: pol2.panel11.ru
+    public-key: NBjOloEUgyAHoLqvcGo_t3jTY8Jya77j5dsNB1VJ8Bo
+    short-id: 0f4dacffd272e65f
+  servername: auto.api-yandex.net
+- name: 🇫🇮Play2go International Limited 3
+  type: vless
+  server: 83.143.112.146
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
+    short-id: 2186a755ed67b034
+  servername: nordic.cendora.ru
 - name: 🇵🇱HOSTES LTD 3
   type: vless
   server: pol2.panel11.ru
@@ -812,6 +772,61 @@ proxies:
     public-key: dkaIImQrQ1ZVQGNfyrNZbtkE-8hxp_u8AH99XDFgfHw
     short-id: 75c55b707d25ae8d
   servername: pol2.panel11.ru
+- name: 🇩🇪U1 Digital Services 3
+  type: vless
+  server: 176.108.245.3
+  port: 443
+  uuid: a34b5e88-cf0d-4c01-8199-2d1002d3c787
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: HKpd1sbrhBds8SJSL0d22MAq_QyTR6EP6y5b5DYol3U
+  servername: www.wikihow.com
+- name: 🇵🇱HOSTES LTD 4
+  type: vless
+  server: 94.183.157.246
+  port: 443
+  uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: dkaIImQrQ1ZVQGNfyrNZbtkE-8hxp_u8AH99XDFgfHw
+    short-id: 75c55b707d25ae8d
+  servername: pol2.panel11.ru
+- name: 🇳🇱Aeza Group 2
+  type: vless
+  server: node4.mxvpn.dev
+  port: 443
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  servername: node4.mxvpn.dev
+- name: 🇬🇧Global Connectivity Solutions Llp 2
+  type: vless
+  server: isp01.skorostnet.space
+  port: 13868
+  uuid: c04bf2df-2b7f-44da-a893-3792d3910fd8
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
+    short-id: e852dc
+  servername: www.ea.com
 - name: 🇵🇱Oc Networks Limited
   type: vless
   server: 144.31.171.143
@@ -840,20 +855,6 @@ proxies:
     public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
     short-id: bbc68cec8bb8d2e3
   servername: node3.mxvpn.dev
-- name: 🇳🇱Aeza Group 2
-  type: vless
-  server: node4.mxvpn.dev
-  port: 443
-  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
-    short-id: bbc68cec8bb8d2e3
-  servername: node4.mxvpn.dev
 - name: 🇦🇪HOSTES LTD
   type: vless
   server: 151.242.160.11
@@ -882,6 +883,33 @@ proxies:
     public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
     short-id: 2186a755ed67b034
   servername: nordic.cendora.ru
+- name: 🇸🇬Contabo Asia Private Limited
+  type: vless
+  server: 217.217.254.126
+  port: 2053
+  uuid: 6b408e62-c5d5-45e1-ae3a-4c9833d46d82
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  tls: true
+  reality-opts:
+    public-key: T4CMxxAJiCcrGk2r87kMkDcvmfNs3nL-gKleaE1wTHQ
+    short-id: fb7ebc9996caf9ac
+  servername: www.cloudflare.com
+- name: 🇳🇱Play2go International Limited 2
+  type: vless
+  server: 2.26.231.40
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0
+    short-id: dd3ff38418d29d22
+  servername: eu-west.cendora.ru
 - name: 🇳🇱Akenai Products LTD
   type: vless
   server: 95.163.232.54
@@ -909,76 +937,20 @@ proxies:
     public-key: urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ
     short-id: 46babe29a750b634
   servername: kibi-institut.de
-- name: 🇬🇧Iomart Cloud Services Limited 2
+- name: 🇳🇱QWINS LTD
   type: vless
-  server: 109.169.85.140
+  server: 141.98.6.226
   port: 443
-  uuid: 4ed94924-861c-444f-8308-67ebff2083fe
+  uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: djzfpNmvwYjCaOUUOHU_k0kl92HXIGIurq2i0p5UyDo
-    short-id: 1dc6d8a2045a7c9d
-  servername: slashdot.org
-- name: 🇳🇱Play2go International Limited 2
-  type: vless
-  server: 2.26.231.40
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: m6RDw1b8R4lCaRUIzhHpy6TtX2Dhk6nyby8dWzeQqA0
-    short-id: dd3ff38418d29d22
-  servername: eu-west.cendora.ru
-- name: 🇳🇱Play2go International Limited 3
-  type: vless
-  server: 2.27.40.190
-  port: 443
-  uuid: 15e83ced-7544-422e-863d-deafe29a1dbe
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
-    short-id: 635a76c25a4b1820
-  servername: www.amd.com
-- name: 🇷🇴Interkvm Host Srl 2
-  type: vless
-  server: 103.126.50.203
-  port: 443
-  uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0
-    short-id: b9f8f9772217538f
-  servername: ro.getvlessvpn.com
-- name: 🇦🇹Aeza Group
-  type: vless
-  server: 95.163.176.68
-  port: 43821
-  uuid: f7e0e597-636e-4550-9f54-6ab1c0e8cf49
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Xx3r5KsSKa1I8O3avmwMbgXOWj_-MqiqzTO_7BzBxyU
-    short-id: 58c5b3ee013bdc8f
-  servername: www.twitch.tv
+    public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+    short-id: 660c1badc77a422b
+  servername: edge-nl.mystatic-cdn.ru
 - name: 🇳🇱Servers Tech Fzco 2
   type: vless
   server: 185.21.15.245
@@ -993,6 +965,34 @@ proxies:
     public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk
     short-id: 0894e51863b5c395
   servername: nl.chick-team.ru
+- name: 🇬🇧Iomart Cloud Services Limited 2
+  type: vless
+  server: 109.169.85.140
+  port: 443
+  uuid: 4ed94924-861c-444f-8308-67ebff2083fe
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: djzfpNmvwYjCaOUUOHU_k0kl92HXIGIurq2i0p5UyDo
+    short-id: 1dc6d8a2045a7c9d
+  servername: slashdot.org
+- name: 🇳🇱Play2go International Limited 3
+  type: vless
+  server: 2.27.40.190
+  port: 443
+  uuid: 15e83ced-7544-422e-863d-deafe29a1dbe
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
+    short-id: 635a76c25a4b1820
+  servername: www.amd.com
 - name: 🇫🇮Web1 Oy
   type: vless
   server: fn.skysafe.online
@@ -1006,20 +1006,34 @@ proxies:
     public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
     short-id: 6ba7b8109dad11d1
   servername: fn.skysafe.online
-- name: 🇳🇱Play2go International Limited 4
+- name: 🇳🇱Eternity International Limited
   type: vless
-  server: 2.26.231.40
-  port: 13443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  server: 144.31.237.125
+  port: 443
+  uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f
+  udp: true
+  client-fingerprint: ios
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
+    short-id: 660c1badc77a422b
+  servername: edge-nl.mystatic-cdn.ru
+- name: 🇦🇹Aeza Group
+  type: vless
+  server: 95.163.176.68
+  port: 43821
+  uuid: f7e0e597-636e-4550-9f54-6ab1c0e8cf49
   udp: true
   client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
-    short-id: a7f3c91b2e6d84c0
-  servername: auto.cendora.ru
+    public-key: Xx3r5KsSKa1I8O3avmwMbgXOWj_-MqiqzTO_7BzBxyU
+    short-id: 58c5b3ee013bdc8f
+  servername: www.twitch.tv
 - name: 🇳🇱Fzco
   type: vless
   server: 177.3.212.155
@@ -1034,6 +1048,47 @@ proxies:
     public-key: 2IpfY9pdiwIuGV1MfExOkr8YgTrIx9mmn85K4_7dMXs
     short-id: ddd281ae46
   servername: olp.crsmaps.com
+- name: 🇳🇱Play2go International Limited 4
+  type: vless
+  server: 2.26.231.40
+  port: 13443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
+    short-id: a7f3c91b2e6d84c0
+  servername: auto.cendora.ru
+- name: 🇩🇪WEYRO LTD 6
+  type: vless
+  server: de.opngtr.nl
+  port: 443
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YULPgY4Knu4LVqKcc2uhzTcndqIWWKr74W1dVXcLQ0c
+    short-id: c37c2ae6f6eb0d71
+  servername: de.savesafe.cc
+- name: 🇷🇴Interkvm Host Srl 3
+  type: vless
+  server: ro.getvlessvpn.com
+  port: 443
+  uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e
+  udp: true
+  client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0
+    short-id: b9f8f9772217538f
+  servername: ro.getvlessvpn.com
 - name: 🌐3934 🇬🇧 United Kingdom VLESS
   type: vless
   server: 45.150.66.201
@@ -1048,6 +1103,20 @@ proxies:
     public-key: CTduQ5Pvex1U2D1ojmFgSF4MQ1N7Yft7EfnEEBK1l1U
     short-id: c571c801812c
   servername: www.nvidia.com
+- name: 🇦🇪HOSTES LTD 2
+  type: vless
+  server: gr1.panel11.ru
+  port: 443
+  uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 8H-YQe-nSd_aL2FwWIFNV2-anUb4v3cY_n5QcEEjGEs
+    short-id: eeed325908a87d9f
+  servername: gr1.panel11.ru
 - name: 🇳🇴Gigahost AS 3
   type: vless
   server: 151.242.168.181
@@ -1062,19 +1131,6 @@ proxies:
     public-key: urD2miGxEfHylELSqqggBKCYIMSNXNTbdPijru7-eAQ
     short-id: 46babe29a750b634
   servername: kibi-institut.de
-- name: 🇷🇴Interkvm Host Srl 3
-  type: vless
-  server: ro.getvlessvpn.com
-  port: 443
-  uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e
-  udp: true
-  client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0
-    short-id: b9f8f9772217538f
-  servername: ro.getvlessvpn.com
 - name: 🇳🇱Eternity International Limited 3
   type: vless
   server: 144.31.237.77
@@ -1089,20 +1145,20 @@ proxies:
     public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
     short-id: 635a76c25a4b1820
   servername: www.amd.com
-- name: 🇸🇪QWINS LTD 2
+- name: 🇫🇮H2nexus Cloud Services - Fzco
   type: vless
-  server: 89.125.37.149
+  server: 85.192.49.151
   port: 443
-  uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
+  uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907
   udp: true
   client-fingerprint: firefox
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-    short-id: 2d6d073dc88f22a8
-  servername: se1.se-cdn.ru
+    public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500
+    short-id: b91a73752053b039
+  servername: de.servers.gracevpnbuy.com
 - name: 🇳🇱Eternity International Limited 2
   type: vless
   server: vs-nl8.vibesignal.space
@@ -1117,30 +1173,19 @@ proxies:
     public-key: xxqv2JF09vb9H5GUrGXvXZx46-dlNtNvdTNgOe_W1A0
     short-id: da8198896a34e6ec
   servername: cdnjs.cloudflare.com
-- name: 🇬🇧Iomart Cloud Services Limited 3
+- name: 🇸🇪Melbikomas UAB
   type: vless
-  server: 77.95.203.224
+  server: 135.106.142.209
   port: 443
-  uuid: 6bdd905e-78d6-4ed2-8dcd-d006e5cc1c70
+  uuid: 730dd3ab-d706-002f-9987-4d4d1715cc5a
   udp: true
-  client-fingerprint: edge
-  network: tcp
-  flow: xtls-rprx-vision
+  client-fingerprint: safari
+  network: xhttp
   tls: true
   reality-opts:
-    public-key: x_Xq88pDWx7xLRYLUiSF0KrH7nPyt_Fy0w-E70dTr3A
-    short-id: d4dbb62d53cd16ec
-  servername: foodnetwork.com
-- name: 🌐OpenRay 🇺🇸 US-24134
-  type: vless
-  server: 40.160.68.55
-  port: 8080
-  uuid: 11af1c47-865a-47c6-92ff-118013655d78
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed
+    public-key: fz_xpZfQks3oa9c_d1OSokmTgmJuGbvFMkyK0Qt8w3I
+    short-id: 0066a7326f06d426
+  servername: alfastat.ru
 - name: 🇨🇦Leaseweb Canada
   type: vless
   server: 184.107.141.174
@@ -1155,6 +1200,20 @@ proxies:
     public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500
     short-id: b91a73752053b039
   servername: ca.servers.gracevpnbuy.com
+- name: 🇸🇪QWINS LTD 2
+  type: vless
+  server: 89.125.37.149
+  port: 443
+  uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: se1.se-cdn.ru
 - name: 🇳🇱Eternity International Limited 4
   type: vless
   server: 144.31.237.76
@@ -1169,14 +1228,6 @@ proxies:
     public-key: xxqv2JF09vb9H5GUrGXvXZx46-dlNtNvdTNgOe_W1A0
     short-id: da8198896a34e6ec
   servername: cdnjs.cloudflare.com
-- name: 🌐🏳️ ShatakVPN 470090
-  type: vless
-  server: 152.69.195.67
-  port: 47878
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
 - name: 🇳🇱Senko Digital
   type: vless
   server: 2.26.77.112
@@ -1191,6 +1242,52 @@ proxies:
     public-key: KdImQfl6ERZr9r7purPMgZpMHXCaY2DnhrebZ-PKR3s
     short-id: 653bd46413ab3503
   servername: app.prostocalc.com
+- name: 🌐🏳️ ShatakVPN 470090
+  type: vless
+  server: 152.69.195.67
+  port: 47878
+  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+- name: 🌐OpenRay 🇺🇸 US-24134
+  type: vless
+  server: 40.160.68.55
+  port: 8080
+  uuid: 11af1c47-865a-47c6-92ff-118013655d78
+  udp: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed
+- name: 🇬🇧Iomart Cloud Services Limited 3
+  type: vless
+  server: 77.95.203.224
+  port: 443
+  uuid: 6bdd905e-78d6-4ed2-8dcd-d006e5cc1c70
+  udp: true
+  client-fingerprint: edge
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: x_Xq88pDWx7xLRYLUiSF0KrH7nPyt_Fy0w-E70dTr3A
+    short-id: d4dbb62d53cd16ec
+  servername: foodnetwork.com
+- name: 🇪🇸Cloudi Nextgen Sl
+  type: vless
+  server: 200.234.227.64
+  port: 8443
+  uuid: 16ab4d4a-fd81-4535-9b7b-346677226ce8
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: OFK3xqhyTsDoJi8emuzmOCE9Xzwi0DyZPNj0X-E4iVE
+    short-id: 5326cc7587a9f0
+  servername: sp.crsmaps.com
 - name: 🇷🇺Kviktel
   type: vless
   server: 185.147.26.175
@@ -1205,20 +1302,6 @@ proxies:
     public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
     short-id: 9e4eced6e98ed4d4
   servername: yt.orpheous.ru
-- name: 🌐11458UA0VLESSNoneext_raw.githu
-  type: vless
-  server: 5.34.182.23
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
-    short-id: 00bca5982f82d083
-  servername: eu-central.cendora.ru
 - name: 🇳🇱QWINS LTD 2
   type: vless
   server: 141.98.6.115
@@ -1233,20 +1316,28 @@ proxies:
     public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
     short-id: 660c1badc77a422b
   servername: edge-nl.mystatic-cdn.ru
-- name: 🇸🇪QWINS LTD 3
+- name: 🌐11458UA0VLESSNoneext_raw.githu
   type: vless
-  server: 132.243.231.93
+  server: 5.34.182.23
   port: 443
-  uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
-    short-id: 2d6d073dc88f22a8
-  servername: se1.se-cdn.ru
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  servername: eu-central.cendora.ru
+- name: 🇨🇴Oracle Cloud
+  type: vless
+  server: 158.247.124.70
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
 - name: 🇳🇱QWINS LTD 3
   type: vless
   server: 141.98.6.189
@@ -1261,6 +1352,28 @@ proxies:
     public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
     short-id: 660c1badc77a422b
   servername: edge-nl.mystatic-cdn.ru
+- name: 🇳🇱Cgi Global Limited
+  type: vless
+  server: netherlands.me.hoomaxconnect.ir
+  port: 443
+  uuid: f2c5c46f-3ebf-45f5-8685-abf9c95764a0
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇸🇪QWINS LTD 3
+  type: vless
+  server: 132.243.231.93
+  port: 443
+  uuid: f202c7ca-17b7-416d-b3a2-ac71d35afe9c
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
+    short-id: 2d6d073dc88f22a8
+  servername: se1.se-cdn.ru
 - name: 🇯🇵The Constant Company
   type: vless
   server: 139.180.198.220
@@ -1269,28 +1382,22 @@ proxies:
   udp: true
   client-fingerprint: chrome
   network: tcp
-- name: 🇨🇴Oracle Cloud 2
+- name: 🇨🇴Oracle Cloud 3
   type: vless
-  server: 157.137.216.1
+  server: 149.130.190.236
   port: 62145
   uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
   udp: true
   client-fingerprint: chrome
   network: tcp
-- name: 🇷🇺YandexCloud
+- name: 🇨🇴Oracle Cloud 4
   type: vless
-  server: 178.154.208.44
-  port: 443
-  uuid: 1a8aa3c0-7741-49dd-adbc-dcc629f6b938
+  server: 149.130.179.71
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
   udp: true
   client-fingerprint: chrome
   network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: oX_8IyRmI_X4pPWaGTbduLyvlZWwLkZlxJKmtvjmqEg
-    short-id: 03a70b17f8036009
-  servername: smartcaptcha.yandexcloud.net
 - name: 🇷🇺Kviktel 2
   type: vless
   server: yt.orpheous.ru
@@ -1305,14 +1412,30 @@ proxies:
     public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q
     short-id: 9e4eced6e98ed4d4
   servername: yt.orpheous.ru
-- name: 🇨🇴Oracle Cloud 4
+- name: 🌐OpenRay 🇺🇸 US-23921
   type: vless
-  server: 149.130.179.71
-  port: 62145
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  server: 40.160.69.53
+  port: 8080
+  uuid: 11af1c47-865a-47c6-92ff-118013655d78
   udp: true
   client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /?ed
+- name: 🌐OpenRay 🇳🇱 NL-11009
+  type: vless
+  server: 87.199.209.9
+  port: 443
+  uuid: 1f619326-cd93-4d6b-aebe-e0b5f8831d02
+  udp: true
+  client-fingerprint: firefox
   network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: XZa7f7bABj7lY4HuLopVCBBBYTu-RB7QyIZ96njvYwo
+    short-id: 7bcfc0bc
+  servername: yahoo.com
 - name: 🇳🇱Eternity International Limited 5
   type: vless
   server: 94.183.254.97
@@ -1327,47 +1450,41 @@ proxies:
     public-key: TC8D2edifNXaro0S31ZiC9izi8tAmXJyxdOHptwNUTw
     short-id: 660c1badc77a422b
   servername: edge-nl.mystatic-cdn.ru
-- name: 🇩🇪Hostkey Bv
+- name: 🇷🇺YandexCloud
   type: vless
-  server: ru.verymad.net
-  port: 20468
-  uuid: e7c15d94-3d4a-445d-9043-17dbc59e3e3d
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  tls: true
-  reality-opts:
-    public-key: fZN3RaPoUpvSEE07sPTzvQva27vY3ooA3RYci5KL42Q
-    short-id: a198d287017f32
-  servername: www.vk.com
-- name: 🇳🇱WAIcore
-  type: vless
-  server: 194.55.239.164
+  server: 178.154.208.44
   port: 443
-  uuid: f7c19962-ae9e-4431-8ddc-276bcd45280a
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: sdnD0vxmj8kHBOoVM8TE9IyBCGwnKNB8hZVaHp_Zfjk
-    short-id: '9042'
-  servername: ads.vk.ru
-- name: 🇳🇱Senko Digital 2
-  type: vless
-  server: 144.31.134.196
-  port: 443
-  uuid: 7b8a65b9-e074-4dcf-ab4f-5ffb5197d974
+  uuid: 1a8aa3c0-7741-49dd-adbc-dcc629f6b938
   udp: true
   client-fingerprint: chrome
   network: tcp
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: twXgIi2sFEo2xqWtEwVi1gmD4XRBBjuJHWh4AzOs-TA
-    short-id: abcd1234
-  servername: dzen.ru
+    public-key: oX_8IyRmI_X4pPWaGTbduLyvlZWwLkZlxJKmtvjmqEg
+    short-id: 03a70b17f8036009
+  servername: smartcaptcha.yandexcloud.net
+- name: 🇳🇴Global Connectivity Solutions Llp
+  type: vless
+  server: 46.29.238.139
+  port: 40443
+  uuid: 8384341b-cd89-4a21-a022-cc4bd4e648ca
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  tls: true
+  reality-opts:
+    public-key: 7i4Y7v80NVAIi_4_9roDkqcXmexIHli87dfZuFaQMUI
+    short-id: 68da
+  servername: deepl.com
+- name: 🇨🇴Oracle Cloud 5
+  type: vless
+  server: 157.137.234.223
+  port: 62145
+  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
 - name: 🇪🇸Global Connectivity Solutions Llp
   type: vless
   server: isp03.skorostnet.space
@@ -1382,16 +1499,6 @@ proxies:
     public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo
     short-id: e852dc
   servername: www.ea.com
-- name: 🌐OpenRay 🇺🇸 US-23921
-  type: vless
-  server: 40.160.69.53
-  port: 8080
-  uuid: 11af1c47-865a-47c6-92ff-118013655d78
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /?ed
 - name: 🇩🇪AWS
   type: vless
   server: 3.127.126.3
@@ -1400,6 +1507,20 @@ proxies:
   udp: true
   client-fingerprint: chrome
   network: tcp
+- name: 🇳🇱WAIcore
+  type: vless
+  server: 194.55.239.164
+  port: 443
+  uuid: f7c19962-ae9e-4431-8ddc-276bcd45280a
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sdnD0vxmj8kHBOoVM8TE9IyBCGwnKNB8hZVaHp_Zfjk
+    short-id: '9042'
+  servername: ads.vk.ru
 - name: 🇩🇪AWS 2
   type: vless
   server: 63.182.189.87
@@ -1421,60 +1542,16 @@ proxies:
     public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
     short-id: 00bca5982f82d083
   servername: eu-central.cendora.ru
-- name: 🇷🇺Jsc timeweb 2
+- name: 🌐OpenRay 🇺🇸 US-24746
   type: vless
-  server: 201.24.116.215
-  port: 2027
-  uuid: 579f0893-e6f9-4036-86a1-7c10aa2d24ea
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
-    short-id: 6ba7b8109dad11d1
-  servername: msk2.skysafe.online
-- name: 🇺🇸Limestone Networks
-  type: vless
-  server: usa.opngtr.nl
-  port: 443
-  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
-  udp: true
-  client-fingerprint: firefox
-  network: xhttp
-  tls: true
-  reality-opts:
-    public-key: q-8lriuP627DilumgJAvbowp7YGzWBZg9gSDgbmowjk
-    short-id: 9f3df965329a8e7f
-  servername: usa.savesafe.cc
-- name: 🇸🇪Play2go International Limited
-  type: vless
-  server: 200.165.234.83
-  port: 443
-  uuid: bded43d3-fdad-44eb-a1fb-f3fe86d3550d
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MEf-wwgnhZG97nPrgwU2gry9o9lKn8PmaNNi6OaMEy8
-    short-id: 3c7ad26694142132
-  servername: ya.ru
-- name: 🇰🇿PS Internet Company LLP
-  type: vless
-  server: kzx.savesafe.kz
-  port: 443
-  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  server: 40.160.69.112
+  port: 8080
+  uuid: 11af1c47-865a-47c6-92ff-118013655d78
   udp: true
   client-fingerprint: chrome
-  network: xhttp
-  tls: true
-  reality-opts:
-    public-key: fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8
-    short-id: 62b6d6e64d461d78
-  servername: ya.kz
+  network: ws
+  ws-opts:
+    path: /?ed
 - name: 🌐OpenRay 🇺🇸 US-23896
   type: vless
   server: 40.160.68.136
@@ -1498,6 +1575,40 @@ proxies:
     public-key: EApxy12MeXpqt-78odxizwcXT6hX9f8XeAcbMDVRAV0
     short-id: 6ba7b8109dad11d1
   servername: nlka.skysafe.online
+- name: 🇬🇧Hostkey Bv 2
+  type: vless
+  server: 109.61.108.78
+  port: 20468
+  uuid: e7c15d94-3d4a-445d-9043-17dbc59e3e3d
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  tls: true
+  reality-opts:
+    public-key: fZN3RaPoUpvSEE07sPTzvQva27vY3ooA3RYci5KL42Q
+    short-id: a198d287017f32
+  servername: www.vk.com
+- name: 🇰🇿PS Internet Company LLP
+  type: vless
+  server: kzx.savesafe.kz
+  port: 443
+  uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb
+  udp: true
+  client-fingerprint: chrome
+  network: xhttp
+  tls: true
+  reality-opts:
+    public-key: fkYk0Ow--0GYExpBFb2wZjooymT7uASOQLw9ESC3DF8
+    short-id: 62b6d6e64d461d78
+  servername: ya.kz
+- name: 🌐OpenRay 🇺🇸 US-24138
+  type: vless
+  server: 40.160.68.126
+  port: 8080
+  uuid: 11af1c47-865a-47c6-92ff-118013655d78
+  udp: true
+  client-fingerprint: chrome
+  network: ws
 - name: 🇨🇦 Canada Montreal Ville-Marie 🌐 BL
   type: vless
   server: 8.6.112.6
@@ -1513,44 +1624,26 @@ proxies:
     path: /cdn/7ae87fc47c544a50
     headers:
       Host: worker-015.miloi8dmz.top
-- name: 🇰🇿 Kazakhstan Almaty 🌐 BL
+- name: 🇺🇸Cgi Global Limited
   type: vless
-  server: 2.26.124.152
-  port: 21446
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-  udp: true
-  client-fingerprint: android
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 93924LbE6cwVVF6kCIT1Z0hoKmWJu_0RmnKzQsTz_SM
-    short-id: f9f1d5f7fa9ce307
-  servername: kz.chick-team.ru
-- name: 🇳🇱 The Netherlands Amsterdam BL 2
-  type: vless
-  server: nl.chick-team.ru
+  server: 31.57.47.140
   port: 443
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  uuid: 75e65714-fc50-489e-9344-0fb00b0fe222
   udp: true
   client-fingerprint: chrome
   network: tcp
+- name: 🇸🇪 Sweden Stockholm 🌐 BL
+  type: vless
+  server: pro-se.emrata.top
+  port: 443
+  uuid: 19a26f12-aeb7-48a4-b075-8a5dfa4d3d1a
+  udp: true
+  client-fingerprint: firefox
   encryption: none
-  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk
-    short-id: 0894e51863b5c395
-  servername: nl.chick-team.ru
-- name: 🌐OpenRay 🇺🇸 US-24138
-  type: vless
-  server: 40.160.68.126
-  port: 8080
-  uuid: 11af1c47-865a-47c6-92ff-118013655d78
-  udp: true
-  client-fingerprint: chrome
-  network: ws
+    public-key: AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk
+  servername: pro-se.emrata.top
 - name: 🇵🇱 Poland 🌐 BL
   type: vless
   server: pl.chick-team.ru
@@ -1566,10 +1659,10 @@ proxies:
     public-key: tPkLNwERe23qHETdRm0NN6TSF-bwvUeWKnmXR8CK3nc
     short-id: 58d746158028c90d
   servername: pl.chick-team.ru
-- name: 🇰🇷 South Korea Seongnam-si Geumto-ro BL
+- name: 🇰🇿 Kazakhstan Almaty 🌐 BL
   type: vless
-  server: kr.chick-team.ru
-  port: 443
+  server: 2.26.124.152
+  port: 21446
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
   client-fingerprint: android
@@ -1578,9 +1671,19 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: d2SIGBcXOL_gjokJFWUZb42ZA2vRIpZZERDOTjFHElo
-    short-id: ecd1800c8d6098fb
-  servername: kr.chick-team.ru
+    public-key: 93924LbE6cwVVF6kCIT1Z0hoKmWJu_0RmnKzQsTz_SM
+    short-id: f9f1d5f7fa9ce307
+  servername: kz.chick-team.ru
+- name: 🇳🇱 The Netherlands Eygelshoven BL 2
+  type: vless
+  server: 167.104.217.24
+  port: 443
+  uuid: 65b71da3-15f4-4ab2-b5e0-b8b329797142
+  udp: true
+  client-fingerprint: android
+  network: xhttp
+  tls: true
+  servername: nlnew9.denverpresents.top
 - name: 🇳🇱 The Netherlands Eygelshoven BL 3
   type: vless
   server: 167.104.217.50
@@ -1591,6 +1694,32 @@ proxies:
   network: xhttp
   tls: true
   servername: nl12.jailever.org
+- name: 🇸🇪 Sweden Stockholm 🌐 BL 2
+  type: vless
+  server: pro-se.emrata.top
+  port: 443
+  uuid: 470deebb-fc49-4f48-a5be-a75638aa6e79
+  udp: true
+  client-fingerprint: android
+  tls: true
+  reality-opts:
+    public-key: AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk
+  servername: pro-se.emrata.top
+- name: 🇳🇱 The Netherlands Amsterdam BL 2
+  type: vless
+  server: nl.chick-team.ru
+  port: 443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk
+    short-id: 0894e51863b5c395
+  servername: nl.chick-team.ru
 - name: 🇳🇱 The Netherlands Amsterdam BL
   type: vless
   server: 31.15.18.174
@@ -1602,52 +1731,27 @@ proxies:
   tls: true
   ws-opts:
     path: /api
-- name: 🇳🇱 The Netherlands Eygelshoven BL 8
+- name: 🇳🇱 The Netherlands Eygelshoven BL 6
   type: vless
-  server: 167.104.217.50
+  server: 167.104.217.32
   port: 443
   uuid: df113220-46b2-421c-8394-2340d161d056
   udp: true
-  client-fingerprint: edge
+  client-fingerprint: chrome
   network: xhttp
   encryption: none
   tls: true
-  servername: nl12.jailever.org
-- name: 🇳🇱 The Netherlands Eygelshoven BL 4
+  servername: nl13.jailever.org
+- name: 🇳🇱 The Netherlands Eygelshoven BL
   type: vless
-  server: 167.104.217.43
-  port: 443
-  uuid: c7b01c00-ac51-4c43-a9b6-adc17b4d6a7d
-  udp: true
-  client-fingerprint: android
-  network: xhttp
-  tls: true
-  servername: nl5.gracefultun.xyz
-- name: 🇬🇧 United Kingdom London BL
-  type: vless
-  server: 45.86.159.115
+  server: 167.104.217.18
   port: 443
   uuid: 65b71da3-15f4-4ab2-b5e0-b8b329797142
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: xhttp
   tls: true
-  servername: uk10.jailever.org
-- name: 🇬🇧 United Kingdom Maidenhead BL
-  type: vless
-  server: 109.169.85.140
-  port: 443
-  uuid: 0f9ef86a-f329-4a9d-811f-a4c115863c4f
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: djzfpNmvwYjCaOUUOHU_k0kl92HXIGIurq2i0p5UyDo
-    short-id: 1dc6d8a2045a7c9d
-  servername: slashdot.org
+  servername: nlnew8.denverpresents.top
 - name: 🇳🇱 The Netherlands Eygelshoven BL 5
   type: vless
   server: 167.104.217.24
@@ -1659,18 +1763,27 @@ proxies:
   encryption: none
   tls: true
   servername: nlnew9.denverpresents.top
-- name: 🇺🇸 United States Quincy BL
+- name: 🇬🇧 United Kingdom London BL
   type: vless
-  server: 104.21.74.214
-  port: 2095
-  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+  server: 45.86.159.115
+  port: 443
+  uuid: 65b71da3-15f4-4ab2-b5e0-b8b329797142
   udp: true
   client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: download.pusytroller.gq
+  network: xhttp
+  tls: true
+  servername: uk10.jailever.org
+- name: 🇳🇱 The Netherlands Eygelshoven BL 7
+  type: vless
+  server: 167.104.217.41
+  port: 443
+  uuid: df113220-46b2-421c-8394-2340d161d056
+  udp: true
+  client-fingerprint: chrome
+  network: xhttp
+  encryption: none
+  tls: true
+  servername: nl11.jailever.org
 - name: 🇬🇧 United Kingdom London BL 2
   type: vless
   server: freja.chick-team.ru
@@ -1686,28 +1799,21 @@ proxies:
     public-key: aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc
     short-id: 89e0494514ec
   servername: www.oracle.com
-- name: 🇳🇱 The Netherlands Eygelshoven BL 6
+- name: 🇬🇧 United Kingdom Maidenhead BL
   type: vless
-  server: 167.104.217.32
+  server: 109.169.85.140
   port: 443
-  uuid: df113220-46b2-421c-8394-2340d161d056
+  uuid: 0f9ef86a-f329-4a9d-811f-a4c115863c4f
   udp: true
-  client-fingerprint: chrome
-  network: xhttp
+  client-fingerprint: firefox
+  network: tcp
   encryption: none
+  flow: xtls-rprx-vision
   tls: true
-  servername: nl13.jailever.org
-- name: 🇳🇱 The Netherlands Eygelshoven BL 7
-  type: vless
-  server: 167.104.217.41
-  port: 443
-  uuid: df113220-46b2-421c-8394-2340d161d056
-  udp: true
-  client-fingerprint: chrome
-  network: xhttp
-  encryption: none
-  tls: true
-  servername: nl11.jailever.org
+  reality-opts:
+    public-key: djzfpNmvwYjCaOUUOHU_k0kl92HXIGIurq2i0p5UyDo
+    short-id: 1dc6d8a2045a7c9d
+  servername: slashdot.org
 - name: 🇺🇸 United States Newark BL
   type: vless
   server: gr4.cryptoofarm.com
@@ -1723,28 +1829,18 @@ proxies:
     public-key: k_NAHiw_mvUm61Ah8F29FRSGtk4GMvsBdRqiwhcuRRw
     short-id: 26c2b8ccfd4a
   servername: gr4.cryptoofarm.com
-- name: 🇨🇳 China Lijia BL
-  type: hysteria2
-  server: 139.28.168.54
-  port: 9080
-  password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8
-  udp: true
-  sni: grape-honk.yyuyy.com
-- name: 🌐 Anycast-IP 🇨🇦 🇫🇮 BL
+- name: 🇺🇸 United States Quincy BL
   type: vless
-  server: 198.177.57.103
-  port: 443
-  uuid: 50414e45-4c5f-5a45-5553-4bd4a58ae838
+  server: 104.21.74.214
+  port: 2095
+  uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
   udp: true
-  client-fingerprint: android
+  client-fingerprint: chrome
   network: ws
-  encryption: none
-  tls: true
-  servername: mwzr0qesuhys.1bzoi6etu8ys.workers.dev
   ws-opts:
-    path: /stream/PANEL_ZEUS/4bd4a58ae838
+    path: /
     headers:
-      Host: mwzr0qesuhys.1bzoi6etu8ys.workers.dev
+      Host: download.pusytroller.gq
 - name: 🇫🇷 France Yvrac BL
   type: hysteria2
   server: frn.skysafe.online
@@ -1752,6 +1848,20 @@ proxies:
   password: 579f0893-e6f9-4036-86a1-7c10aa2d24ea
   udp: true
   sni: frn.skysafe.online
+- name: 🇺🇸 United States Roma BL
+  type: vless
+  server: freja.chick-team.ru
+  port: 21443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: android
+  network: xhttp
+  encryption: none
+  tls: true
+  reality-opts:
+    public-key: W2XPexOPEtuEV17TpGUenunZHFdhy5h7T66OZTpxRHk
+    short-id: ff1122cc
+  servername: www.google.com
 - name: 🇷🇸 Serbia Belgrade BL
   type: hysteria2
   server: 46.229.243.137
@@ -1759,13 +1869,13 @@ proxies:
   password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
   udp: true
   sni: grape-turbo-fr.roxa.org
-- name: 🇰🇿 Kazakhstan Almaty BL
+- name: 🇨🇭 Switzerland Zurich BL
   type: hysteria2
-  server: kz.frkn.org
+  server: hy2-switzerlandgopota.unlimited-access.ru
   port: 443
-  password: 3b8c82ed-fe66-472d-915e-034ccb57103f
+  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
   udp: true
-  sni: kz.frkn.org
+  sni: hy2-switzerlandgopota.unlimited-access.ru
 - name: 🇹🇷 Turkey Ankara BL
   type: hysteria2
   server: 162.249.124.106
@@ -1773,13 +1883,13 @@ proxies:
   password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
   udp: true
   sni: mercedes-grape.yyuyy.com
-- name: 🇷🇺 Russia CIDR t.me/rjsxrd
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd
   type: vless
-  server: 212.193.27.23
+  server: 193.233.102.214
   port: 443
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
-  client-fingerprint: android
+  client-fingerprint: qq
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
@@ -1788,13 +1898,13 @@ proxies:
     public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
     short-id: d484643ca8396614
   servername: yt.chick-team.ru
-- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd
+- name: '!'
   type: vless
-  server: 193.233.102.214
+  server: 5.129.249.118
   port: 443
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: safari
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
@@ -1818,6 +1928,28 @@ proxies:
     public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
     short-id: d484643ca8396614
   servername: yt.chick-team.ru
+- name: 🇳🇱 The Netherlands Amsterdam BL 3
+  type: hysteria2
+  server: 46.229.243.137
+  port: 8443
+  password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z
+  udp: true
+  sni: grape-turbo-fr.roxa.org
+- name: 🇷🇺 Russia CIDR t.me/rjsxrd
+  type: vless
+  server: 5.129.194.182
+  port: 443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: edge
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
+    short-id: d484643ca8396614
+  servername: yt.chick-team.ru
 - name: 🇷🇺 Россия 🏳️LTE 🥭🔧 t.me/rjsxrd
   type: vless
   server: 185.39.206.241
@@ -1826,21 +1958,6 @@ proxies:
   udp: true
   client-fingerprint: firefox
   network: raw
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
-    short-id: d484643ca8396614
-  servername: yt.chick-team.ru
-- name: '!'
-  type: vless
-  server: 5.129.249.118
-  port: 443
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-  udp: true
-  client-fingerprint: safari
-  network: tcp
   encryption: none
   flow: xtls-rprx-vision
   tls: true
@@ -1863,28 +1980,13 @@ proxies:
     public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
     short-id: d484643ca8396614
   servername: yt.chick-team.ru
-- name: 🇷🇺 Russia CIDR t.me/rjsxrd-2
+- name: '82'
   type: vless
-  server: 5.129.194.182
+  server: 109.73.206.180
   port: 443
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
-  client-fingerprint: edge
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
-    short-id: d484643ca8396614
-  servername: yt.chick-team.ru
-- name: 🇷🇺 Russia CIDR t.me/rjsxrd 2
-  type: vless
-  server: 147.45.108.169
-  port: 443
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-  udp: true
-  client-fingerprint: safari
+  client-fingerprint: chrome
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
@@ -1906,40 +2008,13 @@ proxies:
   reality-opts:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
   servername: tradingview.com
-- name: '🇳🇱 VL Нидерланды #4167 РосТуннель t.me/rjsxrd'
+- name: 🇷🇺 Russia CIDR t.me/rjsxrd 2
   type: vless
-  server: 193.32.178.57
-  port: 443
-  uuid: ded4cb63-e401-47f6-9bb3-83f07ea559a3
-  udp: true
-  client-fingerprint: firefox
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: S5IX1oiVizdxEHw3A4bjP6_HOxFRIfroYOtq504wyiA
-    short-id: 9d3f7b2a5c0e8461
-  servername: cloudflare.com
-- name: 🇩🇪 机场推荐:dafei.de 德国 06 t.me/rjsxrd
-  type: vless
-  server: 93.152.217.41
-  port: 40443
-  uuid: 969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  encryption: none
-  tls: true
-  reality-opts:
-    public-key: VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA
-    short-id: 5b97
-  servername: deepl.com
-- name: '82'
-  type: vless
-  server: 109.73.206.180
+  server: 147.45.108.169
   port: 443
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
@@ -1948,6 +2023,21 @@ proxies:
     public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
     short-id: d484643ca8396614
   servername: yt.chick-team.ru
+- name: '🇳🇱 VL Нидерланды #4165 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: nl5.freekeysh110.online
+  port: 443
+  uuid: 872cc99d-1064-4c79-9c55-7fe4a92f9937
+  udp: true
+  client-fingerprint: edge
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: sgPREsDFJUchKawgXgFGEM4YBjTDur0rgD2GuQmZXzA
+    short-id: 04b9f0b2470fae16
+  servername: nl5.freekeysh110.online
 - name: '🇳🇱 VL Нидерланды #4104 РосТуннель t.me/rjsxrd'
   type: vless
   server: 85.155.226.87
@@ -1962,6 +2052,19 @@ proxies:
     public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
     short-id: 82f5d3a1e9c0b661
   servername: getsavesafe.net
+- name: '🇳🇱 VL Нидерланды #4167 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 193.32.178.57
+  port: 443
+  uuid: ded4cb63-e401-47f6-9bb3-83f07ea559a3
+  udp: true
+  client-fingerprint: firefox
+  network: grpc
+  tls: true
+  reality-opts:
+    public-key: S5IX1oiVizdxEHw3A4bjP6_HOxFRIfroYOtq504wyiA
+    short-id: 9d3f7b2a5c0e8461
+  servername: cloudflare.com
 - name: '🇫🇮 VL Финляндия #4331 РосТуннель t.me/rjsxrd'
   type: vless
   server: 45.14.247.20
@@ -1975,32 +2078,6 @@ proxies:
     public-key: YlDYlOajLRqHnaSiswyc7MODJRE_qDwyzqramg4AhRo
     short-id: c5e8f2d1a9b70386
   servername: cloudflare.com
-- name: '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd 2'
-  type: vless
-  server: 72.56.78.50
-  port: 443
-  uuid: fee2cdd8-55d1-4c5b-a67a-cfde8d45eed0
-  udp: true
-  client-fingerprint: ios
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: huH_8n0Dfk4iolIkzrc-qET8ySHWgZAr-i6K6lr6xSs
-    short-id: 375838bc17c0
-  servername: sun6-21.userapi.com
-- name: '🇷🇺 VL Россия #5134 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 5.129.215.87
-  port: 40443
-  uuid: f0eac976-e4e2-4e24-bc86-cda82ee31442
-  udp: true
-  client-fingerprint: qq
-  network: tcp
-  tls: true
-  reality-opts:
-    public-key: 7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k
-    short-id: '3180'
-  servername: deepl.com
 - name: '🇵🇱 VL Польша #7240 РосТуннель t.me/rjsxrd'
   type: vless
   server: 94.156.45.130
@@ -2015,21 +2092,6 @@ proxies:
   reality-opts:
     public-key: KOgPteoWEwtVtykS2FGV5NHdZw6197VzbITPGkUJDBQ
   servername: electric-mantis.cdn.cachefleet.com
-- name: 700. 🇩🇪 Germany t.me/rjsxrd t.me/rjsxrd
-  type: vless
-  server: 51.250.4.141
-  port: 8443
-  uuid: 5ca83936-136d-4314-8453-4ba10a86cf60
-  udp: true
-  client-fingerprint: firefox
-  network: ws
-  encryption: none
-  tls: true
-  servername: cloudflare.vhub.pro
-  ws-opts:
-    path: /websocket?ed=2560
-    headers:
-      Host: cloudflare.vhub.pro
 - name: '🇺🇦 VL Украина #11752 РосТуннель t.me/rjsxrd'
   type: vless
   server: 91.224.86.107
@@ -2067,13 +2129,57 @@ proxies:
     public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
     short-id: 82f5d3a1e9c0b661
   servername: getsavesafe.net
-- name: 🇷🇺 Russia CIDR t.me/rjsxrd 4
+- name: 700. 🇩🇪 Germany t.me/rjsxrd t.me/rjsxrd
   type: vless
-  server: 5.129.194.180
+  server: 51.250.4.141
+  port: 8443
+  uuid: 5ca83936-136d-4314-8453-4ba10a86cf60
+  udp: true
+  client-fingerprint: firefox
+  network: ws
+  encryption: none
+  tls: true
+  servername: cloudflare.vhub.pro
+  ws-opts:
+    path: /websocket?ed=2560
+    headers:
+      Host: cloudflare.vhub.pro
+- name: '🇵🇱 VL Польша #7152 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 94.183.209.43
+  port: 33843
+  uuid: 5e7ecc47-e424-4653-876e-c7515a2c82b4
+  udp: true
+  client-fingerprint: firefox
+  network: grpc
+  encryption: none
+  tls: true
+  reality-opts:
+    public-key: mFLIx6qO9qtNTKCHiRV6_M3LzLtff_TU03sHwA2A3x4
+    short-id: ed9e5b70102767a8
+  servername: www.cloudflare.com
+- name: '🇳🇱 VL Нидерланды #4014 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 85.155.226.174
+  port: 443
+  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
+    short-id: 82f5d3a1e9c0b661
+  servername: getsavesafe.net
+- name: 🇷🇺 Russia CIDR t.me/rjsxrd 3
+  type: vless
+  server: 62.113.37.127
   port: 443
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
-  client-fingerprint: firefox
+  client-fingerprint: chrome
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
@@ -2096,9 +2202,9 @@ proxies:
     public-key: 7QJA1tXQcNj8gioQVzief5a4KeUTDT7R8FE0jfKU41k
     short-id: '3180'
   servername: deepl.com
-- name: 🇷🇺 Russia CIDR t.me/rjsxrd 5
+- name: 🇷🇺 Russia CIDR t.me/rjsxrd 4
   type: vless
-  server: 147.45.213.156
+  server: 5.129.194.180
   port: 443
   uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
   udp: true
@@ -2126,6 +2232,21 @@ proxies:
     public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
     short-id: bbc68cec8bb8d2e3
   servername: node21.mxvpn.dev
+- name: 🇷🇺 Russia CIDR t.me/rjsxrd 5
+  type: vless
+  server: 147.45.213.156
+  port: 443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
+    short-id: d484643ca8396614
+  servername: yt.chick-team.ru
 - name: '🇳🇱 VL Нидерланды #4164 РосТуннель t.me/rjsxrd'
   type: vless
   server: nl3.freekeysh110.online
@@ -2166,29 +2287,6 @@ proxies:
     public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
     short-id: d484643ca8396614
   servername: yt.chick-team.ru
-- name: '🇳🇱 VL Нидерланды #4137 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 201.51.23.91
-  port: 443
-  uuid: ae2e0637-5c9d-422b-93ac-70bd3fceeb81
-  udp: true
-  client-fingerprint: firefox
-  network: ws
-  encryption: none
-  tls: true
-  servername: hys40.wba-pn.ru
-- name: '🇷🇺 VL Россия #5116 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 45.139.26.104
-  port: 443
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  udp: true
-  client-fingerprint: ios
-  network: raw
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: ru104.mechvpn.online
 - name: 🇺🇸 美国 USA t.me/rjsxrd
   type: vless
   server: 104.17.123.101
@@ -2213,59 +2311,6 @@ proxies:
   network: ws
   tls: true
   servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '🇱🇹 VL Литва #17710 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 104.16.151.21
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '🇵🇱 VL Польша #7225 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: pl4.lckdwn.ru
-  port: 33843
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-  udp: true
-  client-fingerprint: chrome
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: 6GqM3zujFqyHA2Ksah-jgKWzxZToKS-PZOHqLIWNJhs
-    short-id: b9a14981
-  servername: www.cloudflare.com
-- name: 🇷🇺 Russia CIDR t.me/rjsxrd 7
-  type: vless
-  server: 185.207.66.30
-  port: 443
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-  udp: true
-  client-fingerprint: firefox
-  network: raw
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
-    short-id: d484643ca8396614
-  servername: yt.chick-team.ru
-- name: '22'
-  type: vless
-  server: 188.68.220.99
-  port: 443
-  uuid: 2daa9f67-8edc-41a2-a401-4a2497640c53
-  udp: true
-  client-fingerprint: qq
-  network: raw
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: D-OHTModvYqWAvNpZUlIEB4he1pQ0HUHB4fUd6LyOic
-    short-id: ecc652c213fed5d1
-  servername: uk.nightproducts.ru
 - name: 🇸🇪 Sweden CIDR t.me/rjsxrd
   type: vless
   server: 194.87.201.52
@@ -2281,18 +2326,70 @@ proxies:
     public-key: KmgjHeIC7Zng50V-dgIE5H7mBidRngTKPtYTxYbmUl0
     short-id: 27478d7c4511b6
   servername: ya.ru
-- name: 🏳️_未知_56 t.me/rjsxrd
+- name: '🇳🇱 VL Нидерланды #4137 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 104.17.28.89
+  server: 201.51.23.91
   port: 443
-  uuid: 1078d418-b4e0-4668-9018-dc90c2042d61
+  uuid: ae2e0637-5c9d-422b-93ac-70bd3fceeb81
+  udp: true
+  client-fingerprint: firefox
+  network: ws
+  encryption: none
+  tls: true
+  servername: hys40.wba-pn.ru
+- name: '22'
+  type: vless
+  server: 188.68.220.99
+  port: 443
+  uuid: 2daa9f67-8edc-41a2-a401-4a2497640c53
+  udp: true
+  client-fingerprint: qq
+  network: raw
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: D-OHTModvYqWAvNpZUlIEB4he1pQ0HUHB4fUd6LyOic
+    short-id: ecc652c213fed5d1
+  servername: uk.nightproducts.ru
+- name: '🇱🇹 VL Литва #17710 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 104.16.151.21
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   client-fingerprint: chrome
   network: ws
   tls: true
-  servername: workspace.evan00.dpdns.org
-  ws-opts:
-    path: /
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: 🇷🇺 Russia CIDR t.me/rjsxrd 7
+  type: vless
+  server: 185.207.66.30
+  port: 443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: firefox
+  network: raw
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
+    short-id: d484643ca8396614
+  servername: yt.chick-team.ru
+- name: '🇵🇱 VL Польша #7225 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: pl4.lckdwn.ru
+  port: 33843
+  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
+  udp: true
+  client-fingerprint: chrome
+  network: grpc
+  tls: true
+  reality-opts:
+    public-key: 6GqM3zujFqyHA2Ksah-jgKWzxZToKS-PZOHqLIWNJhs
+    short-id: b9a14981
+  servername: www.cloudflare.com
 - name: '🇵🇱 VL Польша #7233 РосТуннель t.me/rjsxrd'
   type: vless
   server: pl.shhflow.xyz
@@ -2307,6 +2404,21 @@ proxies:
   reality-opts:
     public-key: HjLRDqyB9FZNOZwYbiCUN3itf5OEbU1sGIaHDe0e-Fc
   servername: pl.shhflow.xyz
+- name: 🇷🇺
+  type: vless
+  server: 78.159.247.58
+  port: 443
+  uuid: cd9d4675-82ab-4d73-85f2-0af98074b5bb
+  udp: true
+  client-fingerprint: firefox
+  network: raw
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: smzqWgG-wLasYWMveMswB9S5XU9ftuMfQZhmW18nsHc
+    short-id: 965cab7032ceb344
+  servername: smartcaptcha.yandexcloud.net
 - name: '🇩🇪 VL Германия #1944 РосТуннель t.me/rjsxrd'
   type: vless
   server: 144.31.87.16
@@ -2320,41 +2432,34 @@ proxies:
     public-key: l5eAOSPQMEyzEPvWGAKvCkcPpsJvR3DJfYo6elw1UTE
     short-id: 3b802dad547b0847
   servername: yandex.ru
-- name: '🇦🇺 VL Австралия #18915 РосТуннель t.me/rjsxrd'
+- name: 🌐 Anycast-IP 🇷🇺 🇺🇸 CIDR t.me/rjsxrd
   type: vless
-  server: 172.64.53.227
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 171.22.180.21
+  port: 27017
+  uuid: 16490952-0ab6-44dd-b500-039c3e408a78
   udp: true
-  client-fingerprint: chrome
-  network: ws
+  client-fingerprint: firefox
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
   tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '🇩🇪 VL Германия #2395 РосТуннель t.me/rjsxrd'
+  reality-opts:
+    public-key: ens3hLP8kjd-Zye3nW1Q_CC2kJFo0PdPbplj9VLwkWg
+    short-id: c6442fba175fcd79
+  servername: dl.google.com
+- name: '🇷🇺 VL Россия #4358 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 89.125.156.25
-  port: 443
-  uuid: ded4cb63-e401-47f6-9bb3-83f07ea559a3
+  server: 201.51.1.84
+  port: 16923
+  uuid: ba222add-6ac1-45f1-9a18-f91cb38e324f
   udp: true
   client-fingerprint: firefox
   network: grpc
   tls: true
   reality-opts:
-    public-key: BgpHV3rnigdHVH1np44BH-aB8c5NJbso5AoMeqHmG3c
-    short-id: 9c3f2a7e1d8b4056
-  servername: cloudflare.com
-- name: '🇨🇭 VL Швейцария #8821 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 193.151.108.186
-  port: 443
-  uuid: c245122a-f149-4e32-8eaa-e875e88a5ab6
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  servername: shop.magazinetut.online
+    public-key: _QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA
+    short-id: 10ffb85da1c2d986
+  servername: api-maps.yandex.ru
 - name: '🇷🇺 VL Россия #5131 РосТуннель t.me/rjsxrd'
   type: vless
   server: api.kinomir.fun
@@ -2369,20 +2474,42 @@ proxies:
     public-key: cZF84xUCciKRXxTA39vNnh0U8CjUZiUSjLzuNTMOzV8
     short-id: 33e48a03db900ff3
   servername: deepl.com
-- name: '🇨🇭 VL Швейцария #8815 РосТуннель t.me/rjsxrd'
+- name: '🇦🇺 VL Австралия #18915 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 45.143.200.245
-  port: 443
-  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+  server: 172.64.53.227
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
   udp: true
   client-fingerprint: chrome
   network: ws
   tls: true
-  servername: vod.ensf.top
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: '🇨🇭 VL Швейцария #8821 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 193.151.108.186
+  port: 443
+  uuid: c245122a-f149-4e32-8eaa-e875e88a5ab6
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  servername: shop.magazinetut.online
+- name: 🇩🇰 丹麦 DNK t.me/rjsxrd
+  type: vless
+  server: ipw.ygdfw.com
+  port: 443
+  uuid: 9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d
+  udp: true
+  client-fingerprint: unsafe
+  network: ws
+  tls: true
+  servername: p2bm6l1.freelanceriran98.ir
   ws-opts:
-    path: /api/v1/irc
+    path: /ws-dk
     headers:
-      Host: vod.ensf.top
+      Host: p2bm6l1.freelanceriran98.ir
 - name: '🇳🇱 VL Нидерланды #3982 РосТуннель t.me/rjsxrd'
   type: vless
   server: 85.155.226.211
@@ -2426,20 +2553,16 @@ proxies:
     public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
     short-id: a7f3c91b2e6d84c0
   servername: auto.cendora.ru
-- name: 🇩🇰 丹麦 DNK t.me/rjsxrd
+- name: '🇷🇺 VL Россия #5196 РосТуннель t.me/rjsxrd'
   type: vless
-  server: ipw.ygdfw.com
-  port: 443
-  uuid: 9f2f3e55-a8a6-40f3-aeb2-1061e9207d4d
+  server: bz2.wba-pn.ru
+  port: 2053
+  uuid: f62a1751-c1e4-4612-90e7-bd5781c1aede
   udp: true
-  client-fingerprint: unsafe
+  client-fingerprint: android
   network: ws
   tls: true
-  servername: p2bm6l1.freelanceriran98.ir
-  ws-opts:
-    path: /ws-dk
-    headers:
-      Host: p2bm6l1.freelanceriran98.ir
+  servername: bz2.wba-pn.ru
 - name: '🇷🇺 VL Россия #5120 РосТуннель t.me/rjsxrd'
   type: vless
   server: status.netraidly.ru
@@ -2454,11 +2577,11 @@ proxies:
     public-key: WRveYv8IuUyvai4jgnQ6nWCL971-wKboe8evES5arlg
     short-id: 69d4
   servername: deepl.com
-- name: '🇦🇺 VL Австралия #20346 РосТуннель t.me/rjsxrd'
+- name: '🇳🇱 VL Нидерланды #17736 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 89.127.233.204
+  server: 45.137.60.6
   port: 443
-  uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d
+  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
   udp: true
   client-fingerprint: firefox
   network: tcp
@@ -2466,19 +2589,9 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: rcVky9axRdk20BsjA4myAKcjlAAFNQFLUTMrZNqRMis
-    short-id: 663c7a4f406dd6f8
-  servername: app.prostocalc.com
-- name: '🇷🇺 VL Россия #5196 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: bz2.wba-pn.ru
-  port: 2053
-  uuid: f62a1751-c1e4-4612-90e7-bd5781c1aede
-  udp: true
-  client-fingerprint: android
-  network: ws
-  tls: true
-  servername: bz2.wba-pn.ru
+    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
+    short-id: bbc68cec8bb8d2e3
+  servername: node5.mxvpn.dev
 - name: '9'
   type: vless
   server: 147.45.145.127
@@ -2507,11 +2620,11 @@ proxies:
     path: /api/v1/irc
     headers:
       Host: vod.ensf.top
-- name: '🇳🇱 VL Нидерланды #17736 РосТуннель t.me/rjsxrd'
+- name: '11'
   type: vless
-  server: 45.137.60.6
+  server: 45.93.201.131
   port: 443
-  uuid: 564082ff-cf3c-48db-9e10-8ad2312847b4
+  uuid: 9ae0379f-c5d0-434d-bb06-66035aafd2fc
   udp: true
   client-fingerprint: firefox
   network: tcp
@@ -2519,23 +2632,9 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: TlpXTLz1Y-v8B6q9MX55U6eypjfL0LCSNE5zQP4yRHw
-    short-id: bbc68cec8bb8d2e3
-  servername: node5.mxvpn.dev
-- name: '39'
-  type: vless
-  server: 87.228.101.34
-  port: 443
-  uuid: 23da643f-f43c-4c83-af3f-4193eacd878d
-  udp: true
-  client-fingerprint: firefox
-  network: grpc
-  encryption: none
-  tls: true
-  reality-opts:
-    public-key: DmpMjyYBIU4KdMNY-0M8TxX5OBrQQ1A5E28Y9_-VQDk
-    short-id: aaaa
-  servername: metrics.selectel.ru
+    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
+    short-id: fd55b698ee8c3629
+  servername: frantax.my3cx.de
 - name: '🇱🇻 VL Латвия #12816 РосТуннель t.me/rjsxrd'
   type: vless
   server: 208.103.161.32
@@ -2551,6 +2650,20 @@ proxies:
     path: /sg-melbi_/
     headers:
       Host: josni.hoyes.cloudns.ch
+- name: '🇩🇪 VL Германия #2015 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 5.61.46.9
+  port: 443
+  uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7
+  udp: true
+  client-fingerprint: chrome
+  network: ws
+  tls: true
+  servername: vod.ensf.top
+  ws-opts:
+    path: /api/v1/irc
+    headers:
+      Host: vod.ensf.top
 - name: '🇫🇮 VL Финляндия #4329 РосТуннель t.me/rjsxrd'
   type: vless
   server: fin.feywebsite.ir
@@ -2565,29 +2678,44 @@ proxies:
     public-key: y2ciDMmaLyu1U7wEG7Wi9buO91wWHnRtWfPLGjSZHC8
     short-id: 6633e065744286
   servername: play.googleapis.com
-- name: '🇩🇪 VL Германия #2351 РосТуннель t.me/rjsxrd'
+- name: '🇷🇺 VL Россия #5210 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 89.167.0.240
-  port: 443
-  uuid: 694eb5d5-794c-4389-af65-e5a4b8489dae
+  server: 186.246.12.85
+  port: 2053
+  uuid: f62a1751-c1e4-4612-90e7-bd5781c1aede
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: firefox
+  network: ws
+  encryption: none
+  tls: true
+  servername: bz2.wba-pn.ru
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd 2
+  type: vless
+  server: 5.129.253.177
+  port: 443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: firefox
   network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Qr6_9TMQYMCB2hVSYeONcMvxBqIaT0mzPUy8nIivV1g
-    short-id: b58b
-  servername: play.google.com
-- name: '🇩🇪 VL Германия #2238 РосТуннель t.me/rjsxrd'
+    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
+    short-id: d484643ca8396614
+  servername: yt.chick-team.ru
+- name: '🇺🇦 VL Украина #11750 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 185.140.12.160
-  port: 2083
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  server: 91.224.87.22
+  port: 9873
+  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
   udp: true
-  client-fingerprint: ios
+  client-fingerprint: chrome
   network: grpc
   tls: true
-  servername: derman.neobo-tooth.ru
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+  servername: dl.google.com
 - name: '🇨🇾 VL Кипр #16785 РосТуннель t.me/rjsxrd'
   type: vless
   server: 172.64.52.60
@@ -2613,68 +2741,6 @@ proxies:
     public-key: 0ZJDfr9ZghDx3u0pPFvEQ888ViXE_kHVoALrN8j8xnI
     short-id: ed5a52acd4b78bde
   servername: www.rumedia-cdn.com
-- name: '🇺🇦 VL Украина #11750 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 91.224.87.22
-  port: 9873
-  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
-  udp: true
-  client-fingerprint: chrome
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-  servername: dl.google.com
-- name: '🇳🇴 VL Норвегия #17474 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 104.18.1.18
-  port: 443
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  udp: true
-  client-fingerprint: ios
-  network: ws
-  tls: true
-  servername: germany-2.ariyuz.org.
-- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd 2
-  type: vless
-  server: 5.129.253.177
-  port: 443
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
-    short-id: d484643ca8396614
-  servername: yt.chick-team.ru
-- name: '🇷🇺 VL Россия #5210 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 186.246.12.85
-  port: 2053
-  uuid: f62a1751-c1e4-4612-90e7-bd5781c1aede
-  udp: true
-  client-fingerprint: firefox
-  network: ws
-  encryption: none
-  tls: true
-  servername: bz2.wba-pn.ru
-- name: '🇩🇪 VL Германия #19622 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 2.26.227.49
-  port: 443
-  uuid: 2f919a1e-f00e-4538-b0a9-cf190721d578
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: HyxJ9UmGQlNG7YPMdc_jjvB8GW8JfeKmoi1CA1ZL5wM
-  servername: ge1.shhflow.xyz
 - name: 🇷🇺_俄罗斯_18 t.me/rjsxrd
   type: vless
   server: 78.159.247.253
@@ -2702,30 +2768,6 @@ proxies:
     public-key: 6RshLCSAs31qGRa_tWi63KClbh2Kzj9ooXpdaPJKbjs
     short-id: a6bbc4aecf5d961f
   servername: vk.ru
-- name: 🇺🇸
-  type: vless
-  server: 78.159.247.229
-  port: 443
-  uuid: cd9d4675-82ab-4d73-85f2-0af98074b5bb
-  udp: true
-  client-fingerprint: chrome
-  network: raw
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: zaXPmtzoPurwERLf5M2RiCGidnIXzdHycBCkB4AZlRE
-    short-id: a46a71daa12a5c9b
-  servername: smartcaptcha.yandexcloud.net
-- name: '🇷🇺 VL Россия #19036 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: using.neobo-tooth.ru
-  port: 2083
-  uuid: 0c6b632a-cd96-4b74-9b51-151e3b5697db
-  udp: true
-  client-fingerprint: chrome
-  network: grpc
-  tls: true
 - name: '🇵🇱 VL Польша #7258 РосТуннель t.me/rjsxrd'
   type: vless
   server: 31.76.82.186
@@ -2741,43 +2783,66 @@ proxies:
     public-key: bi6nc3_PcMa3ZxOkUH87JrRz8E7yiBJpv6Qnr46HCDY
     short-id: 4098a82e9c343413
   servername: de.chick-team.ru
-- name: '🇦🇲 Armenia — #108 t.me/rjsxrd'
+- name: '26'
   type: vless
-  server: 77.91.68.70
-  port: 55983
-  uuid: f667a096-5231-4cfb-8759-92bb32473139
+  server: 185.91.52.83
+  port: 443
+  uuid: 6a798544-d17a-4039-abde-a25dc939441a
   udp: true
-  client-fingerprint: chrome
-  network: tcp
-  encryption: none
-  tls: true
-  reality-opts:
-    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
-    short-id: 0e
-  servername: yahoo.com
-- name: '🇷🇺 VL Россия #5213 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: usa1.wba-pn.ru
-  port: 2053
-  uuid: fd3ff7be-f277-494b-a651-c210b93f2c19
-  udp: true
-  client-fingerprint: android
-  network: ws
-  tls: true
-  servername: usa1.wba-pn.ru
-- name: '🇳🇱 VL Нидерланды #3716 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 78.159.245.75
-  port: 9002
-  uuid: 2c634977-584e-4e1f-b501-1b70c77a6743
-  udp: true
-  client-fingerprint: firefox
+  client-fingerprint: qq
   network: grpc
   encryption: none
   tls: true
+  servername: slnd.tdvin.com
+- name: '🇩🇪 VL Германия #19622 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 2.26.227.49
+  port: 443
+  uuid: 2f919a1e-f00e-4538-b0a9-cf190721d578
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
   reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: api-maps.yandex.ru
+    public-key: HyxJ9UmGQlNG7YPMdc_jjvB8GW8JfeKmoi1CA1ZL5wM
+  servername: ge1.shhflow.xyz
+- name: '🇷🇺 VL Россия #19499 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 193.233.246.82
+  port: 8443
+  uuid: 41da9cd0-b02c-427a-b74e-7e402c610ae4
+  udp: true
+  client-fingerprint: chrome
+  network: grpc
+  tls: true
+  reality-opts:
+    public-key: sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg
+    short-id: 844352756c1fabba
+  servername: ads.x5.ru
+- name: 🇺🇸_美国_16 t.me/rjsxrd
+  type: vless
+  server: 31.76.5.26
+  port: 443
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
+  udp: true
+  client-fingerprint: qq
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
+    short-id: 2186a755ed67b034
+  servername: nordic.cendora.ru
+- name: '🇷🇺 VL Россия #19036 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: using.neobo-tooth.ru
+  port: 2083
+  uuid: 0c6b632a-cd96-4b74-9b51-151e3b5697db
+  udp: true
+  client-fingerprint: chrome
+  network: grpc
+  tls: true
 - name: '🇳🇱 VL Нидерланды #4008 РосТуннель t.me/rjsxrd'
   type: vless
   server: 85.155.226.141
@@ -2793,49 +2858,20 @@ proxies:
     public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
     short-id: 82f5d3a1e9c0b661
   servername: getsavesafe.net
-- name: 🇷🇺 2
+- name: '🇦🇲 Armenia — #108 t.me/rjsxrd'
   type: vless
-  server: 78.159.247.105
-  port: 443
-  uuid: cd9d4675-82ab-4d73-85f2-0af98074b5bb
-  udp: true
-  client-fingerprint: firefox
-  network: raw
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: wa9Uphq5iZL7IAYh13BHOvd-qs0oDe_qJKNjEJpVBVw
-    short-id: 01b0a66d0267b0d8
-  servername: smartcaptcha.yandexcloud.net
-- name: 🇺🇸_美国_16 t.me/rjsxrd
-  type: vless
-  server: 31.76.5.26
-  port: 443
-  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
-  udp: true
-  client-fingerprint: qq
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: YQTixaXzPVImuRc4TUbrFAekjIiaYV-t5S-HTKlH0AU
-    short-id: 2186a755ed67b034
-  servername: nordic.cendora.ru
-- name: 🇩🇪 Germany CIDR t.me/rjsxrd
-  type: vless
-  server: 138.124.254.21
-  port: 8443
-  uuid: 6fe06b02-74f7-431f-8ca4-c702fa3322bf
+  server: 77.91.68.70
+  port: 55983
+  uuid: f667a096-5231-4cfb-8759-92bb32473139
   udp: true
   client-fingerprint: chrome
   network: tcp
   encryption: none
-  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: QMJRGTqZRbpeLpIAdvn6dhftuzrpwbtwmVG2s5IuuU0
-    short-id: 00a02855ba568c29
-  servername: de-two.quiet-rogue.site
+    public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg
+    short-id: 0e
+  servername: yahoo.com
 - name: '🇷🇺 VL Россия #5201 РосТуннель t.me/rjsxrd'
   type: vless
   server: 194.87.143.165
@@ -2862,16 +2898,21 @@ proxies:
     public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo
     short-id: dc8109baf0f607ea
   servername: storage.yandex.net
-- name: '🇪🇬 VL Египет #17628 РосТуннель t.me/rjsxrd'
+- name: 🇩🇪 Germany CIDR t.me/rjsxrd
   type: vless
-  server: 104.16.75.46
-  port: 443
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
+  server: 138.124.254.21
+  port: 8443
+  uuid: 6fe06b02-74f7-431f-8ca4-c702fa3322bf
   udp: true
   client-fingerprint: chrome
-  network: ws
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
   tls: true
-  servername: de-new.ariyuz.org
+  reality-opts:
+    public-key: QMJRGTqZRbpeLpIAdvn6dhftuzrpwbtwmVG2s5IuuU0
+    short-id: 00a02855ba568c29
+  servername: de-two.quiet-rogue.site
 - name: '! 3'
   type: vless
   server: 176.108.240.241
@@ -2886,36 +2927,16 @@ proxies:
     public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
     short-id: aa
   servername: dl.google.com
-- name: '🇱🇻 VL Латвия #9801 РосТуннель t.me/rjsxrd'
+- name: '🇪🇬 VL Египет #17628 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 89.36.161.222
-  port: 2053
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  udp: true
-  client-fingerprint: firefox
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg
-    short-id: d26f4703cdd30f4e
-  servername: vk.ru
-- name: '🇳🇱 VL Нидерланды #4157 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 45.154.98.72
-  port: 1000
-  uuid: 97883b3a-f0b5-4e88-a61b-e9b24e18423d
+  server: 104.16.75.46
+  port: 443
+  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
   udp: true
   client-fingerprint: chrome
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
+  network: ws
   tls: true
-  reality-opts:
-    public-key: NLmekXQAhK-GC7wZhk2RcDHFI41iq6ojzZea1ppEazM
-    short-id: 06cc092d6f372b5e
-  servername: sony.com
+  servername: de-new.ariyuz.org
 - name: 🇫🇮 Finland CIDR t.me/rjsxrd
   type: vless
   server: 138.124.254.68
@@ -2931,50 +2952,26 @@ proxies:
     public-key: AKUQO-fKsD19FFBxNq5XTFCRXWDZfes4zJjRINY1KUI
     short-id: beff3ff061a64cfd
   servername: fi-one.quiet-rogue.site
-- name: '🇷🇺 VL Россия #18857 РосТуннель t.me/rjsxrd'
+- name: '🇳🇱 VL Нидерланды #4157 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 172.64.52.182
-  port: 2087
-  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  server: 45.154.98.72
+  port: 1000
+  uuid: 97883b3a-f0b5-4e88-a61b-e9b24e18423d
   udp: true
   client-fingerprint: chrome
-  network: ws
-  tls: true
-  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
-- name: '🇳🇱 VL Нидерланды #3983 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 85.155.226.132
-  port: 443
-  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
-  udp: true
-  client-fingerprint: qq
-  network: raw
+  network: tcp
   encryption: none
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
-    short-id: 82f5d3a1e9c0b661
-  servername: getsavesafe.net
-- name: '🇳🇱 VL Нидерланды #4103 РосТуннель t.me/rjsxrd'
+    public-key: NLmekXQAhK-GC7wZhk2RcDHFI41iq6ojzZea1ppEazM
+    short-id: 06cc092d6f372b5e
+  servername: sony.com
+- name: '🇩🇪 VL Германия #20622 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 85.155.226.31
+  server: 185.136.12.28
   port: 443
-  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
-  udp: true
-  client-fingerprint: qq
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
-    short-id: 82f5d3a1e9c0b661
-  servername: getsavesafe.net
-- name: '🇸🇪 VL Швеция #11903 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 80.66.78.227
-  port: 443
-  uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e
+  uuid: 2f919a1e-f00e-4538-b0a9-cf190721d578
   udp: true
   client-fingerprint: firefox
   network: tcp
@@ -2982,9 +2979,8 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: kRwY2AAdT6SH4FKFQb-UhnJbyddqbdluKy1xaYPatD8
-    short-id: b9f8f9772217538f
-  servername: cdn-se.alohaapp.uk
+    public-key: QpvTz7SVokDMimMwrNtrLy4XbS4XdKZlgDqyqZXpREM
+  servername: ge.shhflow.xyz
 - name: '🇷🇺 VL Россия #21315 РосТуннель t.me/rjsxrd'
   type: vless
   server: 85.209.135.10
@@ -3000,19 +2996,6 @@ proxies:
     public-key: cNWgfJHerzIEb0RXxncP8R9Ex8-FkALOtbhneEIHpR0
     short-id: a1b2c4d4a1b2c5d5
   servername: www.sciencedirect.com
-- name: '🇬🇧 VL Великобритания #5786 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 149.248.79.235
-  port: 17301
-  uuid: 3571b127-4b3b-4c01-8249-1684daf586b5
-  udp: true
-  client-fingerprint: firefox
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: nadshlxG0RqC6om__cf9E4F6qolRmHJLcNtReBTr9xY
-    short-id: 5d
-  servername: aws.amazon.com
 - name: '10'
   type: vless
   server: 185.91.54.83
@@ -3028,6 +3011,36 @@ proxies:
     public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI
     short-id: 226509f017e4c36d
   servername: eda.x5.ru
+- name: '🇸🇪 VL Швеция #11903 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 80.66.78.227
+  port: 443
+  uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: kRwY2AAdT6SH4FKFQb-UhnJbyddqbdluKy1xaYPatD8
+    short-id: b9f8f9772217538f
+  servername: cdn-se.alohaapp.uk
+- name: '🇵🇱 VL Польша #7243 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 144.31.5.171
+  port: 753
+  uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907
+  udp: true
+  client-fingerprint: firefox
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500
+    short-id: b91a73752053b039
+  servername: www.nvidia.com
 - name: '17'
   type: vless
   server: 188.225.47.207
@@ -3043,21 +3056,64 @@ proxies:
     public-key: iWxxH0TWB1Ciz6sEwtfjUVY61OcTDihou5IJfkt0O0Q
     short-id: 7c1e5a9f2d348b0a
   servername: www.ozon.ru
-- name: 🇫🇮 Finland 🌐 CIDR t.me/rjsxrd
+- name: '🇬🇧 VL Великобритания #5786 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 185.147.27.131
-  port: 6450
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  server: 149.248.79.235
+  port: 17301
+  uuid: 3571b127-4b3b-4c01-8249-1684daf586b5
   udp: true
-  client-fingerprint: qq
+  client-fingerprint: firefox
+  network: grpc
+  tls: true
+  reality-opts:
+    public-key: nadshlxG0RqC6om__cf9E4F6qolRmHJLcNtReBTr9xY
+    short-id: 5d
+  servername: aws.amazon.com
+- name: '🇩🇪 VL Германия #18238 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 172.64.52.24
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  client-fingerprint: chrome
+  network: ws
+  tls: true
+  servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+- name: '🇷🇺 VL Россия #5110 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: ru104.mechvpn.online
+  port: 443
+  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
+  udp: true
+  client-fingerprint: chrome
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
   tls: true
+- name: '🇳🇱 VL Нидерланды #4000 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 85.155.226.30
+  port: 443
+  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+  udp: true
+  client-fingerprint: qq
+  network: raw
+  flow: xtls-rprx-vision
+  tls: true
   reality-opts:
-    public-key: MXfd9WXeMKb5RApiIBz3do37MVVs7eSjAolIRoVT6zk
-    short-id: 26b1888d30cae1f1
-  servername: fi.chick-team.ru
+    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
+    short-id: 82f5d3a1e9c0b661
+  servername: getsavesafe.net
+- name: '🇪🇬 VL Египет #18329 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: ytryurdj64bbb.localip.ir
+  port: 443
+  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
+  udp: true
+  client-fingerprint: chrome
+  network: ws
+  tls: true
+  servername: ro-3.ariyuz.org
 - name: '🇦🇹 VL Австрия #13012 РосТуннель t.me/rjsxrd'
   type: vless
   server: 104.168.146.122
@@ -3073,54 +3129,6 @@ proxies:
     path: /sg-amz
     headers:
       Host: support.zoom.us.yxls.eu.cc
-- name: '🇷🇺 VL Россия #5110 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: ru104.mechvpn.online
-  port: 443
-  uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-- name: '🇪🇬 VL Египет #18329 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: ytryurdj64bbb.localip.ir
-  port: 443
-  uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  tls: true
-  servername: ro-3.ariyuz.org
-- name: '🇳🇱 VL Нидерланды #4000 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 85.155.226.30
-  port: 443
-  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
-  udp: true
-  client-fingerprint: qq
-  network: raw
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
-    short-id: 82f5d3a1e9c0b661
-  servername: getsavesafe.net
-- name: '🇵🇱 VL Польша #7173 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 94.183.209.59
-  port: 33843
-  uuid: d23cb516-40db-4aa4-8142-6b45ff882f90
-  udp: true
-  client-fingerprint: firefox
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: 6GqM3zujFqyHA2Ksah-jgKWzxZToKS-PZOHqLIWNJhs
-    short-id: b9a14981
-  servername: www.cloudflare.com
 - name: 🇷🇺 Russia CIDR VK t.me/rjsxrd
   type: vless
   server: 212.233.99.132
@@ -3136,6 +3144,20 @@ proxies:
     public-key: NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk
     short-id: ab532d3308daa67b
   servername: ru.chick-team.ru
+- name: '🇩🇪 VL Германия #2344 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 157.90.165.181
+  port: 11762
+  uuid: 7c9b4360-6be9-47f2-ace9-b87297ea3d8f
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU
+  servername: swdist.apple.com
 - name: '🇺🇦 VL Украина #12118 РосТуннель t.me/rjsxrd'
   type: vless
   server: 172.64.155.209
@@ -3151,20 +3173,35 @@ proxies:
     path: /
     headers:
       Host: music1000.melobitmusic1.ir
-- name: '🇩🇪 VL Германия #2344 РосТуннель t.me/rjsxrd'
+- name: '🇳🇱 VL Нидерланды #4113 РосТуннель t.me/rjsxrd'
   type: vless
-  server: 157.90.165.181
-  port: 11762
-  uuid: 7c9b4360-6be9-47f2-ace9-b87297ea3d8f
+  server: edge.netraidly.ru
+  port: 40443
+  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
   udp: true
-  client-fingerprint: chrome
+  client-fingerprint: qq
+  network: tcp
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ
+    short-id: beb4
+  servername: deepl.com
+- name: '🇳🇱 VL Нидерланды #4007 РосТуннель t.me/rjsxrd'
+  type: vless
+  server: 85.155.226.108
+  port: 443
+  uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d
+  udp: true
+  client-fingerprint: qq
   network: tcp
   encryption: none
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: R2gKMF0Tetlnesc1pPkZH9NaOeehw-f5_U9JKG_cLjU
-  servername: swdist.apple.com
+    public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs
+    short-id: 82f5d3a1e9c0b661
+  servername: getsavesafe.net
 - name: '🇩🇪 VL Германия #11915 РосТуннель t.me/rjsxrd'
   type: vless
   server: 43.224.150.71
@@ -3180,52 +3217,11 @@ proxies:
     public-key: jkGStCLgX1e3kQ31H1_ycSuYm_zSNQ4qVafasU7bkwU
     short-id: 4c0be5bf40e9f5ce
   servername: www.bing.com
-- name: '🇳🇱 VL Нидерланды #4113 РосТуннель t.me/rjsxrd'
+- name: '🇳🇱 VL Нидерланды #3927 РосТуннель t.me/rjsxrd'
   type: vless
-  server: edge.netraidly.ru
-  port: 40443
-  uuid: 8ac637bf-554e-4902-94d7-baf01780a83c
-  udp: true
-  client-fingerprint: qq
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: mM33xyzf1GPaU2CQXAGYoGkTuYzEZRYT6S-NngyqfHQ
-    short-id: beb4
-  servername: deepl.com
-- name: '! 4'
-  type: vless
-  server: 91.224.87.22
-  port: 9882
-  uuid: f4685d27-73e3-4588-9622-add50b84046a
-  udp: true
-  client-fingerprint: qq
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aabb
-  servername: dl.google.com
-- name: '🇩🇪 VL Германия #2314 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 150.230.146.170
-  port: 2053
-  uuid: c7e9c591-2764-423a-afca-efbd010fd396
-  udp: true
-  client-fingerprint: chrome
-  network: ws
-  tls: true
-  servername: forfreeuse.rtqa.ru
-  ws-opts:
-    path: /
-    headers:
-      Host: forfreeuse.rtqa.ru
-- name: '🇳🇱 VL Нидерланды #3829 РосТуннель t.me/rjsxrd'
-  type: vless
-  server: 2.27.40.190
-  port: 443
-  uuid: 682102a3-9731-4562-ad28-04dc62bc8dee
+  server: 150.40.117.221
+  port: 8443
+  uuid: 47388561-cf0c-4cfc-91f8-fdfd9fa3d756
   udp: true
   client-fingerprint: firefox
   network: tcp
@@ -3233,9 +3229,9 @@ proxies:
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
-    short-id: 635a76c25a4b1820
-  servername: www.amd.com
+    public-key: B5F8h8tpeZ-1ydiT0uFgdc30jJyw8H89Y8e-p_VV6yw
+    short-id: 7b
+  servername: www.amazon.com
 - name: '🇷🇺 VL Россия #18482 РосТуннель t.me/rjsxrd'
   type: vless
   server: 46.8.158.22
@@ -3249,35 +3245,20 @@ proxies:
     public-key: wdWQNp1lnaFZ3L_r9hRK5vpVgv9M7UBb5JZuYPcWDAE
     short-id: e96bc8c85c3836
   servername: www.icloud.com
-- name: 🇷🇺 3
+- name: '! 5'
   type: vless
-  server: 78.159.247.235
-  port: 443
-  uuid: cd9d4675-82ab-4d73-85f2-0af98074b5bb
+  server: 176.108.243.192
+  port: 9880
+  uuid: 14777bd9-56a5-46f6-a94f-826b4800dc05
   udp: true
   client-fingerprint: chrome
-  network: raw
+  network: grpc
   encryption: none
-  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: f6aiEkCa2WOzwaKQjpbrDAZlqVpT1lNcP5hAlKV9PG0
-    short-id: 7a1373222576ba4d
-  servername: smartcaptcha.yandexcloud.net
-- name: 🇨🇭 瑞士 CHE t.me/rjsxrd
-  type: vless
-  server: 178.83.226.142
-  port: 8443
-  uuid: 4cb63132-e084-4676-ac67-1ed6b60be05a
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: -x9vdxai-qKAzuhxV7H2RIbEmIh_ZgdiFxiUA5q0B1I
-    short-id: aa6988d03cc11454
-  servername: refersion.com
+    public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0
+    short-id: aa
+  servername: dl.google.com
 - name: '🇳🇱 VL Нидерланды #3730 РосТуннель t.me/rjsxrd'
   type: vless
   server: 95.85.247.155
@@ -3293,21 +3274,6 @@ proxies:
     public-key: gc9oXe37KCCm3J1dJ03wdGsnxPBdeEkRPOvl_t-vfVM
     short-id: a7f3c91b2e6d84c0
   servername: auto.cendora.ru
-- name: 🇫🇮 Finland 🌐 CIDR
-  type: vless
-  server: alya.chick-team.ru
-  port: 6450
-  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
-  udp: true
-  client-fingerprint: edge
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: MXfd9WXeMKb5RApiIBz3do37MVVs7eSjAolIRoVT6zk
-    short-id: 26b1888d30cae1f1
-  servername: fi.chick-team.ru
 - name: '🇱🇻 VL Латвия #17239 РосТуннель t.me/rjsxrd'
   type: vless
   server: 132.243.231.89
@@ -3323,6 +3289,21 @@ proxies:
     public-key: nF_kEdHan2dgl2tlQ_dtNaKZ4oORhuiFrXHbtEDcT2Q
     short-id: 2d6d073dc88f22a8
   servername: se1.se-cdn.ru
+- name: 🇷🇺 3
+  type: vless
+  server: 78.159.247.235
+  port: 443
+  uuid: cd9d4675-82ab-4d73-85f2-0af98074b5bb
+  udp: true
+  client-fingerprint: chrome
+  network: raw
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: f6aiEkCa2WOzwaKQjpbrDAZlqVpT1lNcP5hAlKV9PG0
+    short-id: 7a1373222576ba4d
+  servername: smartcaptcha.yandexcloud.net
 - name: 1701 t.me/rjsxrd
   type: vless
   server: 79.174.92.133
@@ -3336,6 +3317,36 @@ proxies:
     public-key: M_V1dM8_wcpwnmh2VZp-s3LCBjy38ZWCRpxLrBc58Do
     short-id: a48d397391861a3c
   servername: max.ru
+- name: .𖥔 ݁ ˖ִ🛸༄˖°. CIDR
+  type: vless
+  server: 81.19.135.191
+  port: 443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: chrome
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6J829WZ6hhEtCmz8CfBBBP69ikMDlYPF2Lumyel6XTI
+    short-id: d484643ca8396614
+  servername: yt.chick-team.ru
+- name: 🇫🇮 Finland 🌐 CIDR
+  type: vless
+  server: alya.chick-team.ru
+  port: 6450
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: edge
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: MXfd9WXeMKb5RApiIBz3do37MVVs7eSjAolIRoVT6zk
+    short-id: 26b1888d30cae1f1
+  servername: fi.chick-team.ru
 - name: 🇫🇷 France CIDR VK
   type: vless
   server: frabridge1.frost-api.com
@@ -3351,14 +3362,6 @@ proxies:
     public-key: SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw
     short-id: e7
   servername: max.ru
-- name: 🇩🇪 Germany CIDR
-  type: vless
-  server: 135.106.193.180
-  port: 54
-  uuid: 9972a440-39a6-4672-8883-5dd188863acf
-  udp: true
-  client-fingerprint: chrome
-  network: tcp
 - name: 🇩🇪 Germany 🌐 CIDR
   type: vless
   server: 95.163.232.184
@@ -3384,35 +3387,6 @@ proxies:
   network: grpc
   tls: true
   servername: de2.frost-api.com
-- name: 🇮🇹 Italy CIDR
-  type: vless
-  server: 138.124.254.68
-  port: 2096
-  uuid: 6fe06b02-74f7-431f-8ca4-c702fa3322bf
-  udp: true
-  client-fingerprint: edge
-  network: tcp
-  encryption: none
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: pWPvxPIVtdzgaL0cdFZ73qn1FihjKDZ7TE55wg57Vl8
-    short-id: 9b43ece6010612b0
-  servername: it-one.quiet-rogue.site
-- name: 🇵🇱 Poland CIDR
-  type: vless
-  server: 176.109.108.196
-  port: 9892
-  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
-  udp: true
-  client-fingerprint: chrome
-  network: grpc
-  encryption: none
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aabbccdd
-  servername: dl.google.com
 - name: 🇱🇻 Latvia CIDR
   type: vless
   server: 171.22.180.21
@@ -3428,6 +3402,63 @@ proxies:
     public-key: ens3hLP8kjd-Zye3nW1Q_CC2kJFo0PdPbplj9VLwkWg
     short-id: faa145dab838eac4
   servername: dl.google.com
+- name: 🇮🇹 Italy CIDR
+  type: vless
+  server: 138.124.254.68
+  port: 2096
+  uuid: 6fe06b02-74f7-431f-8ca4-c702fa3322bf
+  udp: true
+  client-fingerprint: edge
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: pWPvxPIVtdzgaL0cdFZ73qn1FihjKDZ7TE55wg57Vl8
+    short-id: 9b43ece6010612b0
+  servername: it-one.quiet-rogue.site
+- name: 🇳🇴 Norway 🌐 CIDR
+  type: vless
+  server: 185.186.143.76
+  port: 443
+  uuid: 2c0a296d-3b2a-4529-9ba6-8484aecbc14b
+  udp: true
+  client-fingerprint: edge
+  network: grpc
+  tls: true
+  reality-opts:
+    public-key: 6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM
+    short-id: f74c6a18133e2e72
+  servername: ru-kitchen.ru
+- name: 🇵🇱 Poland CIDR
+  type: vless
+  server: 176.109.108.196
+  port: 9892
+  uuid: 2a650f3b-d95b-4bd6-aadf-16ccc0717155
+  udp: true
+  client-fingerprint: chrome
+  network: grpc
+  encryption: none
+  tls: true
+  reality-opts:
+    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
+    short-id: aabbccdd
+  servername: dl.google.com
+- name: 🇳🇱 The Netherlands CIDR VK
+  type: vless
+  server: 212.233.99.132
+  port: 6443
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: edge
+  network: tcp
+  encryption: none
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc
+    short-id: 89e0494514ec
+  servername: www.oracle.com
 - name: 🇳🇴 Norway CIDR VK
   type: vless
   server: 212.233.99.132
@@ -3443,19 +3474,6 @@ proxies:
     public-key: aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc
     short-id: 89e0494514ec
   servername: www.oracle.com
-- name: 🇳🇴 Norway 🌐 CIDR
-  type: vless
-  server: 185.186.143.76
-  port: 443
-  uuid: 2c0a296d-3b2a-4529-9ba6-8484aecbc14b
-  udp: true
-  client-fingerprint: edge
-  network: grpc
-  tls: true
-  reality-opts:
-    public-key: 6vDdlh4aAipoRQ-IXDjzTUtKpZS09xtNXIisCa__2CM
-    short-id: f74c6a18133e2e72
-  servername: ru-kitchen.ru
 - name: 🇸🇪 Sweden CIDR
   type: vless
   server: 171.22.180.21
@@ -3471,16 +3489,30 @@ proxies:
     public-key: ens3hLP8kjd-Zye3nW1Q_CC2kJFo0PdPbplj9VLwkWg
     short-id: faa145dab838eac4
   servername: dl.google.com
-- name: 🌐 Anycast-IP 🇫🇷 🇵🇱 CIDR
+- name: 🇹🇷 Turkey CIDR
   type: vless
-  server: 82.202.143.221
+  server: tr3.wba-pn.ru
   port: 443
-  uuid: cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68
+  uuid: af2a0c18-b08c-471f-baa3-259ac2ce3a85
   udp: true
   client-fingerprint: chrome
-  network: xhttp
+  network: ws
   tls: true
-  servername: pol8.frost-api.com
+  servername: tr3.wba-pn.ru
+- name: 🇳🇱 The Netherlands CIDR VK-2
+  type: vless
+  server: 212.233.99.132
+  port: 6444
+  uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5
+  udp: true
+  client-fingerprint: edge
+  network: grpc
+  encryption: none
+  tls: true
+  reality-opts:
+    public-key: D_6yJhDg-rnm_4y3onQwlfpTjCfoJvSeihN7D4pHnCA
+    short-id: 7e4aa03904fefb
+  servername: www.sony.com
 - name: 🇹🇷 Turkey CIDR VK
   type: vless
   server: 212.233.99.132
@@ -3509,6 +3541,16 @@ proxies:
     path: /v1
     headers:
       Host: live.ok.ru
+- name: 🌐 Anycast-IP 🇫🇷 🇵🇱 CIDR
+  type: vless
+  server: 82.202.143.221
+  port: 443
+  uuid: cbe5611f-392b-4ec3-9d8b-5bbe59c0fa68
+  udp: true
+  client-fingerprint: chrome
+  network: xhttp
+  tls: true
+  servername: pol8.frost-api.com
 - name: 🇷🇺 Russia 🌐 CIDR-2
   type: vless
   server: 176.53.146.164
@@ -3531,6 +3573,13 @@ proxies:
   password: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
   udp: true
   sni: fi-one.quiet-rogue.site
+- name: 🇫🇮 Finland CIDR 2
+  type: hysteria2
+  server: 138.124.254.68
+  port: 2053
+  password: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
+  udp: true
+  sni: fi-one.quiet-rogue.site
 - name: 🇮🇹 Italy CIDR 2
   type: hysteria2
   server: 138.124.254.21
@@ -3545,13 +3594,6 @@ proxies:
   password: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
   udp: true
   sni: it-one.quiet-rogue.site
-- name: 🇫🇮 Finland CIDR 2
-  type: hysteria2
-  server: 138.124.254.68
-  port: 2053
-  password: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
-  udp: true
-  sni: fi-one.quiet-rogue.site
 - name: WARP AWG tel.de.tribukvy.ltd jc4
   type: wireguard
   provider: warp
@@ -5120,276 +5162,280 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - 🌐TCP Пятёрочка V.O.I.D
-  - 🇫🇮Hetzner
+  - 🇫🇷OVH
   - 🌐1984 🇷🇺 Russia 🏳️ SNI-VK VL
+  - 🇫🇷OVH 2
+  - 🌐1137 🇷🇺 Russia 🏳️ CIDR-Yande
+  - 🌐REALITYDE🇩🇪 144.31.168.133-44
+  - 🌐TCP Пятёрочка V.O.I.D
   - 🌐636ms Бельгия BE 🇧🇪 @vlesstroj
   - 🇷🇺Jsc timeweb
-  - 🇫🇷OVH 2
-  - 🇫🇷OVH
-  - 🌐REALITYDE🇩🇪 144.31.168.133-44
+  - 🇫🇮Play2go International Limited
+  - 🇫🇮Hetzner
   - 🌐0228 🇫🇮 Finland 🏳️ SNI-X5 V
-  - 🇩🇪Aeza Group
-  - 🇬🇧Iomart Cloud Services Limited
   - 🇩🇪Forestsnet
-  - 🇺🇸Chsl One
-  - 🌐🔒 VL-TCP-RLT 🇳🇱 NL-144.31.86.1
-  - 🌐EPODONIOS
-  - 🌐@DeltaKroneckerGithub
-  - 🇮🇹OVH
-  - 🌐OpenRay 🇨🇦 CA-26473
   - 🇫🇷OVH 3
+  - 🌐🔒 VL-TCP-RLT 🇳🇱 NL-144.31.86.1
+  - 🌐@DeltaKroneckerGithub
+  - 🇩🇪Hetzner
+  - 🇺🇸Chsl One
+  - 🌐EPODONIOS
   - 🇩🇪WEYRO LTD
+  - 🌐OpenRay 🇨🇦 CA-26473
   - 🇩🇪WEYRO LTD 2
-  - 🇳🇱Play2go International Limited
   - 🇨🇦OVH
   - 🇫🇷OVH 4
+  - 🇳🇱Play2go International Limited
   - 🇩🇪U1 Digital Services
   - 🇺🇸Servhost Group
   - 🇬🇧Packet Star Networks Limited
-  - 🇫🇷Aeza Group
   - 🇫🇷ESTOXY OU
+  - 🇫🇷Aeza Group
+  - 🌐EPODONIOS 2
   - 🇩🇪Senko Digital
   - 🇫🇷Aeza Group 2
-  - 🌐EPODONIOS 2
-  - 🇬🇧Hostkey Bv
   - 🇩🇪WEYRO LTD 3
-  - 🌐🇳🇱 The Netherlands Eygelshove
-  - 🇫🇮Senko Digital
-  - 🇺🇦Route 95
-  - 🇫🇷Contabo GmbH
-  - 🌐4Sarina-b0356cdc6c
-  - 🇵🇱HOSTES LTD
-  - 🌐18203NL0VLESSNoneext_raw.githu
-  - 🇩🇪U1 Digital Services 2
+  - 🇬🇧Hostkey Bv
   - 🇫🇷OVH 5
+  - 🇺🇦Route 95
+  - 🇫🇮Senko Digital
+  - 🌐🇳🇱 The Netherlands Eygelshove
+  - 🌐4Sarina-b0356cdc6c
+  - 🇫🇷Contabo GmbH
+  - 🇵🇱HOSTES LTD
+  - 🇩🇪U1 Digital Services 2
+  - 🌐18203NL0VLESSNoneext_raw.githu
+  - 🇫🇮Play2go International Limited 2
   - 🇳🇱Servers Tech Fzco
   - 🇩🇪WEYRO LTD 4
-  - 🇫🇮Play2go International Limited 2
-  - 🇬🇧Global Connectivity Solutions Llp
   - 🇺🇦Route 95 2
-  - 🇳🇴Gigahost AS
+  - 🇬🇧Global Connectivity Solutions Llp
   - 🇳🇱Oc Networks Limited
-  - 🇵🇱MEVSPACE sp z oo
-  - 🇩🇪WEYRO LTD 5
   - 🇵🇱HOSTES LTD 2
-  - 🇫🇮Play2go International Limited 3
-  - 🇩🇪U1 Digital Services 3
-  - 🇳🇱Oc Networks Limited 2
+  - 🇵🇱MEVSPACE sp z oo
+  - 🇳🇴Gigahost AS
   - 🇸🇪QWINS LTD
-  - 🇬🇧Global Connectivity Solutions Llp 2
-  - 🇵🇱HOSTES LTD 4
+  - 🇩🇪WEYRO LTD 5
+  - 🇷🇴Interkvm Host Srl
+  - 🇫🇮Play2go International Limited 3
   - 🇵🇱HOSTES LTD 3
+  - 🇩🇪U1 Digital Services 3
+  - 🇵🇱HOSTES LTD 4
+  - 🇳🇱Aeza Group 2
+  - 🇬🇧Global Connectivity Solutions Llp 2
   - 🇵🇱Oc Networks Limited
   - 🇳🇱Aeza Group
-  - 🇳🇱Aeza Group 2
   - 🇦🇪HOSTES LTD
   - 🌐EPODONIOS 3
+  - 🇸🇬Contabo Asia Private Limited
+  - 🇳🇱Play2go International Limited 2
   - 🇳🇱Akenai Products LTD
   - 🇳🇴Gigahost AS 2
-  - 🇬🇧Iomart Cloud Services Limited 2
-  - 🇳🇱Play2go International Limited 2
-  - 🇳🇱Play2go International Limited 3
-  - 🇷🇴Interkvm Host Srl 2
-  - 🇦🇹Aeza Group
+  - 🇳🇱QWINS LTD
   - 🇳🇱Servers Tech Fzco 2
+  - 🇬🇧Iomart Cloud Services Limited 2
+  - 🇳🇱Play2go International Limited 3
   - 🇫🇮Web1 Oy
-  - 🇳🇱Play2go International Limited 4
+  - 🇳🇱Eternity International Limited
+  - 🇦🇹Aeza Group
   - 🇳🇱Fzco
-  - 🌐3934 🇬🇧 United Kingdom VLESS
-  - 🇳🇴Gigahost AS 3
+  - 🇳🇱Play2go International Limited 4
+  - 🇩🇪WEYRO LTD 6
   - 🇷🇴Interkvm Host Srl 3
+  - 🌐3934 🇬🇧 United Kingdom VLESS
+  - 🇦🇪HOSTES LTD 2
+  - 🇳🇴Gigahost AS 3
   - 🇳🇱Eternity International Limited 3
-  - 🇸🇪QWINS LTD 2
+  - 🇫🇮H2nexus Cloud Services - Fzco
   - 🇳🇱Eternity International Limited 2
-  - 🇬🇧Iomart Cloud Services Limited 3
-  - 🌐OpenRay 🇺🇸 US-24134
+  - 🇸🇪Melbikomas UAB
   - 🇨🇦Leaseweb Canada
+  - 🇸🇪QWINS LTD 2
   - 🇳🇱Eternity International Limited 4
-  - 🌐🏳️ ShatakVPN 470090
   - 🇳🇱Senko Digital
+  - 🌐🏳️ ShatakVPN 470090
+  - 🌐OpenRay 🇺🇸 US-24134
+  - 🇬🇧Iomart Cloud Services Limited 3
+  - 🇪🇸Cloudi Nextgen Sl
   - 🇷🇺Kviktel
-  - 🌐11458UA0VLESSNoneext_raw.githu
   - 🇳🇱QWINS LTD 2
-  - 🇸🇪QWINS LTD 3
+  - 🌐11458UA0VLESSNoneext_raw.githu
+  - 🇨🇴Oracle Cloud
   - 🇳🇱QWINS LTD 3
+  - 🇳🇱Cgi Global Limited
+  - 🇸🇪QWINS LTD 3
   - 🇯🇵The Constant Company
-  - 🇨🇴Oracle Cloud 2
-  - 🇷🇺YandexCloud
-  - 🇷🇺Kviktel 2
+  - 🇨🇴Oracle Cloud 3
   - 🇨🇴Oracle Cloud 4
-  - 🇳🇱Eternity International Limited 5
-  - 🇩🇪Hostkey Bv
-  - 🇳🇱WAIcore
-  - 🇳🇱Senko Digital 2
-  - 🇪🇸Global Connectivity Solutions Llp
+  - 🇷🇺Kviktel 2
   - 🌐OpenRay 🇺🇸 US-23921
+  - 🌐OpenRay 🇳🇱 NL-11009
+  - 🇳🇱Eternity International Limited 5
+  - 🇷🇺YandexCloud
+  - 🇳🇴Global Connectivity Solutions Llp
+  - 🇨🇴Oracle Cloud 5
+  - 🇪🇸Global Connectivity Solutions Llp
   - 🇩🇪AWS
+  - 🇳🇱WAIcore
   - 🇩🇪AWS 2
   - 🇹🇷GLB Bulut Teknolojisi Limited Sirketi
-  - 🇷🇺Jsc timeweb 2
-  - 🇺🇸Limestone Networks
-  - 🇸🇪Play2go International Limited
-  - 🇰🇿PS Internet Company LLP
+  - 🌐OpenRay 🇺🇸 US-24746
   - 🌐OpenRay 🇺🇸 US-23896
   - 🇩🇪Tom Gewiese
-  - 🇨🇦 Canada Montreal Ville-Marie 🌐 BL
-  - 🇰🇿 Kazakhstan Almaty 🌐 BL
-  - 🇳🇱 The Netherlands Amsterdam BL 2
+  - 🇬🇧Hostkey Bv 2
+  - 🇰🇿PS Internet Company LLP
   - 🌐OpenRay 🇺🇸 US-24138
+  - 🇨🇦 Canada Montreal Ville-Marie 🌐 BL
+  - 🇺🇸Cgi Global Limited
+  - 🇸🇪 Sweden Stockholm 🌐 BL
   - 🇵🇱 Poland 🌐 BL
-  - 🇰🇷 South Korea Seongnam-si Geumto-ro BL
+  - 🇰🇿 Kazakhstan Almaty 🌐 BL
+  - 🇳🇱 The Netherlands Eygelshoven BL 2
   - 🇳🇱 The Netherlands Eygelshoven BL 3
+  - 🇸🇪 Sweden Stockholm 🌐 BL 2
+  - 🇳🇱 The Netherlands Amsterdam BL 2
   - 🇳🇱 The Netherlands Amsterdam BL
-  - 🇳🇱 The Netherlands Eygelshoven BL 8
-  - 🇳🇱 The Netherlands Eygelshoven BL 4
-  - 🇬🇧 United Kingdom London BL
-  - 🇬🇧 United Kingdom Maidenhead BL
-  - 🇳🇱 The Netherlands Eygelshoven BL 5
-  - 🇺🇸 United States Quincy BL
-  - 🇬🇧 United Kingdom London BL 2
   - 🇳🇱 The Netherlands Eygelshoven BL 6
+  - 🇳🇱 The Netherlands Eygelshoven BL
+  - 🇳🇱 The Netherlands Eygelshoven BL 5
+  - 🇬🇧 United Kingdom London BL
   - 🇳🇱 The Netherlands Eygelshoven BL 7
+  - 🇬🇧 United Kingdom London BL 2
+  - 🇬🇧 United Kingdom Maidenhead BL
   - 🇺🇸 United States Newark BL
-  - 🇨🇳 China Lijia BL
-  - 🌐 Anycast-IP 🇨🇦 🇫🇮 BL
+  - 🇺🇸 United States Quincy BL
   - 🇫🇷 France Yvrac BL
+  - 🇺🇸 United States Roma BL
   - 🇷🇸 Serbia Belgrade BL
-  - 🇰🇿 Kazakhstan Almaty BL
+  - 🇨🇭 Switzerland Zurich BL
   - 🇹🇷 Turkey Ankara BL
-  - 🇷🇺 Russia CIDR t.me/rjsxrd
   - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd
-  - 🇷🇺 Russia 🌐 CIDR t.me/rjsxrd
-  - 🇷🇺 Россия 🏳️LTE 🥭🔧 t.me/rjsxrd
   - '!'
+  - 🇷🇺 Russia 🌐 CIDR t.me/rjsxrd
+  - 🇳🇱 The Netherlands Amsterdam BL 3
+  - 🇷🇺 Russia CIDR t.me/rjsxrd
+  - 🇷🇺 Россия 🏳️LTE 🥭🔧 t.me/rjsxrd
   - 🇷🇺 Russia 🌐 CIDR t.me/rjsxrd-2
-  - 🇷🇺 Russia CIDR t.me/rjsxrd-2
-  - 🇷🇺 Russia CIDR t.me/rjsxrd 2
-  - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #4167 РосТуннель t.me/rjsxrd'
-  - 🇩🇪 机场推荐:dafei.de 德国 06 t.me/rjsxrd
   - '82'
+  - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd'
+  - 🇷🇺 Russia CIDR t.me/rjsxrd 2
+  - '🇳🇱 VL Нидерланды #4165 РосТуннель t.me/rjsxrd'
   - '🇳🇱 VL Нидерланды #4104 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #4167 РосТуннель t.me/rjsxrd'
   - '🇫🇮 VL Финляндия #4331 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 Netherlands TG: @HardVpn_robot t.me/rjsxrd 2'
-  - '🇷🇺 VL Россия #5134 РосТуннель t.me/rjsxrd'
   - '🇵🇱 VL Польша #7240 РосТуннель t.me/rjsxrd'
-  - 700. 🇩🇪 Germany t.me/rjsxrd t.me/rjsxrd
   - '🇺🇦 VL Украина #11752 РосТуннель t.me/rjsxrd'
   - '🇦🇲 VL Армения #19589 РосТуннель t.me/rjsxrd'
   - '🇳🇱 VL Нидерланды #4135 РосТуннель t.me/rjsxrd'
-  - 🇷🇺 Russia CIDR t.me/rjsxrd 4
+  - 700. 🇩🇪 Germany t.me/rjsxrd t.me/rjsxrd
+  - '🇵🇱 VL Польша #7152 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #4014 РосТуннель t.me/rjsxrd'
+  - 🇷🇺 Russia CIDR t.me/rjsxrd 3
   - '! 2'
-  - 🇷🇺 Russia CIDR t.me/rjsxrd 5
+  - 🇷🇺 Russia CIDR t.me/rjsxrd 4
   - '🇫🇷 VL Франция #5626 РосТуннель t.me/rjsxrd'
+  - 🇷🇺 Russia CIDR t.me/rjsxrd 5
   - '🇳🇱 VL Нидерланды #4164 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #5197 РосТуннель t.me/rjsxrd'
   - 🇷🇺 Russia CIDR t.me/rjsxrd 6
-  - '🇳🇱 VL Нидерланды #4137 РосТуннель t.me/rjsxrd'
-  - '🇷🇺 VL Россия #5116 РосТуннель t.me/rjsxrd'
   - 🇺🇸 美国 USA t.me/rjsxrd
   - '🇫🇷 VL Франция #17482 РосТуннель t.me/rjsxrd'
-  - '🇱🇹 VL Литва #17710 РосТуннель t.me/rjsxrd'
-  - '🇵🇱 VL Польша #7225 РосТуннель t.me/rjsxrd'
-  - 🇷🇺 Russia CIDR t.me/rjsxrd 7
-  - '22'
   - 🇸🇪 Sweden CIDR t.me/rjsxrd
-  - 🏳️_未知_56 t.me/rjsxrd
+  - '🇳🇱 VL Нидерланды #4137 РосТуннель t.me/rjsxrd'
+  - '22'
+  - '🇱🇹 VL Литва #17710 РосТуннель t.me/rjsxrd'
+  - 🇷🇺 Russia CIDR t.me/rjsxrd 7
+  - '🇵🇱 VL Польша #7225 РосТуннель t.me/rjsxrd'
   - '🇵🇱 VL Польша #7233 РосТуннель t.me/rjsxrd'
+  - 🇷🇺
   - '🇩🇪 VL Германия #1944 РосТуннель t.me/rjsxrd'
-  - '🇦🇺 VL Австралия #18915 РосТуннель t.me/rjsxrd'
-  - '🇩🇪 VL Германия #2395 РосТуннель t.me/rjsxrd'
-  - '🇨🇭 VL Швейцария #8821 РосТуннель t.me/rjsxrd'
+  - 🌐 Anycast-IP 🇷🇺 🇺🇸 CIDR t.me/rjsxrd
+  - '🇷🇺 VL Россия #4358 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #5131 РосТуннель t.me/rjsxrd'
-  - '🇨🇭 VL Швейцария #8815 РосТуннель t.me/rjsxrd'
+  - '🇦🇺 VL Австралия #18915 РосТуннель t.me/rjsxrd'
+  - '🇨🇭 VL Швейцария #8821 РосТуннель t.me/rjsxrd'
+  - 🇩🇰 丹麦 DNK t.me/rjsxrd
   - '🇳🇱 VL Нидерланды #3982 РосТуннель t.me/rjsxrd'
   - '🇵🇱 VL Польша #7157 РосТуннель t.me/rjsxrd'
   - '🇦🇹 VL Австрия #9360 РосТуннель t.me/rjsxrd'
-  - 🇩🇰 丹麦 DNK t.me/rjsxrd
-  - '🇷🇺 VL Россия #5120 РосТуннель t.me/rjsxrd'
-  - '🇦🇺 VL Австралия #20346 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #5196 РосТуннель t.me/rjsxrd'
+  - '🇷🇺 VL Россия #5120 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #17736 РосТуннель t.me/rjsxrd'
   - '9'
   - '🇩🇪 VL Германия #2017 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #17736 РосТуннель t.me/rjsxrd'
-  - '39'
+  - '11'
   - '🇱🇻 VL Латвия #12816 РосТуннель t.me/rjsxrd'
+  - '🇩🇪 VL Германия #2015 РосТуннель t.me/rjsxrd'
   - '🇫🇮 VL Финляндия #4329 РосТуннель t.me/rjsxrd'
-  - '🇩🇪 VL Германия #2351 РосТуннель t.me/rjsxrd'
-  - '🇩🇪 VL Германия #2238 РосТуннель t.me/rjsxrd'
+  - '🇷🇺 VL Россия #5210 РосТуннель t.me/rjsxrd'
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd 2
+  - '🇺🇦 VL Украина #11750 РосТуннель t.me/rjsxrd'
   - '🇨🇾 VL Кипр #16785 РосТуннель t.me/rjsxrd'
   - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd 3
-  - '🇺🇦 VL Украина #11750 РосТуннель t.me/rjsxrd'
-  - '🇳🇴 VL Норвегия #17474 РосТуннель t.me/rjsxrd'
-  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR t.me/rjsxrd 2
-  - '🇷🇺 VL Россия #5210 РосТуннель t.me/rjsxrd'
-  - '🇩🇪 VL Германия #19622 РосТуннель t.me/rjsxrd'
   - 🇷🇺_俄罗斯_18 t.me/rjsxrd
   - '🇩🇪 VL Германия #2247 РосТуннель t.me/rjsxrd'
-  - 🇺🇸
-  - '🇷🇺 VL Россия #19036 РосТуннель t.me/rjsxrd'
   - '🇵🇱 VL Польша #7258 РосТуннель t.me/rjsxrd'
-  - '🇦🇲 Armenia — #108 t.me/rjsxrd'
-  - '🇷🇺 VL Россия #5213 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #3716 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #4008 РосТуннель t.me/rjsxrd'
-  - 🇷🇺 2
+  - '26'
+  - '🇩🇪 VL Германия #19622 РосТуннель t.me/rjsxrd'
+  - '🇷🇺 VL Россия #19499 РосТуннель t.me/rjsxrd'
   - 🇺🇸_美国_16 t.me/rjsxrd
-  - 🇩🇪 Germany CIDR t.me/rjsxrd
+  - '🇷🇺 VL Россия #19036 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #4008 РосТуннель t.me/rjsxrd'
+  - '🇦🇲 Armenia — #108 t.me/rjsxrd'
   - '🇷🇺 VL Россия #5201 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #5032 РосТуннель t.me/rjsxrd'
-  - '🇪🇬 VL Египет #17628 РосТуннель t.me/rjsxrd'
+  - 🇩🇪 Germany CIDR t.me/rjsxrd
   - '! 3'
-  - '🇱🇻 VL Латвия #9801 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #4157 РосТуннель t.me/rjsxrd'
+  - '🇪🇬 VL Египет #17628 РосТуннель t.me/rjsxrd'
   - 🇫🇮 Finland CIDR t.me/rjsxrd
-  - '🇷🇺 VL Россия #18857 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #3983 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #4103 РосТуннель t.me/rjsxrd'
-  - '🇸🇪 VL Швеция #11903 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #4157 РосТуннель t.me/rjsxrd'
+  - '🇩🇪 VL Германия #20622 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #21315 РосТуннель t.me/rjsxrd'
-  - '🇬🇧 VL Великобритания #5786 РосТуннель t.me/rjsxrd'
   - '10'
+  - '🇸🇪 VL Швеция #11903 РосТуннель t.me/rjsxrd'
+  - '🇵🇱 VL Польша #7243 РосТуннель t.me/rjsxrd'
   - '17'
-  - 🇫🇮 Finland 🌐 CIDR t.me/rjsxrd
-  - '🇦🇹 VL Австрия #13012 РосТуннель t.me/rjsxrd'
+  - '🇬🇧 VL Великобритания #5786 РосТуннель t.me/rjsxrd'
+  - '🇩🇪 VL Германия #18238 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #5110 РосТуннель t.me/rjsxrd'
-  - '🇪🇬 VL Египет #18329 РосТуннель t.me/rjsxrd'
   - '🇳🇱 VL Нидерланды #4000 РосТуннель t.me/rjsxrd'
-  - '🇵🇱 VL Польша #7173 РосТуннель t.me/rjsxrd'
+  - '🇪🇬 VL Египет #18329 РосТуннель t.me/rjsxrd'
+  - '🇦🇹 VL Австрия #13012 РосТуннель t.me/rjsxrd'
   - 🇷🇺 Russia CIDR VK t.me/rjsxrd
-  - '🇺🇦 VL Украина #12118 РосТуннель t.me/rjsxrd'
   - '🇩🇪 VL Германия #2344 РосТуннель t.me/rjsxrd'
-  - '🇩🇪 VL Германия #11915 РосТуннель t.me/rjsxrd'
+  - '🇺🇦 VL Украина #12118 РосТуннель t.me/rjsxrd'
   - '🇳🇱 VL Нидерланды #4113 РосТуннель t.me/rjsxrd'
-  - '! 4'
-  - '🇩🇪 VL Германия #2314 РосТуннель t.me/rjsxrd'
-  - '🇳🇱 VL Нидерланды #3829 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #4007 РосТуннель t.me/rjsxrd'
+  - '🇩🇪 VL Германия #11915 РосТуннель t.me/rjsxrd'
+  - '🇳🇱 VL Нидерланды #3927 РосТуннель t.me/rjsxrd'
   - '🇷🇺 VL Россия #18482 РосТуннель t.me/rjsxrd'
-  - 🇷🇺 3
-  - 🇨🇭 瑞士 CHE t.me/rjsxrd
+  - '! 5'
   - '🇳🇱 VL Нидерланды #3730 РосТуннель t.me/rjsxrd'
-  - 🇫🇮 Finland 🌐 CIDR
   - '🇱🇻 VL Латвия #17239 РосТуннель t.me/rjsxrd'
+  - 🇷🇺 3
   - 1701 t.me/rjsxrd
+  - .𖥔 ݁ ˖ִ🛸༄˖°. CIDR
+  - 🇫🇮 Finland 🌐 CIDR
   - 🇫🇷 France CIDR VK
-  - 🇩🇪 Germany CIDR
   - 🇩🇪 Germany 🌐 CIDR
   - 🇩🇪 Germany 🌐 CIDR 2
-  - 🇮🇹 Italy CIDR
-  - 🇵🇱 Poland CIDR
   - 🇱🇻 Latvia CIDR
-  - 🇳🇴 Norway CIDR VK
+  - 🇮🇹 Italy CIDR
   - 🇳🇴 Norway 🌐 CIDR
+  - 🇵🇱 Poland CIDR
+  - 🇳🇱 The Netherlands CIDR VK
+  - 🇳🇴 Norway CIDR VK
   - 🇸🇪 Sweden CIDR
-  - 🌐 Anycast-IP 🇫🇷 🇵🇱 CIDR
+  - 🇹🇷 Turkey CIDR
+  - 🇳🇱 The Netherlands CIDR VK-2
   - 🇹🇷 Turkey CIDR VK
   - 🇷🇺 Russia 🌐 CIDR
+  - 🌐 Anycast-IP 🇫🇷 🇵🇱 CIDR
   - 🇷🇺 Russia 🌐 CIDR-2
   - 🇫🇮 Finland CIDR
+  - 🇫🇮 Finland CIDR 2
   - 🇮🇹 Italy CIDR 2
   - 🇮🇹 Italy CIDR 3
-  - 🇫🇮 Finland CIDR 2
   - WARP WG 188.114.99.90:4443
   - WARP WG 188.114.96.160:8443
   - WARP WG 188.114.99.135:2408
