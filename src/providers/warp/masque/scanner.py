@@ -1,58 +1,41 @@
+import ipaddress
+import random
+
 def scan_endpoints(account):
-    """
-    Build MASQUE endpoint candidates exclusively from the endpoint
-    information returned by Cloudflare during MASQUE enrollment.
-
-    We deliberately do not brute-force Cloudflare IP ranges here.
-    """
-
-    server_v4 = account.get("endpoint_v4", "").strip()
-    server_v6 = account.get("endpoint_v6", "").strip()
-    ports = account.get("endpoint_ports") or []
-
-    if not ports:
-        print("[WARP MASQUE SCANNER] No endpoint ports returned by Cloudflare")
-        return []
-
+    print("[WARP EXTENDED SCANNER] Generating large pool of candidates...")
+    
+    base_cidrs = [
+        "162.159.192.0/24",
+        "162.159.193.0/24",
+        "162.159.195.0/24",
+        "188.114.96.0/24",
+        "188.114.97.0/24",
+        "188.114.98.0/24",
+        "188.114.99.0/24"
+    ]
+    
+    ports = [443, 2408, 500, 1701, 4500, 8443, 4443]
     candidates = []
-
-    for port in ports:
-        try:
-            port = int(port)
-        except (TypeError, ValueError):
-            continue
-
-        if not (1 <= port <= 65535):
-            continue
-
-        if server_v4:
+    
+    for cidr in base_cidrs:
+        net = ipaddress.ip_network(cidr)
+        hosts = list(net.hosts())
+        # Берем по 20 случайных IP из каждой подсети
+        selected_hosts = random.sample(hosts, min(20, len(hosts)))
+        for ip in selected_hosts:
+            port = random.choice(ports)
             candidates.append({
-                "server": server_v4,
-                "port": port,
-                "mode": "masque",
-                "family": "ipv4",
+                "server": str(ip),
+                "port": port
             })
+            
+    fallback_domains = [
+        "engage.cloudflareclient.com",
+        "cloudflareaccess.com"
+    ]
+    for domain in fallback_domains:
+        candidates.append({"server": domain, "port": 2408})
+        candidates.append({"server": domain, "port": 443})
 
-        if server_v6:
-            candidates.append({
-                "server": server_v6,
-                "port": port,
-                "mode": "masque",
-                "family": "ipv6",
-            })
-
-    print(
-        f"[WARP MASQUE SCANNER] "
-        f"Cloudflare endpoints: IPv4={server_v4 or '-'}, "
-        f"IPv6={server_v6 or '-'}"
-    )
-    print(
-        f"[WARP MASQUE SCANNER] "
-        f"Ports: {ports}"
-    )
-    print(
-        f"[WARP MASQUE SCANNER] "
-        f"Generated {len(candidates)} endpoint candidates"
-    )
-
+    print(f"[WARP EXTENDED SCANNER] Total generated candidates: {len(candidates)}")
     return candidates

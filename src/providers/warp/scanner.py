@@ -1,71 +1,40 @@
-NETWORKS = [
-    "162.159.192.",
-    "162.159.193.",
-    "188.114.96.",
-    "188.114.97.",
-]
+import ipaddress
+import random
 
+def scan_endpoints(account):
+    print("[WARP SCANNER] Generating extended endpoint candidates...")
+    
+    base_cidrs = [
+        "162.159.192.0/24",
+        "162.159.193.0/24",
+        "162.159.195.0/24",
+        "188.114.96.0/24",
+        "188.114.97.0/24",
+        "188.114.98.0/24",
+        "188.114.99.0/24"
+    ]
+    
+    ports = [443, 2408, 500, 1701, 4500, 8443, 4443]
+    candidates = []
+    
+    for cidr in base_cidrs:
+        net = ipaddress.ip_network(cidr)
+        hosts = list(net.hosts())
+        selected_hosts = random.sample(hosts, min(20, len(hosts)))
+        for ip in selected_hosts:
+            port = random.choice(ports)
+            candidates.append({
+                "server": str(ip),
+                "port": port
+            })
+            
+    fallback_domains = [
+        "engage.cloudflareclient.com",
+        "cloudflareaccess.com"
+    ]
+    for domain in fallback_domains:
+        candidates.append({"server": domain, "port": 2408})
+        candidates.append({"server": domain, "port": 443})
 
-AMNEZIA_SERVERS = [
-    "pl.tribukvy.ltd",
-    "nl.tribukvy.ltd",
-    "fi.tribukvy.ltd",
-    "lv.tribukvy.ltd",
-    "de.tribukvy.ltd",
-    "ee.tribukvy.ltd",
-    "ru0.tribukvy.ltd",
-
-    "tel.pl.tribukvy.ltd",
-    "tel.fi.tribukvy.ltd",
-    "tel.de.tribukvy.ltd",
-]
-
-
-def generate_candidates():
-
-    result = []
-
-
-    # Cloudflare WARP WG
-    for net in NETWORKS:
-        for i in range(1, 33):
-            result.append(
-                {
-                    "server": f"{net}{i}",
-                    "port": 2408,
-                    "mode": "wireguard",
-                }
-            )
-
-
-    # AmneziaWG
-    for server in AMNEZIA_SERVERS:
-        result.append(
-            {
-                "server": server,
-                "port": 500,
-                "mode": "amnezia",
-            }
-        )
-
-
-    return result
-
-
-
-def scan_endpoints():
-
-    candidates = generate_candidates()
-
-    print(
-        f"[WARP SCANNER] Generated {len(candidates)} endpoints"
-    )
-
+    print(f"[WARP SCANNER] Total generated candidates: {len(candidates)}")
     return candidates
-
-
-
-if __name__ == "__main__":
-
-    for x in scan_endpoints():
-        print(x)

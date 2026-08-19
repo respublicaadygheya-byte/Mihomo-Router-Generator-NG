@@ -1,242 +1,92 @@
-from pathlib import Path
-import socket
-import subprocess
 import tempfile
+import subprocess
+import os
 import time
-import urllib.request
-import urllib.error
-
+import requests
 import yaml
 
-
-BASE_DIR = Path(__file__).resolve().parents[4]
-MIHOMO = BASE_DIR / "bin" / "mihomo.bin"
-
-TEST_URL = "https://cloudflare.com/cdn-cgi/trace"
-TEST_TIMEOUT = 8
-
-
-def get_free_port():
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(("127.0.0.1", 0))
-        return s.getsockname()[1]
-
-
-def check_masque(node):
-    port = get_free_port()
-
-    cfg = {
-        "mixed-port": port,
-        "allow-lan": False,
-        "mode": "rule",
-        "log-level": "warning",
-
-        "proxies": [node],
-
-        "proxy-groups": [{
-            "name": "TEST",
-            "type": "select",
-            "proxies": [node["name"]],
-        }],
-
-        "rules": [
-            "MATCH,TEST"
-        ],
+def check_masque(node_config):
+    import random
+    mixed_port = random.randint(20000, 45000)
+    
+    proxy_item = {
+        "name": "warp-test",
+        "type": "wireguard",
+        "magic": node_config.get("magic", ""),
+        "jc": node_config.get("jc", 4),
+        "jmin": node_config.get("jmin", 50),
+        "jmax": node_config.get("jmax", 100),
+        "s1": node_config.get("s1", 50),
+        "s2": node_config.get("s2", 70),
+        "server": node_config["server"],
+        "port": node_config["port"],
+        "ip": node_config["ip"],
+        "ipv6": node_config.get("ipv6", ""),
+        "private-key": node_config["private-key"],
+        "public-key": node_config["public-key"],
+        "reserved": node_config.get("reserved", [0, 0, 0])[:3],
+        "udp": True,
+        "mtu": 1280,
+        "remote-dns-resolve": True
     }
 
-    cfg_path = None
-    proc = None
+    config_data = {
+        "mixed-port": mixed_port,
+        "allow-lan": False,
+        "mode": "rule",
+        "log-level": "warning",  # Поставим warning, чтобы видеть, если ядро ругается на конфиг
+        "proxies": [proxy_item]
+    }
 
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".yaml", delete=False) as tf:
+        yaml.dump(config_data, tf)
+        temp_filename = tf.name
+
+    mihomo_bin = "./bin/mihomo"
+    if not os.path.exists(mihomo_bin):
+        import shutil
+        mihomo_bin = shutil.which("mihomo") or "mihomo"
+
+    process = None
     try:
-        # --------------------------------------------------------------
-        # Create temporary Mihomo config.
-        # --------------------------------------------------------------
-
-        with tempfile.NamedTemporaryFile(
-            "w",
-            suffix=".yaml",
-            delete=False,
-        ) as f:
-            yaml.dump(
-                cfg,
-                f,
-                allow_unicode=True,
-                sort_keys=False,
-            )
-            cfg_path = f.name
-
-        # --------------------------------------------------------------
-        # Start Mihomo.
-        # --------------------------------------------------------------
-
-        proc = subprocess.Popen(
-            [
-                str(MIHOMO),
-                "-f",
-                cfg_path,
-            ],
-            stdout=subprocess.DEVNULL,
+        process = subprocess.Popen(
+            [mihomo_bin, "-d", os.path.dirname(temp_filename), "-f", temp_filename],
+            stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True,
+            text=True
         )
+        
+        # Дадим ядру 1.5 секунды на старт
+        time.sleep(1.5)
 
-        # Give Mihomo time to initialize the proxy listener.
-        time.sleep(2.5)
-
-        if proc.poll() is not None:
-            print(
-                f"[WARP MASQUE CHECK] Mihomo exited immediately "
-                f"for {node.get('server')}:{node.get('port')}"
-            )
+        if process.poll() is not None:
+            stdout, stderr = process.communicate()
+            print(f"[WARP CHECK] Mihomo failed for {node_config['server']}:{node_config['port']}. Output: {stderr.strip() or stdout.strip()}")
             return None
 
-        # --------------------------------------------------------------
-        # HTTP proxy -> Mihomo.
-        # --------------------------------------------------------------
-
-        proxy_support = urllib.request.ProxyHandler({
-            "http": f"http://127.0.0.1:{port}",
-            "https": f"http://127.0.0.1:{port}",
-        })
-
-        opener = urllib.request.build_opener(proxy_support)
-
-        # --------------------------------------------------------------
-        # Cloudflare trace is the actual WARP health check.
-        #
-        # We deliberately do NOT use:
-        #
-        #   http://cp.cloudflare.com/generate_204
-        #
-        # because Cloudflare may return an anti-bot challenge there.
-        # That does not mean the MASQUE tunnel is broken.
-        # --------------------------------------------------------------
-
-        req = urllib.request.Request(
-            TEST_URL,
-            headers={
-                "User-Agent": "curl/7.68.0",
-                "Accept": "*/*",
-            },
-        )
-
-        start = time.time()
-
-        try:
-            with opener.open(
-                req,
-                timeout=TEST_TIMEOUT,
-            ) as resp:
-
-                status = resp.status
-                body = resp.read(4096).decode(
-                    "utf-8",
-                    errors="replace",
-                )
-
-        except urllib.error.HTTPError as e:
-            status = e.code
-            body = e.read(4096).decode(
-                "utf-8",
-                errors="replace",
-            )
-
-            print(
-                f"[WARP MASQUE CHECK] HTTP {status} "
-                f"{node.get('server')}:{node.get('port')}"
-            )
-
-            return None
-
-        latency = round(
-            (time.time() - start) * 1000,
-            2,
-        )
-
-        # --------------------------------------------------------------
-        # Validate Cloudflare trace response.
-        # --------------------------------------------------------------
-
-        if status != 200:
-            print(
-                f"[WARP MASQUE CHECK] FAIL "
-                f"{node.get('server')}:{node.get('port')} "
-                f"HTTP={status}"
-            )
-            return None
-
-        trace = {}
-
-        for line in body.splitlines():
-            if "=" not in line:
-                continue
-
-            key, value = line.split("=", 1)
-            trace[key.strip()] = value.strip()
-
-        warp = trace.get("warp", "").lower()
-
-        # --------------------------------------------------------------
-        # The most important condition:
-        #
-        # Cloudflare must report warp=on.
-        # --------------------------------------------------------------
-
-        if warp != "on":
-            print(
-                f"[WARP MASQUE CHECK] FAIL "
-                f"{node.get('server')}:{node.get('port')} "
-                f"warp={warp or 'missing'}"
-            )
-            return None
-
-        # --------------------------------------------------------------
-        # Successful MASQUE/WARP node.
-        # --------------------------------------------------------------
-
-        result = {
-            **node,
-            "latency": latency,
+        proxies = {
+            "http": f"http://127.0.0.1:{mixed_port}",
+            "https": f"http://127.0.0.1:{mixed_port}"
         }
+        
+        start_time = time.time()
+        response = requests.get("http://www.gstatic.com/generate_204", proxies=proxies, timeout=4)
+        latency = int((time.time() - start_time) * 1000)
 
-        print(
-            f"[WARP MASQUE CHECK] OK "
-            f"{node.get('server')}:{node.get('port')} "
-            f"({latency} ms) "
-            f"warp=on "
-            f"loc={trace.get('loc', '-')}"
-        )
+        if response.status_code == 204:
+            node_config["latency"] = latency
+            return node_config
 
-        return result
-
-    except Exception as e:
-        print(
-            f"[WARP MASQUE CHECK] ERROR "
-            f"{node.get('server')}:{node.get('port')}: "
-            f"{type(e).__name__}: {e}"
-        )
-
+    except Exception:
+        pass
     finally:
-        # --------------------------------------------------------------
-        # Stop Mihomo.
-        # --------------------------------------------------------------
-
-        if proc and proc.poll() is None:
-            proc.kill()
-
+        if process and process.poll() is None:
+            process.terminate()
             try:
-                proc.wait(timeout=2)
-            except subprocess.TimeoutExpired:
-                proc.kill()
-                proc.wait()
-
-        # --------------------------------------------------------------
-        # Remove temporary config.
-        # --------------------------------------------------------------
-
-        if cfg_path:
-            Path(cfg_path).unlink(
-                missing_ok=True
-            )
+                process.wait(timeout=1)
+            except:
+                process.kill()
+        if os.path.exists(temp_filename):
+            os.remove(temp_filename)
 
     return None

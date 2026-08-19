@@ -281,9 +281,9 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                 [{
                     'name': '🌀 MASQUE AUTO',
                     'type': 'url-test',
-                    'url': 'https://cloudflare.com/cdn-cgi/trace',
+                    'url': 'http://cp.cloudflare.com/generate_204',
                     'interval': 300,
-                    'tolerance': 50,
+                    'tolerance': 100,
                     'proxies': masque_names
                 }]
                 if masque_names else []

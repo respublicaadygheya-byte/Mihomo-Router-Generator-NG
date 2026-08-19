@@ -61,7 +61,7 @@ class WarpProvider:
 
         nodes = []
 
-        candidates = scan_endpoints()
+        candidates = scan_endpoints(account)
 
 
         print(
