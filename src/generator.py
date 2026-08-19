@@ -281,9 +281,9 @@ def generate_config(proxy_list, ru_domains, ru_ips):
                 [{
                     'name': '🌀 MASQUE AUTO',
                     'type': 'url-test',
-                    'url': 'http://cp.cloudflare.com/generate_204',
+                    'url': 'https://cloudflare.com/cdn-cgi/trace',
                     'interval': 300,
-                    'tolerance': 100,
+                    'tolerance': 50,
                     'proxies': masque_names
                 }]
                 if masque_names else []
@@ -299,12 +299,6 @@ def generate_config(proxy_list, ru_domains, ru_ips):
 def main():
 
     parser = argparse.ArgumentParser()
-
-    parser.add_argument(
-        '--warp-import',
-        type=str,
-        help='Path to external AmneziaWG YAML file'
-    )
 
     parser.add_argument(
         '--proxies',

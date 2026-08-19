@@ -38,7 +38,6 @@ echo "  Proxy pool: $POOL_COUNT"
 
 echo "[4/4] Generate config"
 python3 src/generator.py \
-    --warp-import publish/ClashWARP_64.yaml \
     --proxies cache/filtered/all.json \
     --ru-direct domains:lists/ru_direct_domains.txt \
     --ru-direct ips:lists/ru_direct_ips.txt \
