@@ -23,11 +23,11 @@ echo "  Working proxies: $AVAIL"
 
 echo "[3/4] Generate WARP providers"
 
-python3 -m src.providers.warp.provider
+# python3 -m src.providers.warp.provider
 
 echo "[3/4] Generate WARP MASQUE providers"
 
-python3 -m src.providers.warp.masque.provider
+# python3 -m src.providers.warp.masque.provider
 
 echo "[3/4] Merge proxy pool"
 
