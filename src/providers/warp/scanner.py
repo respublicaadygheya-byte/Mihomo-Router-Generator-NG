@@ -1,68 +1,31 @@
-NETWORKS = [
-    "162.159.192.",
-    "162.159.193.",
-    "188.114.96.",
-    "188.114.97.",
-]
-
-
-AMNEZIA_SERVERS = [
-    "pl.tribukvy.ltd",
-    "nl.tribukvy.ltd",
-    "fi.tribukvy.ltd",
-    "lv.tribukvy.ltd",
-    "de.tribukvy.ltd",
-    "ee.tribukvy.ltd",
-    "ru0.tribukvy.ltd",
-
-    "tel.pl.tribukvy.ltd",
-    "tel.fi.tribukvy.ltd",
-    "tel.de.tribukvy.ltd",
-]
-
-
-def generate_candidates():
-
-    result = []
-
-
-    # Cloudflare WARP WG
-    for net in NETWORKS:
-        for i in range(1, 33):
-            result.append(
-                {
-                    "server": f"{net}{i}",
-                    "port": 2408,
-                    "mode": "wireguard",
-                }
-            )
-
-
-    # AmneziaWG
-    for server in AMNEZIA_SERVERS:
-        result.append(
-            {
-                "server": server,
-                "port": 500,
-                "mode": "amnezia",
-            }
-        )
-
-
-    return result
-
+from .bpb import scan_bpb
+from .native import generate_candidates
 
 
 def scan_endpoints():
 
-    candidates = generate_candidates()
+    candidates = []
+
+    bpb_nodes = scan_bpb()
+
+    if bpb_nodes:
+        print(
+            f"[WARP BPB] Loaded {len(bpb_nodes)} endpoints"
+        )
+
+        candidates.extend(bpb_nodes)
+
+
+    native_nodes = generate_candidates()
 
     print(
-        f"[WARP SCANNER] Generated {len(candidates)} endpoints"
+        f"[WARP NATIVE] Loaded {len(native_nodes)} endpoints"
     )
 
-    return candidates
+    candidates.extend(native_nodes)
 
+
+    return candidates
 
 
 if __name__ == "__main__":

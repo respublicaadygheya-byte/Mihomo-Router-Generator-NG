@@ -132,12 +132,36 @@ def register_account() -> Dict[str, Any]:
     if "ports" in endpoint and endpoint["ports"]:
         port = endpoint["ports"][0]
 
-    # Безопасное извлечение reserved
-    reserved = (
-        result["config"].get("reserved")
-        or interface.get("reserved")
-        or [0, 0, 0]
-    )
+    # Cloudflare WARP client_id является Base64-кодированным
+    # значением WireGuard reserved (3 байта).
+    client_id = result["config"].get("client_id", "")
+
+    if client_id:
+        try:
+            reserved = list(
+                base64.b64decode(
+                    client_id,
+                    validate=True
+                )
+            )
+        except Exception as e:
+            raise RuntimeError(
+                f"Failed to decode Cloudflare client_id: {e}"
+            ) from e
+
+        if len(reserved) != 3:
+            raise RuntimeError(
+                f"Invalid WARP reserved length: {len(reserved)}"
+            )
+    else:
+        # Fallback для альтернативного формата ответа API.
+        reserved = (
+            result["config"].get("reserved")
+            or interface.get("reserved")
+            or [0, 0, 0]
+        )
+
+    print(f"[WARP] Reserved: {reserved}")
 
     account = {
         "private_key": private_key,
